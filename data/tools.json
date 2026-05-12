@@ -1,0 +1,125 @@
+{
+  "site": {
+    "name": "SaaSPolarBeam",
+    "url": "https://saaspolarbeam.vercel.app",
+    "tagline": "Real Reviews. Real Features. Smarter Automation."
+  },
+  "tool": {
+    "name": "GoHighLevel",
+    "slug": "gohighlevel",
+    "shortName": "GHL",
+    "tagline": "All-in-One AI-Powered Marketing & Sales Platform",
+    "website": "https://www.gohighlevel.com",
+    "affiliateLink": "",
+    "pricing": {
+      "starter": 97,
+      "unlimited": 297,
+      "saasPro": 497,
+      "currency": "USD",
+      "cycle": "monthly"
+    },
+    "features": [
+      { "slug": "crm", "name": "CRM & Pipeline Management", "shortDesc": "Visual pipelines, contact management, lead scoring" },
+      { "slug": "ai-voice", "name": "AI Voice Agents", "shortDesc": "24/7 AI receptionist that answers and qualifies calls" },
+      { "slug": "funnels", "name": "Funnel Builder", "shortDesc": "Drag-and-drop landing pages, sales funnels, checkout" },
+      { "slug": "email-sms", "name": "Email & SMS Marketing", "shortDesc": "Automated campaigns, bulk messaging, two-way SMS" },
+      { "slug": "booking", "name": "Appointment Scheduling", "shortDesc": "Calendar booking, reminders, group events" },
+      { "slug": "reputation", "name": "Reputation Management", "shortDesc": "Review requests, monitoring, AI reply generation" },
+      { "slug": "memberships", "name": "Memberships & Courses", "shortDesc": "Paid content access, course hosting, communities" },
+      { "slug": "automations", "name": "Workflow Automations", "shortDesc": "Multi-step triggers, conditional logic, actions" },
+      { "slug": "analytics", "name": "Reporting & Analytics", "shortDesc": "Client dashboards, campaign tracking, ROI reports" },
+      { "slug": "whitelabel", "name": "White-Label / SaaS Mode", "shortDesc": "Rebrand as your own platform, sell to clients" }
+    ]
+  },
+  "audiences": [
+    {
+      "slug": "marketing-agencies",
+      "name": "Marketing Agencies",
+      "title": "GoHighLevel for Marketing Agencies",
+      "metaDesc": "How marketing agencies use GoHighLevel to manage 50+ clients from one dashboard, automate reporting, and white-label the platform as their own.",
+      "problem": "Juggling 5-10 separate tools (CRM, email, funnels, scheduling) across multiple clients. Manual reporting eats hours. Can't scale without hiring.",
+      "realReview": "\"We managed 12 clients with HubSpot, Mailchimp, Calendly, and ClickFunnels — $1,500/month in tools alone. GHL replaced all of them. Now we pay $297 and our client work is 3x faster.\" — Reddit, r/agency",
+      "solution": "GHL replaces 10 tools with one platform. Snapshots let you clone winning setups across clients instantly. White-label mode turns GHL into your own software."
+    },
+    {
+      "slug": "real-estate",
+      "name": "Real Estate Agents",
+      "title": "GoHighLevel for Real Estate Agents",
+      "metaDesc": "Real estate professionals use GoHighLevel to automate lead follow-ups, nurture buyers with drip campaigns, and never miss a deal.",
+      "problem": "Leads come in from Zillow, Facebook, and open houses but follow-ups are manual and slow. 80% of leads never get contacted after the first 24 hours.",
+      "realReview": "\"I was losing leads because I couldn't respond fast enough. GHL's AI voice agent answers calls instantly, qualifies buyers, and books showings. I closed 3 deals from AI-qualified leads in my first month.\" — r/RealEstate",
+      "solution": "Automated lead capture from all sources. AI voice agents answer instantly. Drip sequences nurture buyers for months until they're ready."
+    },
+    {
+      "slug": "small-business",
+      "name": "Small Business Owners",
+      "title": "GoHighLevel for Small Business Owners",
+      "metaDesc": "Stop juggling scattered tools. GoHighLevel gives small businesses CRM, email, booking, and payments in one affordable platform.",
+      "problem": "Small business owners wear every hat. Leads fall through cracks, follow-ups don't happen, and there's no system — just sticky notes and spreadsheets.",
+      "realReview": "\"I run a cleaning business with 4 employees. Before GHL, I was using a notebook for leads. Now I have automated reminders, text booking, and review requests. Revenue up 40% in 3 months.\" — GHL User Forum",
+      "solution": "One dashboard for leads, bookings, payments, and follow-ups. Automated reminders cut no-shows. Review requests build your reputation automatically."
+    },
+    {
+      "slug": "coaches-consultants",
+      "name": "Coaches & Consultants",
+      "title": "GoHighLevel for Coaches & Consultants",
+      "metaDesc": "Coaches and consultants use GoHighLevel to host courses, book sessions, send email sequences, and manage clients — all without Kajabi or Teachable.",
+      "problem": "Paying for Kajabi ($149) + Calendly ($96) + Mailchimp ($79) + Zoom ($149) = $473/month. Too many tools, too much complexity.",
+      "realReview": "\"I was on Kajabi, Calendly, and Mailchimp separately. GHL replaced all three for $97/month. My course is hosted natively, bookings auto-sync, and my email sequences run on autopilot.\" — Medium review",
+      "solution": "Native course hosting replaces Kajabi. Built-in booking replaces Calendly. Email automation replaces Mailchimp. All for $97/month."
+    },
+    {
+      "slug": "local-services",
+      "name": "Local Service Businesses",
+      "title": "GoHighLevel for Local Service Businesses",
+      "metaDesc": "Dentists, gyms, salons, and spas use GoHighLevel to auto-remind appointments, request reviews, and fill their schedule on autopilot.",
+      "problem": "High no-show rates, low review count, no automated follow-up. Staff spends hours on the phone reminding clients when they could be serving them.",
+      "realReview": "\"Our dental practice had 20% no-show rate. GHL automated reminders cut it to 3%. We also went from 12 Google reviews to 87 in 4 months. The system runs itself.\" — GHL Case Study",
+      "solution": "Automated appointment reminders via SMS/email. Review request campaigns. Online booking that fills your calendar 24/7."
+    }
+  ],
+  "problems": [
+    {
+      "slug": "missed-leads",
+      "name": "Missed Leads",
+      "title": "How GoHighLevel Solves Missed Leads",
+      "metaDesc": "Never miss a lead again. GoHighLevel's instant response + AI voice agents capture every lead within seconds — day or night.",
+      "explanation": "78% of leads convert when contacted within 5 minutes. Without automation, most businesses respond in hours or days. GHL fixes this with instant SMS/email response, AI voice agents that answer calls 24/7, and smart lead routing."
+    },
+    {
+      "slug": "tool-sprawl",
+      "name": "Too Many Tools",
+      "title": "How GoHighLevel Replaces 10 Tools",
+      "metaDesc": "Stop paying for 10 separate subscriptions. GoHighLevel replaces CRM, email, SMS, funnels, booking, and more in one platform.",
+      "explanation": "Average business uses 6-10 marketing tools costing $500-$1,500/month. GHL replaces most of them with one $97-$297 subscription. Users report cutting their tech stack by 70% and saving hours weekly."
+    },
+    {
+      "slug": "slow-followup",
+      "name": "Slow Follow-Up",
+      "title": "How GoHighLevel Speeds Up Follow-Up",
+      "metaDesc": "Automated follow-up sequences ensure no lead is forgotten. Multi-channel drips via email, SMS, and voice keep you top-of-mind.",
+      "explanation": "Speed-to-lead is everything. GHL triggers instant multi-channel responses the moment a lead enters your system. 5-step nurture sequences run automatically. Users report 2-3x conversion improvements."
+    },
+    {
+      "slug": "no-shows",
+      "name": "Appointment No-Shows",
+      "title": "How GoHighLevel Eliminates Appointment No-Shows",
+      "metaDesc": "Automated reminders via SMS and email cut no-show rates from 20% to under 3%. Built-in booking system with confirmation flows.",
+      "explanation": "No-shows cost service businesses thousands monthly. GHL sends 24-hour and 1-hour automated reminders, collects confirmations, and allows easy rescheduling. Businesses report dropping from 20% to 3% no-show rate."
+    },
+    {
+      "slug": "low-reviews",
+      "name": "Low Online Reviews",
+      "title": "How GoHighLevel Boosts Your Online Reviews",
+      "metaDesc": "Automated review request campaigns help businesses grow from 10 to 100+ Google reviews in months.",
+      "explanation": "Customers rarely leave reviews unless asked. GHL automates review requests via SMS and email after service completion. Smart routing sends happy customers to Google and filters unhappy ones to a private feedback form."
+    },
+    {
+      "slug": "manual-processes",
+      "name": "Manual Processes Wasting Time",
+      "title": "How GoHighLevel Automates Manual Processes",
+      "metaDesc": "Stop doing repetitive tasks by hand. GHL automates follow-ups, invoicing, scheduling, and reporting so you focus on what matters.",
+      "explanation": "Business owners spend 20+ hours/week on repetitive tasks. GHL workflows automate lead nurturing, payment collection, appointment reminders, review requests, and client reporting. Users report saving 15+ hours weekly."
+    }
+  ]
+}

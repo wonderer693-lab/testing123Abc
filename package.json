@@ -1,0 +1,24 @@
+{
+  "name": "saaspolarbeam",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "presitemap": "node scripts/generate-sitemap.mjs",
+    "build": "npm run presitemap && next build",
+    "start": "npx serve out"
+  },
+  "dependencies": {
+    "@types/node": "^25.7.0",
+    "@types/react": "^19.2.14",
+    "next": "^15.5.18",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "typescript": "^6.0.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.0",
+    "postcss": "^8.5.14",
+    "tailwindcss": "^4.3.0"
+  }
+}
