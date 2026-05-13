@@ -25,7 +25,7 @@
   فَلَا مُمۡسِكَ لَهَا
 */
 import type { Metadata } from "next";
-import { getSite, getTool, getFeatures, getGuides, getCompetitors, getAudiences } from "@/lib/data";
+import { getSite, getTool, getFeatures, getGuides, getCompetitors, getAudiences, getAffiliateLink, getAffiliateLinkSaaSUpgrade } from "@/lib/data";
 import "./globals.css";
 
 const site = getSite();
@@ -48,6 +48,8 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const trialLink = getAffiliateLink();
+  const saasUpgradeLink = getAffiliateLinkSaaSUpgrade();
   return (
     <html lang="en">
       <body>
@@ -55,8 +57,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
             <a
               href="/"
-              className="text-xl font-bold tracking-tight gradient-text-blue"
+              className="flex items-center gap-2 text-xl font-bold tracking-tight gradient-text-blue"
             >
+              <svg width="28" height="28" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0">
+                <circle cx="120" cy="120" r="110" fill="#F8FAFC"/>
+                <g>
+                  <path d="M120 20 L126 54 L160 60 L126 66 L120 100 L114 66 L80 60 L114 54 Z" fill="#0EA5E9"/>
+                  <path d="M120 45 L123 57 L135 60 L123 63 L120 75 L117 63 L105 60 L117 57 Z" fill="#BAE6FD"/>
+                </g>
+                <g>
+                  <path d="M40 200 L90 130 L140 200 Z" fill="#94A3B8" opacity="0.4"/>
+                  <path d="M130 200 L180 140 L220 200 Z" fill="#94A3B8" opacity="0.4"/>
+                  <path d="M30 220 L120 100 L210 220 Z" fill="#1E293B"/>
+                  <path d="M120 100 L140 126 L125 132 L115 120 L100 130 L95 125 Z" fill="#F1F5F9"/>
+                </g>
+                <rect x="30" y="215" width="180" height="4" rx="2" fill="#0EA5E9"/>
+              </svg>
               {site.name}
             </a>
             <nav className="hidden items-center gap-1 sm:flex">
@@ -105,7 +121,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 </div>
               </div>
               <a href="/best" className="nav-link px-3 py-2 text-sm">Best Picks</a>
-              <a href={tool.website} target="_blank" rel="noopener noreferrer nofollow" className="ml-2 btn-primary !py-2 !px-4 text-sm">Free Trial</a>
+              <a href={trialLink} target="_blank" rel="noopener noreferrer nofollow" className="ml-2 btn-primary !py-2 !px-4 text-sm">Start Free Trial</a>
             </nav>
             <details className="sm:hidden">
               <summary className="flex cursor-pointer items-center gap-2 rounded-lg p-2 text-slate-600">
@@ -134,7 +150,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   ))}
                   <hr className="my-2 border-blue-100" />
                   <a href="/best" className="block rounded-lg px-3 py-2 text-sm font-medium text-blue-600 hover:bg-blue-50">Best Picks</a>
-                  <a href={tool.website} target="_blank" rel="noopener noreferrer nofollow" className="mt-3 btn-primary block text-center text-sm">Free Trial</a>
+                  <a href={trialLink} target="_blank" rel="noopener noreferrer nofollow" className="mt-3 btn-primary block text-center text-sm">Start Free Trial</a>
                 </div>
               </div>
             </details>
@@ -149,6 +165,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
             <div className="grid gap-8 sm:grid-cols-3">
               <div>
+                <svg width="32" height="32" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg" className="mb-2">
+                  <circle cx="120" cy="120" r="110" fill="#F8FAFC"/>
+                  <g>
+                    <path d="M120 20 L126 54 L160 60 L126 66 L120 100 L114 66 L80 60 L114 54 Z" fill="#0EA5E9"/>
+                    <path d="M120 45 L123 57 L135 60 L123 63 L120 75 L117 63 L105 60 L117 57 Z" fill="#BAE6FD"/>
+                  </g>
+                  <g>
+                    <path d="M40 200 L90 130 L140 200 Z" fill="#94A3B8" opacity="0.4"/>
+                    <path d="M130 200 L180 140 L220 200 Z" fill="#94A3B8" opacity="0.4"/>
+                    <path d="M30 220 L120 100 L210 220 Z" fill="#1E293B"/>
+                    <path d="M120 100 L140 126 L125 132 L115 120 L100 130 L95 125 Z" fill="#F1F5F9"/>
+                  </g>
+                  <rect x="30" y="215" width="180" height="4" rx="2" fill="#0EA5E9"/>
+                </svg>
                 <h3 className="mb-3 text-sm font-semibold text-slate-800">{site.name}</h3>
                 <p className="text-sm leading-relaxed text-slate-500">{site.tagline}</p>
               </div>
@@ -157,7 +187,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <div className="space-y-2 text-sm text-slate-500">
                   <a href="/" className="block hover:text-blue-600 transition-colors">Home</a>
                   <a href="/best" className="block hover:text-blue-600 transition-colors">Best Picks</a>
-                  <a href={tool.website} target="_blank" rel="noopener noreferrer nofollow" className="block hover:text-blue-600 transition-colors">{tool.name} Official</a>
+                  <a href={trialLink} target="_blank" rel="noopener noreferrer nofollow" className="block hover:text-blue-600 transition-colors">Start Free Trial</a>
+                  <a href={saasUpgradeLink} target="_blank" rel="noopener noreferrer nofollow" className="block text-xs text-slate-400 hover:text-blue-600 transition-colors">Already a member? Upgrade to SaaS Pro →</a>
                 </div>
               </div>
               <div>

@@ -89,6 +89,12 @@ export interface ToolData {
   description: string
   website: string
   affiliateLink: string
+  affiliateLinkAnnual?: string
+  affiliateLinkSaaSPro?: string
+  affiliateLinkBootcamp?: string
+  affiliateLinkAI?: string
+  affiliateLinkUpgrade?: string
+  affiliateLinkSaaSUpgrade?: string
   rating: number
   reviewCount: number
   pricing: Pricing

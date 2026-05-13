@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getAudiences, getProblems, getTool, getFeatures, getGuides, getCompetitors } from "@/lib/data";
+import { getAudiences, getProblems, getTool, getFeatures, getGuides, getCompetitors, getAffiliateLink, getAffiliateLinkBootcamp, getAffiliateLinkUpgrade, getAffiliateLinkSaaSUpgrade } from "@/lib/data";
 import TrustBar from "@/components/TrustBar";
 import PricingChart from "@/components/PricingChart";
 import FeatureMatrix from "@/components/FeatureMatrix";
@@ -12,6 +12,10 @@ export default function HomePage() {
   const features = getFeatures();
   const guides = getGuides();
   const competitors = getCompetitors();
+  const trialLink = getAffiliateLink();
+  const bootcampLink = getAffiliateLinkBootcamp();
+  const upgradeLink = getAffiliateLinkUpgrade();
+  const saasUpgradeLink = getAffiliateLinkSaaSUpgrade();
 
   return (
     <div className="animate-fade-in">
@@ -26,13 +30,16 @@ export default function HomePage() {
           {tool.description}
         </p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-          <a href={tool.website} target="_blank" rel="noopener noreferrer nofollow" className="btn-primary text-base">
+          <a href={trialLink} target="_blank" rel="noopener noreferrer nofollow" className="btn-primary text-base">
             Start Free Trial →
           </a>
           <a href="#features" className="btn-secondary text-base">
             Explore Features
           </a>
         </div>
+        <p className="mt-4 text-sm text-slate-400">
+          🔥 New? Try the <a href={bootcampLink} target="_blank" rel="noopener noreferrer nofollow" className="font-medium text-blue-600 hover:text-blue-700 underline underline-offset-2">HighLevel Bootcamp</a> — 30 days of guided training with live support, included free with your trial
+        </p>
       </section>
 
       <TrustBar />
@@ -120,6 +127,21 @@ export default function HomePage() {
       </section>
 
       <PricingChart />
+
+      <div className="mb-16 grid gap-4 sm:grid-cols-2">
+        <div className="card-solid p-5 text-center">
+          <p className="text-sm text-slate-500">Already on the Starter plan?</p>
+          <a href={upgradeLink} target="_blank" rel="noopener noreferrer nofollow" className="mt-2 inline-flex items-center gap-1 text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors">
+            Upgrade to Unlimited and unlock the full platform →
+          </a>
+        </div>
+        <div className="card-solid p-5 text-center">
+          <p className="text-sm text-slate-500">Running an agency or SaaS?</p>
+          <a href={saasUpgradeLink} target="_blank" rel="noopener noreferrer nofollow" className="mt-2 inline-flex items-center gap-1 text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors">
+            Move to SaaS Pro — white-label, sub-accounts, and client management →
+          </a>
+        </div>
+      </div>
 
       <section className="mb-16">
         <h2 className="section-title">Quick Start Guides</h2>

@@ -12,6 +12,12 @@
     "description": "GoHighLevel is an all-in-one marketing and sales platform designed for agencies, small businesses, and entrepreneurs. It combines CRM, email/SMS marketing, funnel building, appointment scheduling, reputation management, AI voice agents, and white-label capabilities into a single platform — replacing 10+ separate tools.",
     "website": "https://www.gohighlevel.com",
     "affiliateLink": "",
+    "affiliateLinkAnnual": "https://www.gohighlevel.com/annual?fp_ref=7vvgg2",
+    "affiliateLinkSaaSPro": "https://www.gohighlevel.com/protrial?fp_ref=7vvgg2",
+    "affiliateLinkBootcamp": "https://www.gohighlevel.com/highlevel-bootcamp?fp_ref=7vvgg2",
+    "affiliateLinkAI": "https://www.gohighlevel.com/ai?fp_ref=7vvgg2",
+    "affiliateLinkUpgrade": "https://www.gohighlevel.com/297upgrade?fp_ref=7vvgg2",
+    "affiliateLinkSaaSUpgrade": "https://gohighlevel.com/saasupgrade?fp_ref=7vvgg2",
     "rating": 4.6,
     "reviewCount": 12400,
     "pricing": {
