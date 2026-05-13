@@ -1,30 +1,62 @@
-import { RootData } from "./types";
+import { RootData, SiteInfo, ToolData, Audience, Problem, Feature, Competitor, Guide, GlossaryTerm } from "./types";
 import raw from "@/data/tools.json";
 
 const data = raw as unknown as RootData;
 
-export function getSite(): RootData["site"] {
+export function getSite(): SiteInfo {
   return data.site;
 }
 
-export function getTool(): RootData["tool"] {
+export function getTool(): ToolData {
   return data.tool;
 }
 
-export function getAudiences(): RootData["audiences"] {
+export function getAudiences(): Audience[] {
   return data.audiences;
 }
 
-export function getAudience(slug: string): RootData["audiences"][number] | undefined {
+export function getAudience(slug: string): Audience | undefined {
   return data.audiences.find((a) => a.slug === slug);
 }
 
-export function getProblems(): RootData["problems"] {
+export function getProblems(): Problem[] {
   return data.problems;
 }
 
-export function getProblem(slug: string): RootData["problems"][number] | undefined {
+export function getProblem(slug: string): Problem | undefined {
   return data.problems.find((p) => p.slug === slug);
+}
+
+export function getFeatures(): Feature[] {
+  return data.tool.features;
+}
+
+export function getFeature(slug: string): Feature | undefined {
+  return data.tool.features.find((f) => f.slug === slug);
+}
+
+export function getCompetitors(): Competitor[] {
+  return data.competitors;
+}
+
+export function getCompetitor(slug: string): Competitor | undefined {
+  return data.competitors.find((c) => c.slug === slug);
+}
+
+export function getGuides(): Guide[] {
+  return data.guides;
+}
+
+export function getGuide(slug: string): Guide | undefined {
+  return data.guides.find((g) => g.slug === slug);
+}
+
+export function getGlossaryTerms(): GlossaryTerm[] {
+  return data.glossary;
+}
+
+export function getGlossaryTerm(slug: string): GlossaryTerm | undefined {
+  return data.glossary.find((g) => g.slug === slug);
 }
 
 export function getAffiliateLink(): string {

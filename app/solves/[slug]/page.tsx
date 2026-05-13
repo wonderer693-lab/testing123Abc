@@ -33,56 +33,55 @@ export default async function ProblemPage({ params }: { params: Promise<{ slug: 
 
   const faqs = [
     { q: `How does ${tool.name} help with ${problem.name.toLowerCase()}?`, a: problem.explanation },
-    { q: `Is the Starter plan enough to solve this?`, a: `For most businesses, the $${tool.pricing.starter}/month Starter plan provides enough features to address this. Agencies need the $${tool.pricing.unlimited}/month Unlimited plan.` },
-    { q: `How fast will I see results?`, a: `Most users report noticeable improvements within the first week of setup. Full automation workflows can be deployed in 1-2 days.` },
+    { q: `Is the $${tool.pricing.starter} Starter plan enough?`, a: `For most businesses, yes. Agencies managing multiple clients need the $${tool.pricing.unlimited}/month Unlimited plan.` },
+    { q: `How fast will I see results?`, a: `Most users report noticeable improvements within the first week. Full automation workflows can be deployed in 1-2 days.` },
     { q: `Do I need technical skills?`, a: `No. ${tool.name} is designed for non-technical users. Templates and snapshots make setup straightforward.` },
   ];
 
   return (
     <>
       <SchemaMarkup schema={productSchema()} />
-      <SchemaMarkup schema={breadcrumbSchema([
-        { name: "Home", url: "/" },
-        { name: problem.title, url: `/solves/${problem.slug}` },
-      ])} />
+      <SchemaMarkup schema={breadcrumbSchema([{ name: "Home", url: "/" }, { name: problem.title, url: `/solves/${problem.slug}` }])} />
       <SchemaMarkup schema={faqSchema(faqs)} />
 
-      <Breadcrumbs items={[
-        { name: "Home", url: "/" },
-        { name: problem.title, url: `/solves/${problem.slug}` },
-      ]} />
+      <Breadcrumbs items={[{ name: "Home", url: "/" }, { name: problem.title, url: `/solves/${problem.slug}` }]} />
 
-      <h1 className="mb-4 text-3xl font-bold tracking-tight">{problem.title}</h1>
+      <div className="mb-4 flex items-center gap-2">
+        <span className="pill pill-green">Problem Solver</span>
+      </div>
+      <h1 className="mb-6 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">{problem.title}</h1>
 
-      <section className="mb-8">
-        <p className="leading-relaxed text-gray-700">{problem.explanation}</p>
+      <section className="mb-10" id="overview">
+        <div className="card-glass p-6">
+          <p className="leading-relaxed text-slate-600">{problem.explanation}</p>
+        </div>
       </section>
 
-      <section className="mb-8">
-        <h2 className="mb-3 text-xl font-semibold">Who This Helps Most</h2>
-        <div className="grid gap-3 sm:grid-cols-2">
+      <section className="mb-10">
+        <h2 className="section-title text-xl">Who This Helps Most</h2>
+        <div className="grid gap-4 sm:grid-cols-2">
           {audiences.map((a) => (
             <a
               key={a.slug}
               href={`/for/${a.slug}`}
-              className="rounded-lg border border-gray-200 p-4 transition-colors hover:border-blue-300"
+              className="card-solid p-4 block"
             >
-              <h3 className="font-medium text-blue-700">{a.name}</h3>
-              <p className="mt-1 text-sm text-gray-600">{a.problem.slice(0, 100)}...</p>
+              <h3 className="font-semibold text-slate-800">{a.name}</h3>
+              <p className="mt-1 text-sm text-slate-500">{a.problem.slice(0, 100)}...</p>
             </a>
           ))}
         </div>
       </section>
 
-      <section className="mb-8">
-        <h2 className="mb-3 text-xl font-semibold">Why {tool.name} Works</h2>
+      <section className="mb-10" id="benefits">
+        <h2 className="section-title text-xl">Why {tool.name} Works</h2>
         <ProsCons
           pros={[
-            "All-in-one platform replaces 5-10 tools",
+            "All-in-one replaces 5-10 separate tools",
             "Automated follow-ups never miss a lead",
             "AI voice agents work 24/7",
             "White-label capabilities for agencies",
-            "Snapshots for rapid deployment",
+            "Snapshots for rapid client deployment",
           ]}
           cons={[
             "Learning curve for advanced features",
@@ -92,9 +91,12 @@ export default async function ProblemPage({ params }: { params: Promise<{ slug: 
         />
       </section>
 
-      <AffiliateCta text={`Start Solving ${problem.name} with ${tool.name} →`} />
-
-      <FaqSection items={faqs} />
+      <section id="pricing">
+        <AffiliateCta text={`Start Solving ${problem.name} with ${tool.name} →`} />
+      </section>
+      <section id="faq">
+        <FaqSection items={faqs} />
+      </section>
     </>
   );
 }

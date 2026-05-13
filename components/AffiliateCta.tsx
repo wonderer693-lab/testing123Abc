@@ -1,20 +1,28 @@
-import { getAffiliateLink } from "@/lib/data";
+import { getAffiliateLink, getTool } from "@/lib/data";
 
 export default function AffiliateCta({ text, className }: { text?: string; className?: string }) {
   const link = getAffiliateLink();
+  const tool = getTool();
   return (
-    <div className={`my-8 rounded-xl border border-blue-200 bg-blue-50 p-6 ${className || ""}`}>
-      <p className="mb-1 text-xs text-gray-500">
-        Disclosure: I may earn a commission if you purchase through links on this page.
-      </p>
-      <a
-        href={link}
-        target="_blank"
-        rel="noopener noreferrer nofollow"
-        className="mt-3 inline-block rounded-lg bg-blue-600 px-6 py-3 font-medium text-white transition-colors hover:bg-blue-700"
-      >
-        {text || "Try GoHighLevel Free →"}
-      </a>
+    <div className={`my-10 overflow-hidden rounded-xl border border-blue-200/50 bg-gradient-to-r from-blue-50 via-white to-blue-50 p-6 text-center sm:p-8 ${className || ""}`}>
+      <div className="mx-auto max-w-lg">
+        <div className="mb-2 inline-flex items-center gap-2 rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-blue-700">
+          Affiliate Disclosure
+        </div>
+        <p className="mb-1 text-xs text-slate-400">
+          I may earn a commission if you purchase through links on this page.
+        </p>
+        <p className="mb-2 text-lg font-semibold text-slate-800">Ready to transform your business?</p>
+        <p className="mb-5 text-sm text-slate-500">Join 1M+ businesses using {tool.name}. Start your free trial today — no credit card required.</p>
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+          className="btn-primary"
+        >
+          {text || `Try ${tool.name} Free →`}
+        </a>
+      </div>
     </div>
   );
 }

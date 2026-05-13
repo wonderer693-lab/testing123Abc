@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "verify": "node scripts/verify-bismillah.mjs",
     "presitemap": "node scripts/generate-sitemap.mjs",
-    "build": "npm run presitemap && next build",
-    "start": "npx serve out"
+    "build": "npm run verify && npm run presitemap && next build",
+    "start": "serve out"
   },
   "dependencies": {
     "@types/node": "^25.7.0",
@@ -19,6 +20,7 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4.3.0",
     "postcss": "^8.5.14",
+    "serve": "^14.2.6",
     "tailwindcss": "^4.3.0"
   }
 }
