@@ -63,28 +63,8 @@ export function getAffiliateLink(): string {
   return data.tool.affiliateLink || "[YOUR_AFFILIATE_LINK]";
 }
 
-export function getAffiliateLinkAnnual(): string {
-  return data.tool.affiliateLinkAnnual || getAffiliateLink();
-}
-
-export function getAffiliateLinkSaaSPro(): string {
-  return data.tool.affiliateLinkSaaSPro || getAffiliateLink();
-}
-
 export function getAffiliateLinkBootcamp(): string {
   return data.tool.affiliateLinkBootcamp || getAffiliateLink();
-}
-
-export function getAffiliateLinkAI(): string {
-  return data.tool.affiliateLinkAI || getAffiliateLink();
-}
-
-export function getAffiliateLinkUpgrade(): string {
-  return data.tool.affiliateLinkUpgrade || getAffiliateLink();
-}
-
-export function getAffiliateLinkSaaSUpgrade(): string {
-  return data.tool.affiliateLinkSaaSUpgrade || getAffiliateLink();
 }
 
 export function formatPrice(price: number): string {

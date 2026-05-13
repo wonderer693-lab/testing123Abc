@@ -25,7 +25,7 @@
   فَلَا مُمۡسِكَ لَهَا
 */
 import type { Metadata } from "next";
-import { getSite, getTool, getFeatures, getGuides, getCompetitors, getAudiences, getAffiliateLinkBootcamp, getAffiliateLinkAI, getAffiliateLinkSaaSUpgrade, getAffiliateLinkUpgrade } from "@/lib/data";
+import { getSite, getTool, getFeatures, getGuides, getCompetitors, getAudiences, getAffiliateLink, getAffiliateLinkBootcamp } from "@/lib/data";
 import "./globals.css";
 
 const site = getSite();
@@ -49,9 +49,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const bootcampLink = getAffiliateLinkBootcamp();
-  const aiLink = getAffiliateLinkAI();
-  const saasUpgradeLink = getAffiliateLinkSaaSUpgrade();
-  const upgradeLink = getAffiliateLinkUpgrade();
+  const mainLink = getAffiliateLink();
   return (
     <html lang="en">
       <body>
@@ -159,6 +157,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </div>
         </div>
 
+        <div className="border-b border-blue-100 bg-gradient-to-r from-blue-50 via-white to-blue-50">
+          <div className="mx-auto max-w-5xl px-4 py-3 sm:px-6 lg:px-8">
+            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm sm:text-base font-medium text-slate-700">
+              <a href={mainLink} target="_blank" rel="noopener noreferrer nofollow" className="hover:text-blue-700 transition-colors">🔥 HighLevel Bootcamp — 30-day guided setup with live training, free with your trial</a>
+              <span className="hidden sm:inline text-slate-300">|</span>
+              <a href={mainLink} target="_blank" rel="noopener noreferrer nofollow" className="hover:text-blue-700 transition-colors">🤖 Meet GHL's AI Employee — automated call answering, lead qualification</a>
+              <span className="hidden sm:inline text-slate-300">|</span>
+              <a href={mainLink} target="_blank" rel="noopener noreferrer nofollow" className="hover:text-blue-700 transition-colors">⬆️ Upgrade to SaaS Pro — white-label & client management</a>
+            </div>
+          </div>
+        </div>
+
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <main className="py-8 sm:py-12">{children}</main>
         </div>
@@ -186,11 +196,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </div>
               <div>
                 <h3 className="mb-3 text-sm font-semibold text-slate-800">Quick Links</h3>
-                <div className="space-y-2 text-sm text-slate-500">
-                  <a href="/" className="block hover:text-blue-600 transition-colors">Home</a>
-                  <a href="/best" className="block hover:text-blue-600 transition-colors">Best Picks</a>
-                  <a href={bootcampLink} target="_blank" rel="noopener noreferrer nofollow" className="block hover:text-blue-600 transition-colors">Start Free Trial</a>
-                  <a href={saasUpgradeLink} target="_blank" rel="noopener noreferrer nofollow" className="block text-xs text-slate-400 hover:text-blue-600 transition-colors">Already a member? Upgrade to SaaS Pro →</a>
+                <div className="space-y-2">
+                  <a href="/" className="block text-sm text-slate-500 hover:text-blue-600 transition-colors">Home</a>
+                  <a href="/best" className="block text-sm text-slate-500 hover:text-blue-600 transition-colors">Best Picks</a>
+                  <a href={bootcampLink} target="_blank" rel="noopener noreferrer nofollow" className="block font-semibold text-blue-600 hover:text-blue-700 transition-colors">🔥 Start Free Trial — HighLevel Bootcamp 30-Day</a>
+                  <a href={mainLink} target="_blank" rel="noopener noreferrer nofollow" className="block text-sm text-slate-600 hover:text-blue-600 transition-colors">🤖 Meet GHL's AI Employee</a>
+                  <a href={mainLink} target="_blank" rel="noopener noreferrer nofollow" className="block text-sm text-slate-600 hover:text-blue-600 transition-colors">⬆️ Upgrade to Unlimited</a>
+                  <a href={mainLink} target="_blank" rel="noopener noreferrer nofollow" className="block text-sm text-slate-600 hover:text-blue-600 transition-colors">⭐ Upgrade to SaaS Pro</a>
                 </div>
               </div>
               <div>

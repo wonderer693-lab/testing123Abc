@@ -1,8 +1,9 @@
-import { getTool, getFeatures } from "@/lib/data";
+import { getTool, getFeatures, getAffiliateLinkBootcamp } from "@/lib/data";
 
 export default function Sidebar({ currentSlug, type }: { currentSlug?: string; type: "feature" | "audience" | "guide" }) {
   const tool = getTool();
   const features = getFeatures();
+  const bootcampLink = getAffiliateLinkBootcamp();
 
   return (
     <aside className="space-y-6">
@@ -35,7 +36,7 @@ export default function Sidebar({ currentSlug, type }: { currentSlug?: string; t
         <p className="mb-3 text-sm font-semibold text-slate-800">Start Your Free Trial</p>
         <p className="mb-4 text-xs text-slate-500">Join 1M+ businesses using {tool.name}</p>
         <a
-          href={tool.website}
+          href={bootcampLink}
           target="_blank"
           rel="noopener noreferrer nofollow"
           className="btn-primary !py-2 !px-4 text-sm"
