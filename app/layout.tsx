@@ -25,7 +25,7 @@
   فَلَا مُمۡسِكَ لَهَا
 */
 import type { Metadata } from "next";
-import { getSite, getTool, getFeatures, getGuides, getCompetitors, getAudiences, getAffiliateLink, getAffiliateLinkSaaSUpgrade } from "@/lib/data";
+import { getSite, getTool, getFeatures, getGuides, getCompetitors, getAudiences, getAffiliateLinkBootcamp, getAffiliateLinkAI, getAffiliateLinkSaaSUpgrade, getAffiliateLinkUpgrade } from "@/lib/data";
 import "./globals.css";
 
 const site = getSite();
@@ -48,8 +48,10 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const trialLink = getAffiliateLink();
+  const bootcampLink = getAffiliateLinkBootcamp();
+  const aiLink = getAffiliateLinkAI();
   const saasUpgradeLink = getAffiliateLinkSaaSUpgrade();
+  const upgradeLink = getAffiliateLinkUpgrade();
   return (
     <html lang="en">
       <body>
@@ -121,7 +123,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 </div>
               </div>
               <a href="/best" className="nav-link px-3 py-2 text-sm">Best Picks</a>
-              <a href={trialLink} target="_blank" rel="noopener noreferrer nofollow" className="ml-2 btn-primary !py-2 !px-4 text-sm">Start Free Trial</a>
+              <a href={bootcampLink} target="_blank" rel="noopener noreferrer nofollow" className="ml-2 btn-primary !py-2 !px-4 text-sm">Start Free Trial</a>
             </nav>
             <details className="sm:hidden">
               <summary className="flex cursor-pointer items-center gap-2 rounded-lg p-2 text-slate-600">
@@ -150,7 +152,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   ))}
                   <hr className="my-2 border-blue-100" />
                   <a href="/best" className="block rounded-lg px-3 py-2 text-sm font-medium text-blue-600 hover:bg-blue-50">Best Picks</a>
-                  <a href={trialLink} target="_blank" rel="noopener noreferrer nofollow" className="mt-3 btn-primary block text-center text-sm">Start Free Trial</a>
+                  <a href={bootcampLink} target="_blank" rel="noopener noreferrer nofollow" className="mt-3 btn-primary block text-center text-sm">Start Free Trial</a>
                 </div>
               </div>
             </details>
@@ -187,7 +189,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <div className="space-y-2 text-sm text-slate-500">
                   <a href="/" className="block hover:text-blue-600 transition-colors">Home</a>
                   <a href="/best" className="block hover:text-blue-600 transition-colors">Best Picks</a>
-                  <a href={trialLink} target="_blank" rel="noopener noreferrer nofollow" className="block hover:text-blue-600 transition-colors">Start Free Trial</a>
+                  <a href={bootcampLink} target="_blank" rel="noopener noreferrer nofollow" className="block hover:text-blue-600 transition-colors">Start Free Trial</a>
                   <a href={saasUpgradeLink} target="_blank" rel="noopener noreferrer nofollow" className="block text-xs text-slate-400 hover:text-blue-600 transition-colors">Already a member? Upgrade to SaaS Pro →</a>
                 </div>
               </div>
