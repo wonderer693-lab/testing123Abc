@@ -12,7 +12,6 @@ export default function HomePage() {
   const features = getFeatures();
   const guides = getGuides();
   const competitors = getCompetitors();
-  const trialLink = getAffiliateLink();
   const bootcampLink = getAffiliateLinkBootcamp();
   const upgradeLink = getAffiliateLinkUpgrade();
   const saasUpgradeLink = getAffiliateLinkSaaSUpgrade();
@@ -30,7 +29,7 @@ export default function HomePage() {
           {tool.description}
         </p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-          <a href={trialLink} target="_blank" rel="noopener noreferrer nofollow" className="btn-primary text-base">
+          <a href={bootcampLink} target="_blank" rel="noopener noreferrer nofollow" className="btn-primary text-base">
             Start Free Trial →
           </a>
           <a href="#features" className="btn-secondary text-base">
