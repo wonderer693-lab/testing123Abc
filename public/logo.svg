@@ -1,0 +1,14 @@
+<svg id="main-logo" width="200" height="200" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="120" cy="120" r="110" fill="#F8FAFC"></circle>
+  <g>
+    <path d="M120 20 L126 54 L160 60 L126 66 L120 100 L114 66 L80 60 L114 54 Z" fill="#0EA5E9"></path>
+    <path d="M120 45 L123 57 L135 60 L123 63 L120 75 L117 63 L105 60 L117 57 Z" fill="#BAE6FD"></path>
+  </g>
+  <g>
+    <path d="M40 200 L90 130 L140 200 Z" fill="#94A3B8" opacity="0.4"></path>
+    <path d="M130 200 L180 140 L220 200 Z" fill="#94A3B8" opacity="0.4"></path>
+    <path d="M30 220 L120 100 L210 220 Z" fill="#1E293B"></path>
+    <path d="M120 100 L140 126 L125 132 L115 120 L100 130 L95 125 Z" fill="#F1F5F9"></path>
+  </g>
+  <rect x="30" y="215" width="180" height="4" rx="2" fill="#0EA5E9"></rect>
+</svg>

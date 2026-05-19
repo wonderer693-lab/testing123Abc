@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { getCompetitors, getCompetitor, getTool, getFeatures } from "@/lib/data";
+import { getCompetitors, getCompetitor, getTool, getFeatures, getAffiliateLinkBootcamp } from "@/lib/data";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ProsCons from "@/components/ProsCons";
 import ComparisonTable from "@/components/ComparisonTable";
@@ -33,6 +33,7 @@ export default async function ComparePage({ params }: { params: Promise<{ slug: 
 
   const tool = getTool();
   const features = getFeatures();
+  const bootcampLink = getAffiliateLinkBootcamp();
 
   const comparisonItems = features.map((f) => ({
     feature: f.name,
@@ -73,7 +74,7 @@ export default async function ComparePage({ params }: { params: Promise<{ slug: 
             <span className="text-2xl font-bold text-slate-900">${tool.pricing.starter}</span>
             <span className="text-sm text-slate-500">/mo</span>
           </div>
-          <a href={tool.website} target="_blank" rel="noopener noreferrer nofollow" className="btn-primary mt-4 !py-2 !px-4 text-sm">
+          <a href={bootcampLink} target="_blank" rel="noopener noreferrer nofollow" className="btn-primary mt-4 !py-2 !px-4 text-sm">
             Try {tool.shortName} Free →
           </a>
         </div>
