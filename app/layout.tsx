@@ -24,18 +24,26 @@
   مَّا يَفۡتَحِ ٱللَّهُ لِلنَّاسِ مِن رَّحۡمَةٖ
   فَلَا مُمۡسِكَ لَهَا
 */
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/next";
+import BackToTop from "@/components/BackToTop";
 import "./globals.css";
 
 const siteName = "NextAuthCompare";
 const siteTagline = "Compare the best Next.js authentication tools. In-depth reviews, pricing breakdowns, and developer experience analysis.";
 const siteUrl = "https://saaspolarbeam.vercel.app";
 
+export const viewport: Viewport = {
+  themeColor: "#4f46e5",
+};
+
 export const metadata: Metadata = {
   title: { default: siteName, template: `%s - ${siteName}` },
   description: siteTagline,
   metadataBase: new URL(siteUrl),
+  icons: {
+    icon: "/icon.svg",
+  },
   openGraph: {
     title: siteName,
     description: siteTagline,
@@ -54,25 +62,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               href="/"
               className="flex items-center gap-2 text-xl font-bold tracking-tight gradient-text-blue"
             >
-              <svg width="28" height="28" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0">
-                <circle cx="120" cy="120" r="110" fill="#F8FAFC"/>
-                <g>
-                  <path d="M120 20 L126 54 L160 60 L126 66 L120 100 L114 66 L80 60 L114 54 Z" fill="#0EA5E9"/>
-                  <path d="M120 45 L123 57 L135 60 L123 63 L120 75 L117 63 L105 60 L117 57 Z" fill="#BAE6FD"/>
-                </g>
-                <g>
-                  <path d="M40 200 L90 130 L140 200 Z" fill="#94A3B8" opacity="0.4"/>
-                  <path d="M130 200 L180 140 L220 200 Z" fill="#94A3B8" opacity="0.4"/>
-                  <path d="M30 220 L120 100 L210 220 Z" fill="#1E293B"/>
-                  <path d="M120 100 L140 126 L125 132 L115 120 L100 130 L95 125 Z" fill="#F1F5F9"/>
-                </g>
-                <rect x="30" y="215" width="180" height="4" rx="2" fill="#0EA5E9"/>
+              <svg width="28" height="28" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0">
+                <rect x="2" y="2" width="96" height="96" rx="20" fill="#EEF2FF"/>
+                <rect x="2" y="2" width="96" height="96" rx="20" stroke="#4F46E5" strokeWidth="3"/>
+                <path d="M50 18L22 35v14c0 18.7 11.7 36.2 28 43 16.3-6.8 28-24.3 28-43V35L50 18z" fill="#4F46E5" opacity="0.15"/>
+                <path d="M50 24L28 38v11c0 15.3 9.6 29.6 22 35.2 12.4-5.6 22-19.9 22-35.2V38L50 24z" fill="#4F46E5"/>
+                <path d="M43 52l5 5 9-9" stroke="#fff" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"/>
+                <text x="22" y="85" fontSize="9" fontWeight="700" fill="#4F46E5" fontFamily="system-ui">&lt;/&gt;</text>
               </svg>
               {siteName}
             </a>
             <nav className="flex items-center gap-1">
               <a href="/" className="nav-link px-3 py-2 text-sm">Home</a>
-              <a href="/" className="nav-link px-3 py-2 text-sm">Compare Tools</a>
+              <a href="/#comparisons-grid" className="nav-link px-3 py-2 text-sm">Compare Tools</a>
             </nav>
           </div>
         </div>
@@ -92,6 +94,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <h3 className="mb-3 text-sm font-semibold text-slate-800">Quick Links</h3>
                 <div className="space-y-2">
                   <a href="/" className="block text-sm text-slate-500 hover:text-blue-600 transition-colors">Home</a>
+                  <a href="/#comparisons-grid" className="block text-sm text-slate-500 hover:text-blue-600 transition-colors">All Comparisons</a>
                 </div>
               </div>
               <div>
@@ -109,6 +112,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </div>
           </div>
         </footer>
+        <BackToTop />
         <Analytics />
       </body>
     </html>
