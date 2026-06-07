@@ -8,13 +8,13 @@ export default function HomePage() {
   return (
     <div className="animate-fade-in">
       <section className="mb-10 text-center">
-        <div className="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-gray-200 bg-gray-50 px-4 py-1.5 text-xs font-semibold text-gray-600">
+        <div className="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-gray-200 bg-gray-50 px-4 py-1.5 text-xs font-semibold text-gray-600 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300">
           Next.js Developer Infrastructure
         </div>
-        <h1 className="mb-4 text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">
+        <h1 className="mb-4 text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl dark:text-slate-100">
           Compare the Best Next.js Authentication Tools
         </h1>
-        <p className="mx-auto mb-8 max-w-2xl text-lg text-slate-500">
+        <p className="mx-auto mb-8 max-w-2xl text-lg text-slate-500 dark:text-slate-400">
           In-depth comparisons, pricing breakdowns, and developer experience analysis
           for the top Next.js auth solutions in 2026.
         </p>
@@ -43,11 +43,11 @@ export default function HomePage() {
             <section key={tool.id} id={`tool-${tool.id}`} className="mb-14 scroll-mt-20">
               <div className="mb-4 flex items-center gap-3">
                 <span className="pill pill-blue text-sm font-semibold">{tool.name}</span>
-                <span className="text-sm text-slate-400">
+                <span className="text-sm text-slate-400 dark:text-slate-500">
                   {tool.rating} ★ &middot; Next.js: {tool.nextjs_integration_score}/10
                 </span>
               </div>
-              <p className="mb-5 text-sm leading-relaxed text-slate-500">
+              <p className="mb-5 text-sm leading-relaxed text-slate-500 dark:text-slate-400">
                 {tool.short_description}
               </p>
 
@@ -56,10 +56,10 @@ export default function HomePage() {
                   href={`/compare/${tool.id}-vs-${first.id}`}
                   className="card-solid p-5 group"
                 >
-                  <h3 className="font-semibold text-slate-800 group-hover:text-blue-700 transition-colors">
+                  <h3 className="font-semibold text-slate-800 group-hover:text-blue-700 dark:text-slate-200 dark:group-hover:text-blue-400 transition-colors">
                     {tool.name} vs {first.name}
                   </h3>
-                  <div className="mt-2 flex items-center gap-4 text-sm text-slate-400">
+                  <div className="mt-2 flex items-center gap-4 text-sm text-slate-400 dark:text-slate-500">
                     <span>{first.rating} ★</span>
                     <span>{first.learning_curve}</span>
                     <span>{first.starting_price}</span>
@@ -69,10 +69,10 @@ export default function HomePage() {
                   href={`/compare/${tool.id}-vs-${second.id}`}
                   className="card-solid p-5 group"
                 >
-                  <h3 className="font-semibold text-slate-800 group-hover:text-blue-700 transition-colors">
+                  <h3 className="font-semibold text-slate-800 group-hover:text-blue-700 dark:text-slate-200 dark:group-hover:text-blue-400 transition-colors">
                     {tool.name} vs {second.name}
                   </h3>
-                  <div className="mt-2 flex items-center gap-4 text-sm text-slate-400">
+                  <div className="mt-2 flex items-center gap-4 text-sm text-slate-400 dark:text-slate-500">
                     <span>{second.rating} ★</span>
                     <span>{second.learning_curve}</span>
                     <span>{second.starting_price}</span>
@@ -82,7 +82,7 @@ export default function HomePage() {
 
               <Link
                 href={`/tools/${tool.id}`}
-                className="text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors"
+                className="text-sm font-semibold text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 transition-colors"
               >
                 View all comparisons for {tool.name} &rarr;
               </Link>

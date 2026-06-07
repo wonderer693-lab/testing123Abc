@@ -36,13 +36,13 @@ export default async function AlternativesPage({ params }: { params: Promise<{ s
 
       <div className="mb-4 flex items-center gap-2">
         <span className="pill pill-amber">Alternatives</span>
-        <span className="text-xs text-slate-400">Top 5 picks</span>
+        <span className="text-xs text-slate-400 dark:text-slate-500">Top 5 picks</span>
       </div>
 
-      <h1 className="mb-2 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+      <h1 className="mb-2 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl dark:text-slate-100">
         Best 5 {tool.name} Alternatives for Next.js Developers (2026)
       </h1>
-      <p className="mb-8 text-lg text-slate-500">
+      <p className="mb-8 text-lg text-slate-500 dark:text-slate-400">
         If {tool.name} does not fit your needs, here are the top alternatives sorted by learning curve
         from easiest to most advanced.
       </p>
@@ -54,13 +54,13 @@ export default async function AlternativesPage({ params }: { params: Promise<{ s
             className="card-solid p-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between"
           >
             <div className="flex items-start gap-4">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-100 font-bold text-blue-700">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-100 font-bold text-blue-700 dark:bg-blue-900 dark:text-blue-300">
                 {i + 1}
               </div>
               <div>
-                <h2 className="font-semibold text-slate-800">{alt.name}</h2>
-                <p className="mt-1 text-sm leading-relaxed text-slate-500">{alt.short_description.slice(0, 100)}...</p>
-                <div className="mt-2 flex flex-wrap gap-3 text-xs text-slate-400">
+                <h2 className="font-semibold text-slate-800 dark:text-slate-200">{alt.name}</h2>
+                <p className="mt-1 text-sm leading-relaxed text-slate-500 dark:text-slate-400">{alt.short_description.slice(0, 100)}...</p>
+                <div className="mt-2 flex flex-wrap gap-3 text-xs text-slate-400 dark:text-slate-500">
                   <span>{alt.rating} ★</span>
                   <span>{alt.learning_curve}</span>
                   <span>{alt.starting_price}</span>
@@ -89,7 +89,7 @@ export default async function AlternativesPage({ params }: { params: Promise<{ s
       </div>
 
       <div className="mt-8 text-center">
-        <Link href={`/tools/${slug}`} className="text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors">
+        <Link href={`/tools/${slug}`} className="text-sm font-semibold text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 transition-colors">
           &larr; Back to {tool.name} review
         </Link>
       </div>

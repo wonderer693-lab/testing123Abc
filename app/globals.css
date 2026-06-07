@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@variant dark (&:is(.dark *));
 
 @theme {
   --color-blue-50: #eff6ff;
@@ -71,6 +72,10 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+  .dark body {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+    color: var(--color-slate-200);
+  }
 
   ::selection {
     background: var(--color-blue-200);
@@ -100,10 +105,18 @@
     transition: all 0.2s ease;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
   }
+  .dark .card-solid {
+    background: var(--color-slate-800);
+    border-color: var(--color-slate-700);
+  }
   .card-solid:hover {
     border-color: var(--color-blue-200);
     box-shadow: 0 4px 12px rgba(59, 130, 246, 0.08);
     transform: translateY(-2px);
+  }
+  .dark .card-solid:hover {
+    border-color: var(--color-blue-600);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
   }
 
   .card-glass {
@@ -113,6 +126,10 @@
     border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 1rem;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
+  }
+  .dark .card-glass {
+    background: rgba(30, 41, 59, 0.7);
+    border-color: rgba(51, 65, 85, 0.5);
   }
 
   .btn-primary {
@@ -150,10 +167,19 @@
     border: 1.5px solid var(--color-blue-200);
     transition: all 0.2s ease;
   }
+  .dark .btn-secondary {
+    background: var(--color-slate-800);
+    color: var(--color-blue-400);
+    border-color: var(--color-slate-700);
+  }
   .btn-secondary:hover {
     border-color: var(--color-blue-400);
     background: var(--color-blue-50);
     transform: translateY(-2px);
+  }
+  .dark .btn-secondary:hover {
+    border-color: var(--color-blue-500);
+    background: var(--color-slate-700);
   }
 
   .btn-ghost {
@@ -167,8 +193,14 @@
     font-size: 0.9375rem;
     transition: all 0.2s ease;
   }
+  .dark .btn-ghost {
+    color: var(--color-blue-400);
+  }
   .btn-ghost:hover {
     background: rgba(59, 130, 246, 0.08);
+  }
+  .dark .btn-ghost:hover {
+    background: rgba(59, 130, 246, 0.15);
   }
 
   .section-title {
@@ -178,12 +210,18 @@
     margin-bottom: 1.5rem;
     letter-spacing: -0.02em;
   }
+  .dark .section-title {
+    color: var(--color-slate-100);
+  }
 
   .section-subtitle {
     font-size: 1rem;
     color: var(--color-slate-500);
     margin-top: -1rem;
     margin-bottom: 2rem;
+  }
+  .dark .section-subtitle {
+    color: var(--color-slate-400);
   }
 
   .gradient-text {
@@ -237,12 +275,20 @@
     color: var(--color-blue-700);
     border: 1px solid var(--color-blue-200);
   }
+  .dark .feature-badge {
+    background: rgba(30, 64, 175, 0.2);
+    color: var(--color-blue-300);
+    border-color: rgba(30, 64, 175, 0.3);
+  }
 
   .nav-link {
     position: relative;
     font-weight: 500;
     color: var(--color-slate-600);
     transition: color 0.2s ease;
+  }
+  .dark .nav-link {
+    color: var(--color-slate-300);
   }
   .nav-link::after {
     content: "";
@@ -258,11 +304,17 @@
   .nav-link:hover {
     color: var(--color-blue-700);
   }
+  .dark .nav-link:hover {
+    color: var(--color-blue-400);
+  }
   .nav-link:hover::after {
     width: 100%;
   }
   .nav-link.active {
     color: var(--color-blue-700);
+  }
+  .dark .nav-link.active {
+    color: var(--color-blue-400);
   }
   .nav-link.active::after {
     width: 100%;
@@ -277,6 +329,10 @@
     background: rgba(255, 255, 255, 0.85);
     border-bottom: 1px solid rgba(59, 130, 246, 0.1);
   }
+  .dark .sticky-nav {
+    background: rgba(15, 23, 42, 0.85);
+    border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+  }
 
   .pill {
     display: inline-flex;
@@ -287,9 +343,13 @@
     font-weight: 600;
   }
   .pill-blue { background: var(--color-blue-100); color: var(--color-blue-800); }
+  .dark .pill-blue { background: rgba(30, 64, 175, 0.3); color: var(--color-blue-300); }
   .pill-green { background: var(--color-green-100); color: var(--color-green-800); }
+  .dark .pill-green { background: rgba(22, 101, 52, 0.3); color: var(--color-green-300); }
   .pill-purple { background: var(--color-purple-100); color: var(--color-purple-800); }
+  .dark .pill-purple { background: rgba(107, 33, 168, 0.3); color: var(--color-purple-300); }
   .pill-amber { background: var(--color-amber-100); color: var(--color-amber-600); }
+  .dark .pill-amber { background: rgba(217, 119, 6, 0.3); color: var(--color-amber-300); }
 
   .stat-number {
     font-size: 2.25rem;

@@ -77,35 +77,35 @@ export default async function ComparePage({ params }: { params: Promise<{ slug: 
 
       <div className="mb-4 flex items-center gap-2">
         <span className="pill pill-purple">Comparison</span>
-        <span className="text-xs text-slate-400">Updated 2026</span>
+        <span className="text-xs text-slate-400 dark:text-slate-500">Updated 2026</span>
       </div>
 
-      <h1 className="mb-2 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+      <h1 className="mb-2 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl dark:text-slate-100">
         {a.name} vs {b.name}
       </h1>
-      <p className="mb-8 text-lg text-slate-500">Which authentication tool is right for your Next.js project?</p>
+      <p className="mb-8 text-lg text-slate-500 dark:text-slate-400">Which authentication tool is right for your Next.js project?</p>
 
       <div className="mb-10 grid gap-5 sm:grid-cols-2">
-        <div className="relative border-2 border-blue-600 shadow-lg bg-gradient-to-br from-blue-50 to-white rounded-xl p-6 overflow-hidden">
-          <span className="absolute top-3 right-3 rounded-full bg-blue-600 px-3 py-1 text-xs font-bold text-white shadow-sm">
+        <div className="relative border-2 border-blue-600 shadow-lg bg-gradient-to-br from-blue-50 to-white rounded-xl p-6 overflow-hidden dark:from-blue-950 dark:to-slate-900">
+          <span className="absolute top-3 right-3 rounded-full bg-blue-600 px-3 py-1 text-xs font-bold text-white shadow-sm dark:bg-blue-500">
             Top Pick
           </span>
-          <div className="mb-1 text-xs font-semibold uppercase tracking-wider text-blue-600">Our Pick</div>
-          <h2 className="text-xl font-bold text-slate-900">{winner.name}</h2>
-          <p className="mt-1 text-sm text-slate-500">
+          <div className="mb-1 text-xs font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400">Our Pick</div>
+          <h2 className="text-xl font-bold text-slate-900 dark:text-slate-100">{winner.name}</h2>
+          <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
             Next.js Score: {winner.nextjs_integration_score}/10 &middot; Rating: {winner.rating} ★
           </p>
-          <p className="mt-2 text-sm leading-relaxed text-slate-600">{winner.short_description.slice(0, 120)}...</p>
+          <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-300">{winner.short_description.slice(0, 120)}...</p>
           <a href={winner.affiliate_url} target="_blank" rel="noopener noreferrer nofollow" className="btn-primary mt-4 !py-2 !px-4 text-sm inline-flex">
             Try {winner.name} Free &rarr;
           </a>
         </div>
-        <div className="rounded-xl border border-slate-200 bg-white p-6">
-          <h2 className="text-xl font-bold text-slate-900">{loser.name}</h2>
-          <p className="mt-1 text-sm text-slate-500">
+        <div className="rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-800">
+          <h2 className="text-xl font-bold text-slate-900 dark:text-slate-100">{loser.name}</h2>
+          <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
             Next.js Score: {loser.nextjs_integration_score}/10 &middot; Rating: {loser.rating} ★
           </p>
-          <p className="mt-2 text-sm leading-relaxed text-slate-600">{loser.short_description.slice(0, 120)}...</p>
+          <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-300">{loser.short_description.slice(0, 120)}...</p>
           <a href={loser.affiliate_url} target="_blank" rel="noopener noreferrer nofollow" className="btn-secondary mt-4 !py-2 !px-4 text-sm inline-flex">
             Visit {loser.name} &rarr;
           </a>
@@ -114,58 +114,58 @@ export default async function ComparePage({ params }: { params: Promise<{ slug: 
 
       <section className="mb-10">
         <h2 className="section-title text-xl">Quick Comparison</h2>
-        <div className="overflow-x-auto rounded-xl border border-slate-200">
+        <div className="overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-700">
           <table className="w-full text-left text-sm">
             <thead>
-              <tr className="border-b border-slate-200 bg-slate-50">
-                <th className="px-5 py-3 font-semibold text-slate-700">Metric</th>
-                <th className="px-5 py-3 font-semibold text-blue-700">{a.name}</th>
-                <th className="px-5 py-3 font-semibold text-slate-700">{b.name}</th>
+              <tr className="border-b border-slate-200 bg-slate-50 dark:border-slate-700 dark:bg-slate-800">
+                <th className="px-5 py-3 font-semibold text-slate-700 dark:text-slate-300">Metric</th>
+                <th className="px-5 py-3 font-semibold text-blue-700 dark:text-blue-400">{a.name}</th>
+                <th className="px-5 py-3 font-semibold text-slate-700 dark:text-slate-300">{b.name}</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-100">
+            <tbody className="divide-y divide-slate-100 dark:divide-slate-700">
               <tr>
-                <td className="px-5 py-3 font-medium text-slate-600">Starting Price</td>
-                <td className="px-5 py-3 text-slate-800">{a.starting_price}</td>
-                <td className="px-5 py-3 text-slate-800">{b.starting_price}</td>
+                <td className="px-5 py-3 font-medium text-slate-600 dark:text-slate-400">Starting Price</td>
+                <td className="px-5 py-3 text-slate-800 dark:text-slate-200">{a.starting_price}</td>
+                <td className="px-5 py-3 text-slate-800 dark:text-slate-200">{b.starting_price}</td>
               </tr>
               <tr>
-                <td className="px-5 py-3 font-medium text-slate-600">Free Tier</td>
-                <td className="px-5 py-3 text-slate-800">{a.free_tier}</td>
-                <td className="px-5 py-3 text-slate-800">{b.free_tier}</td>
+                <td className="px-5 py-3 font-medium text-slate-600 dark:text-slate-400">Free Tier</td>
+                <td className="px-5 py-3 text-slate-800 dark:text-slate-200">{a.free_tier}</td>
+                <td className="px-5 py-3 text-slate-800 dark:text-slate-200">{b.free_tier}</td>
               </tr>
               <tr>
-                <td className="px-5 py-3 font-medium text-slate-600">Learning Curve</td>
-                <td className="px-5 py-3 text-slate-800">{a.learning_curve}</td>
-                <td className="px-5 py-3 text-slate-800">{b.learning_curve}</td>
+                <td className="px-5 py-3 font-medium text-slate-600 dark:text-slate-400">Learning Curve</td>
+                <td className="px-5 py-3 text-slate-800 dark:text-slate-200">{a.learning_curve}</td>
+                <td className="px-5 py-3 text-slate-800 dark:text-slate-200">{b.learning_curve}</td>
               </tr>
               <tr>
-                <td className="px-5 py-3 font-medium text-slate-600">Setup Time (Next.js)</td>
-                <td className="px-5 py-3 text-slate-800">{a.setup_time_nextjs}</td>
-                <td className="px-5 py-3 text-slate-800">{b.setup_time_nextjs}</td>
+                <td className="px-5 py-3 font-medium text-slate-600 dark:text-slate-400">Setup Time (Next.js)</td>
+                <td className="px-5 py-3 text-slate-800 dark:text-slate-200">{a.setup_time_nextjs}</td>
+                <td className="px-5 py-3 text-slate-800 dark:text-slate-200">{b.setup_time_nextjs}</td>
               </tr>
               <tr>
-                <td className="px-5 py-3 font-medium text-slate-600">Easier Alternative</td>
+                <td className="px-5 py-3 font-medium text-slate-600 dark:text-slate-400">Easier Alternative</td>
                 <td className="px-5 py-3">
-                  <Link href={a.easier_alternative_url} className="text-blue-600 hover:text-blue-700 transition-colors">
+                  <Link href={a.easier_alternative_url} className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 transition-colors">
                     {a.easier_alternative}
                   </Link>
                 </td>
                 <td className="px-5 py-3">
-                  <Link href={b.easier_alternative_url} className="text-blue-600 hover:text-blue-700 transition-colors">
+                  <Link href={b.easier_alternative_url} className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 transition-colors">
                     {b.easier_alternative}
                   </Link>
                 </td>
               </tr>
               <tr>
-                <td className="px-5 py-3 font-medium text-slate-600">Next.js Integration</td>
-                <td className="px-5 py-3">{a.nextjs_integration_score}/10</td>
-                <td className="px-5 py-3">{b.nextjs_integration_score}/10</td>
+                <td className="px-5 py-3 font-medium text-slate-600 dark:text-slate-400">Next.js Integration</td>
+                <td className="px-5 py-3 text-slate-800 dark:text-slate-200">{a.nextjs_integration_score}/10</td>
+                <td className="px-5 py-3 text-slate-800 dark:text-slate-200">{b.nextjs_integration_score}/10</td>
               </tr>
               <tr>
-                <td className="px-5 py-3 font-medium text-slate-600">Rating</td>
-                <td className="px-5 py-3">{a.rating} ★</td>
-                <td className="px-5 py-3">{b.rating} ★</td>
+                <td className="px-5 py-3 font-medium text-slate-600 dark:text-slate-400">Rating</td>
+                <td className="px-5 py-3 text-slate-800 dark:text-slate-200">{a.rating} ★</td>
+                <td className="px-5 py-3 text-slate-800 dark:text-slate-200">{b.rating} ★</td>
               </tr>
             </tbody>
           </table>
@@ -176,19 +176,19 @@ export default async function ComparePage({ params }: { params: Promise<{ slug: 
         <h2 className="section-title text-xl">{a.name} vs {b.name}: Pros &amp; Cons</h2>
         <div className="grid gap-5 sm:grid-cols-2">
           <div>
-            <h3 className="mb-3 font-semibold text-blue-700">{a.name} Pros</h3>
+            <h3 className="mb-3 font-semibold text-blue-700 dark:text-blue-400">{a.name} Pros</h3>
             <ul className="space-y-2">
               {a.pros.map((p, i) => (
-                <li key={i} className="flex items-start gap-2 text-sm text-slate-700">
+                <li key={i} className="flex items-start gap-2 text-sm text-slate-700 dark:text-slate-300">
                   <svg className="mt-0.5 h-4 w-4 shrink-0 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
                   {p}
                 </li>
               ))}
             </ul>
-            <h3 className="mb-3 mt-4 font-semibold text-red-600">{a.name} Cons</h3>
+            <h3 className="mb-3 mt-4 font-semibold text-red-600 dark:text-red-400">{a.name} Cons</h3>
             <ul className="space-y-2">
               {a.cons.map((c, i) => (
-                <li key={i} className="flex items-start gap-2 text-sm text-slate-700">
+                <li key={i} className="flex items-start gap-2 text-sm text-slate-700 dark:text-slate-300">
                   <svg className="mt-0.5 h-4 w-4 shrink-0 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" /></svg>
                   {c}
                 </li>
@@ -196,19 +196,19 @@ export default async function ComparePage({ params }: { params: Promise<{ slug: 
             </ul>
           </div>
           <div>
-            <h3 className="mb-3 font-semibold text-blue-700">{b.name} Pros</h3>
+            <h3 className="mb-3 font-semibold text-blue-700 dark:text-blue-400">{b.name} Pros</h3>
             <ul className="space-y-2">
               {b.pros.map((p, i) => (
-                <li key={i} className="flex items-start gap-2 text-sm text-slate-700">
+                <li key={i} className="flex items-start gap-2 text-sm text-slate-700 dark:text-slate-300">
                   <svg className="mt-0.5 h-4 w-4 shrink-0 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
                   {p}
                 </li>
               ))}
             </ul>
-            <h3 className="mb-3 mt-4 font-semibold text-red-600">{b.name} Cons</h3>
+            <h3 className="mb-3 mt-4 font-semibold text-red-600 dark:text-red-400">{b.name} Cons</h3>
             <ul className="space-y-2">
               {b.cons.map((c, i) => (
-                <li key={i} className="flex items-start gap-2 text-sm text-slate-700">
+                <li key={i} className="flex items-start gap-2 text-sm text-slate-700 dark:text-slate-300">
                   <svg className="mt-0.5 h-4 w-4 shrink-0 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" /></svg>
                   {c}
                 </li>
@@ -221,27 +221,27 @@ export default async function ComparePage({ params }: { params: Promise<{ slug: 
       <section className="mb-10">
         <h2 className="section-title text-xl">Best For</h2>
         <div className="grid gap-5 sm:grid-cols-2">
-          <div className="rounded-xl border border-blue-200 bg-blue-50/50 p-5">
-            <h3 className="font-semibold text-blue-800">Choose {a.name} if you need:</h3>
+          <div className="rounded-xl border border-blue-200 bg-blue-50/50 p-5 dark:border-blue-800 dark:bg-blue-950/30">
+            <h3 className="font-semibold text-blue-800 dark:text-blue-300">Choose {a.name} if you need:</h3>
             <ul className="mt-3 space-y-2">
-              <li className="flex items-start gap-2 text-sm text-blue-700">
+              <li className="flex items-start gap-2 text-sm text-blue-700 dark:text-blue-300">
                 <svg className="mt-0.5 h-4 w-4 shrink-0 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
                 {a.pros[0]}
               </li>
-              <li className="flex items-start gap-2 text-sm text-blue-700">
+              <li className="flex items-start gap-2 text-sm text-blue-700 dark:text-blue-300">
                 <svg className="mt-0.5 h-4 w-4 shrink-0 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
                 {a.pros[1]}
               </li>
             </ul>
           </div>
-          <div className="rounded-xl border border-slate-200 bg-white p-5">
-            <h3 className="font-semibold text-slate-800">Choose {b.name} if you need:</h3>
+          <div className="rounded-xl border border-slate-200 bg-white p-5 dark:border-slate-700 dark:bg-slate-800">
+            <h3 className="font-semibold text-slate-800 dark:text-slate-200">Choose {b.name} if you need:</h3>
             <ul className="mt-3 space-y-2">
-              <li className="flex items-start gap-2 text-sm text-slate-600">
+              <li className="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400">
                 <svg className="mt-0.5 h-4 w-4 shrink-0 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
                 {b.pros[0]}
               </li>
-              <li className="flex items-start gap-2 text-sm text-slate-600">
+              <li className="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400">
                 <svg className="mt-0.5 h-4 w-4 shrink-0 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
                 {b.pros[1]}
               </li>
@@ -252,10 +252,10 @@ export default async function ComparePage({ params }: { params: Promise<{ slug: 
 
       <FaqSection items={faqs} />
 
-      <div className="sticky bottom-4 z-40 rounded-xl border border-blue-200 bg-white/90 p-4 shadow-lg backdrop-blur-xl">
+      <div className="sticky bottom-4 z-40 rounded-xl border border-blue-200 bg-white/90 p-4 shadow-lg backdrop-blur-xl dark:border-blue-800 dark:bg-slate-900/90">
         <div className="flex items-center justify-between">
-          <p className="font-semibold text-slate-800">
-            Ship faster with <span className="text-blue-700">{winner.name}</span>
+          <p className="font-semibold text-slate-800 dark:text-slate-200">
+            Ship faster with <span className="text-blue-700 dark:text-blue-400">{winner.name}</span>
           </p>
           <div className="flex gap-3">
             <a href={winner.affiliate_url} target="_blank" rel="noopener noreferrer nofollow" className="btn-primary !py-2 !px-5 text-sm">

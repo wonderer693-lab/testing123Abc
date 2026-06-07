@@ -27,6 +27,8 @@
 import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import BackToTop from "@/components/BackToTop";
+import ThemeProvider from "@/components/ThemeProvider";
+import ThemeToggle from "@/components/ThemeToggle";
 import "./globals.css";
 
 const siteName = "NextAuthCompare";
@@ -56,6 +58,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body>
+        <ThemeProvider>
         <div className="sticky-nav">
           <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
             <a
@@ -76,8 +79,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <a href="/" className="nav-link px-3 py-2 text-sm">Home</a>
               <a href="/#comparisons-grid" className="nav-link px-3 py-2 text-sm">Compare Tools</a>
             </nav>
-            <div className="flex items-center">
-              <a href="/#tool-badges" className="btn-ghost text-sm !py-2">All Tools</a>
+            <div className="flex items-center gap-2">
+              <a href="/#tool-badges" className="btn-ghost text-sm !py-2 max-sm:hidden">All Tools</a>
+              <ThemeToggle />
             </div>
           </div>
         </div>
@@ -86,30 +90,30 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <main className="py-8 sm:py-12">{children}</main>
         </div>
 
-        <footer className="border-t border-blue-100 bg-white/50">
+        <footer className="border-t border-blue-100 bg-white/50 dark:border-slate-700 dark:bg-slate-900/50">
           <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
             <div className="grid gap-8 sm:grid-cols-3">
               <div>
-                <h3 className="mb-3 text-sm font-semibold text-slate-800">{siteName}</h3>
-                <p className="text-sm leading-relaxed text-slate-500">{siteTagline}</p>
+                <h3 className="mb-3 text-sm font-semibold text-slate-800 dark:text-slate-200">{siteName}</h3>
+                <p className="text-sm leading-relaxed text-slate-500 dark:text-slate-400">{siteTagline}</p>
               </div>
               <div>
-                <h3 className="mb-3 text-sm font-semibold text-slate-800">Quick Links</h3>
+                <h3 className="mb-3 text-sm font-semibold text-slate-800 dark:text-slate-200">Quick Links</h3>
                 <div className="space-y-2">
-                  <a href="/" className="block text-sm text-slate-500 hover:text-blue-600 transition-colors">Home</a>
-                  <a href="/#comparisons-grid" className="block text-sm text-slate-500 hover:text-blue-600 transition-colors">All Comparisons</a>
+                  <a href="/" className="block text-sm text-slate-500 hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors">Home</a>
+                  <a href="/#comparisons-grid" className="block text-sm text-slate-500 hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors">All Comparisons</a>
                 </div>
               </div>
               <div>
-                <h3 className="mb-3 text-sm font-semibold text-slate-800">Popular Comparisons</h3>
-                <div className="space-y-2 text-sm text-slate-500">
-                  <a href="/compare/clerk-vs-auth0" className="block hover:text-blue-600 transition-colors">Clerk vs Auth0</a>
-                  <a href="/compare/supabase-auth-vs-firebase-auth" className="block hover:text-blue-600 transition-colors">Supabase Auth vs Firebase Auth</a>
-                  <a href="/compare/authjs-vs-clerk" className="block hover:text-blue-600 transition-colors">Auth.js vs Clerk</a>
+                <h3 className="mb-3 text-sm font-semibold text-slate-800 dark:text-slate-200">Popular Comparisons</h3>
+                <div className="space-y-2 text-sm text-slate-500 dark:text-slate-400">
+                  <a href="/compare/clerk-vs-auth0" className="block hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Clerk vs Auth0</a>
+                  <a href="/compare/supabase-auth-vs-firebase-auth" className="block hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Supabase Auth vs Firebase Auth</a>
+                  <a href="/compare/authjs-vs-clerk" className="block hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Auth.js vs Clerk</a>
                 </div>
               </div>
             </div>
-            <div className="mt-10 border-t border-blue-100 pt-6 text-center text-sm text-slate-400">
+            <div className="mt-10 border-t border-blue-100 pt-6 text-center text-sm text-slate-400 dark:border-slate-700 dark:text-slate-500">
               <p>&copy; {new Date().getFullYear()} {siteName}. All rights reserved.</p>
               <p className="mt-1">This site contains affiliate links. We may earn a commission if you purchase through these links.</p>
             </div>
@@ -117,6 +121,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </footer>
         <BackToTop />
         <Analytics />
+        </ThemeProvider>
       </body>
     </html>
   );
