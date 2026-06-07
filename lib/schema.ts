@@ -1,5 +1,3 @@
-import { getTool } from "./data";
-
 interface SchemaOrg {
   "@context": string
   "@type": string
@@ -34,40 +32,22 @@ export function faqSchema(faqs: { q: string; a: string }[]): SchemaOrg {
   };
 }
 
-export function productSchema(): SchemaOrg {
-  const tool = getTool();
+export function productSchema(name: string, price: string, rating: number): SchemaOrg {
   return {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    name: tool.name,
-    applicationCategory: "BusinessApplication",
-    offers: [
-      {
-        "@type": "Offer",
-        price: tool.pricing.starter,
-        priceCurrency: tool.pricing.currency,
-        name: "Starter",
-      },
-      {
-        "@type": "Offer",
-        price: tool.pricing.unlimited,
-        priceCurrency: tool.pricing.currency,
-        name: "Unlimited",
-      },
-    ],
-  };
-}
-
-export function reviewSchema(
-  name: string,
-  reviewBody: string,
-  authorName: string
-): SchemaOrg {
-  return {
-    "@context": "https://schema.org",
-    "@type": "Review",
-    itemReviewed: { "@type": "SoftwareApplication", name: getTool().name },
-    reviewBody,
-    author: { "@type": "Person", name: authorName },
+    name,
+    applicationCategory: "DeveloperApplication",
+    offers: {
+      "@type": "Offer",
+      price: price.replace(/[^0-9.]/g, "") || "0",
+      priceCurrency: "USD",
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: rating,
+      bestRating: 5,
+      ratingCount: 1,
+    },
   };
 }

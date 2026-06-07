@@ -1,0 +1,289 @@
+[
+  {
+    "id": "clerk",
+    "name": "Clerk",
+    "starting_price": "Free \u2013 $199/mo",
+    "free_tier": "Yes, up to 10,000 monthly active users",
+    "learning_curve": "Easy",
+    "setup_time_nextjs": "10 minutes",
+    "easier_alternative": "Supabase Auth",
+    "easier_alternative_url": "/tools/clerk/alternatives",
+    "pros": [
+      "Purpose-built for Next.js App Router with native server component support",
+      "Drop-in components for sign-in, user profile, and organization management",
+      "Multi-tenancy and organization support out of the box",
+      "Excellent TypeScript types and auto-completion",
+      "Middleware-based session management with edge runtime support"
+    ],
+    "cons": [
+      "Pricing scales quickly at higher MAU tiers",
+      "Limited customization of hosted UI pages without Enterprise plan",
+      "Some advanced features locked behind Pro and Enterprise tiers"
+    ],
+    "affiliate_url": "[YOUR_CLERK_AFFILIATE_LINK]",
+    "short_description": "Clerk is a developer-first authentication and user management platform built specifically for modern Next.js applications. It provides pre-built React components, hooks, and server-side helpers that integrate seamlessly with the App Router.",
+    "rating": 4.7,
+    "dx_details": "Clerk offers the most polished Next.js authentication experience available. The @clerk/nextjs package provides server-side helpers like auth(), currentUser(), and clerkClient() that work seamlessly with React Server Components and middleware. Setting up middleware-based route protection takes under 5 minutes. The pre-built components - <SignIn/>, <SignUp/>, <UserButton/>, and <OrganizationSwitcher/> - are fully customizable through CSS variables and slot props. Clerk also handles session management, cookie rotation, and CSRF protection automatically. The real standout is organization support: multi-tenancy with role-based access controls comes built-in, requiring no additional infrastructure. For Next.js developers building SaaS products, Clerk removes approximately 80% of the authentication boilerplate.",
+    "pricing_pitfall": "Clerk's pricing model looks generous at first glance with a free tier supporting 10K MAU, but the jump from Free ($0) to Pro ($199/mo) is steep for early-stage startups. At 20K MAU you're already paying $199/mo, and Enterprise pricing quickly exceeds $1,000/mo. For a B2B SaaS that hasn't found product-market fit yet, that's significant burn. Consider Supabase Auth if you need a cost-effective alternative that still provides excellent Next.js integration at a fraction of the cost.",
+    "nextjs_integration_score": 9
+  },
+  {
+    "id": "kinde",
+    "name": "Kinde",
+    "starting_price": "Free \u2013 $300/mo",
+    "free_tier": "Yes, up to 7,500 MAU",
+    "learning_curve": "Easy",
+    "setup_time_nextjs": "15 minutes",
+    "easier_alternative": "Clerk",
+    "easier_alternative_url": "/tools/kinde/alternatives",
+    "pros": [
+      "Generous free tier with 7,500 MAU including most Pro features",
+      "Clean developer dashboard with visual workflow builder",
+      "Feature flags and remote configuration built into auth platform",
+      "Good Next.js SDK with documentation for App Router",
+      "Fast and responsive support team"
+    ],
+    "cons": [
+      "Next.js SDK is less mature than Clerk with fewer component abstractions",
+      "Smaller community and fewer third-party integrations",
+      "Advanced customization often requires self-hosting the hosted pages"
+    ],
+    "affiliate_url": "[YOUR_KINDE_AFFILIATE_LINK]",
+    "short_description": "Kinde is a modern authentication platform designed for simplicity and speed. It combines authentication, feature flags, and remote config into a single dashboard, making it a strong choice for Next.js teams that want fewer third-party services.",
+    "rating": 4.3,
+    "dx_details": "Kinde's Next.js integration centers around the @kinde-oss/kinde-auth-nextjs package. Setup follows the standard App Router pattern with a provider wrapper and middleware export. The API surface is straightforward: getAccessToken(), getUser(), and isAuthenticated() cover 90% of use cases. Where Kinde differentiates is bundling feature flags into the auth platform - you can roll out features to specific user segments without a separate flags service. The visual workflow builder for authentication flows (login, registration, MFA enrollment) is genuinely useful for non-developer stakeholders. However, compared to Clerk, Kinde lacks the same depth of pre-built React components; you'll write more UI code yourself. The documentation is clear but examples skew toward simpler use cases.",
+    "pricing_pitfall": "Kinde's pricing appears competitive at $300/mo for Scale plan, but the 7,500 MAU limit on the free tier is tight for a growing app. At 15K MAU you hit $300/mo, and advanced features like MFA and SSO require the Growth plan at $600/mo. For a Next.js startup with modest revenue, auth costs of $300-600/mo are hard to justify. Clerk's free tier (10K MAU) or Supabase Auth (50K MAU free) offer better economics at scale.",
+    "nextjs_integration_score": 7
+  },
+  {
+    "id": "better-auth",
+    "name": "Better Auth",
+    "starting_price": "Free (Open Source)",
+    "free_tier": "Yes, fully open source with self-hosting",
+    "learning_curve": "Medium",
+    "setup_time_nextjs": "30 minutes",
+    "easier_alternative": "Auth.js",
+    "easier_alternative_url": "/tools/better-auth/alternatives",
+    "pros": [
+      "Fully open source with no vendor lock-in or usage limits",
+      "Self-hosted on your own infrastructure - complete data control",
+      "Plugin architecture for extensibility",
+      "Growing community and active development on GitHub"
+    ],
+    "cons": [
+      "Requires database setup and self-hosting infrastructure",
+      "Smaller ecosystem than Auth0 or Clerk",
+      "Fewer pre-built UI components compared to managed alternatives",
+      "Documentation still maturing"
+    ],
+    "affiliate_url": "[YOUR_BETTERAUTH_AFFILIATE_LINK]",
+    "short_description": "Better Auth is an open-source authentication framework for Next.js applications. It provides a self-hosted alternative to managed auth services, giving developers full control over their auth infrastructure and data.",
+    "rating": 4.5,
+    "dx_details": "Better Auth takes a framework-first approach with deep Next.js App Router integration. Setup involves installing the package, configuring a database adapter (Drizzle, Prisma, or Kysely), and adding the API route handler. The middleware integration mirrors Clerk's approach with an auth() helper for route protection and session access in server components. The framework provides built-in support for email/password, OAuth (Google, GitHub, etc.), magic links, and passkeys. The plugin system is a standout feature - you can add MFA, role-based access, and rate limiting through community plugins without reinventing the wheel. The trade-off: you're responsible for database migrations, server maintenance, and keeping the auth infrastructure secure. For teams with DevOps bandwidth, this is liberating. For lean startups, it's operational overhead.",
+    "pricing_pitfall": "Better Auth itself is free and open source, but 'free' here is misleading when you factor in infrastructure costs. You need a database (Postgres, MySQL, or SQLite), a server or serverless functions to host the API routes, and ongoing maintenance for security patches and updates. For a production Next.js app, you are looking at $20-50/mo in hosting costs plus engineering time for setup and maintenance. While there is no per-user pricing, the operational cost can rival or exceed managed auth services for small teams. Auth.js offers a similar open-source model with a larger community and more battle-tested codebase.",
+    "nextjs_integration_score": 8
+  },
+  {
+    "id": "authjs",
+    "name": "Auth.js",
+    "starting_price": "Free (Open Source)",
+    "free_tier": "Yes, fully open source",
+    "learning_curve": "Medium",
+    "setup_time_nextjs": "20 minutes",
+    "easier_alternative": "Clerk",
+    "easier_alternative_url": "/tools/authjs/alternatives",
+    "pros": [
+      "Industry-standard open-source authentication library",
+      "Massive community with extensive documentation and examples",
+      "Framework-agnostic but excellent Next.js support via next-auth",
+      "Supports 80+ OAuth providers out of the box",
+      "Battle-tested in production across thousands of applications"
+    ],
+    "cons": [
+      "No built-in UI components - you build your own login pages",
+      "Configuration can become complex for advanced use cases",
+      "Database setup required for persistent sessions",
+      "Limited built-in organization/multi-tenancy support"
+    ],
+    "affiliate_url": "[YOUR_AUTHJS_AFFILIATE_LINK]",
+    "short_description": "Auth.js (formerly NextAuth.js) is the most widely adopted open-source authentication library for Next.js. It provides a flexible, framework-agnostic authentication system with built-in support for dozens of OAuth providers and database adapters.",
+    "rating": 4.6,
+    "dx_details": "Auth.js v5 introduced the @auth/nextjs package with first-class App Router support. The setup is well-documented: define auth options (providers, database adapter, callbacks), export handlers for the API route, and use the auth() helper in server components and middleware. The provider ecosystem is Auth.js's killer feature - 80+ pre-built OAuth providers mean most integrations are a single config line. Database adapters for Prisma, Drizzle, MongoDB, and others handle session persistence. The callback system gives fine-grained control over the auth flow: jwt(), session(), signIn(), redirect(). Where Auth.js falls short is the DIY approach to UI - there are no pre-built sign-in buttons or user menus. You build everything from scratch. For teams that want full control and have the design resources, this is ideal. For teams that want to ship fast, the missing components add development time.",
+    "pricing_pitfall": "Auth.js is free and open source with no usage limits - the most cost-effective option on this list. However, the hidden cost is engineering time. You need to build and maintain your own authentication UI, handle email verification flows, implement password reset, and manage session lifecycle. For a simple app this takes 1-2 days. For complex multi-tenant apps with role management, it can take weeks. If your engineering time is valued at $100-200/hr, a week of auth development costs $4,000-8,000 in opportunity cost - far more than a year of Clerk Pro. Use Clerk or Supabase Auth if you want to compress auth development to hours, not days.",
+    "nextjs_integration_score": 8
+  },
+  {
+    "id": "supabase-auth",
+    "name": "Supabase Auth",
+    "starting_price": "Free \u2013 $75/mo",
+    "free_tier": "Yes, 50,000 MAU included in Free tier",
+    "learning_curve": "Easy",
+    "setup_time_nextjs": "15 minutes",
+    "easier_alternative": "Firebase Auth",
+    "easier_alternative_url": "/tools/supabase-auth/alternatives",
+    "pros": [
+      "Extremely generous free tier with 50,000 monthly active users",
+      "Integrated with Supabase database, storage, and realtime subscriptions",
+      "Row-Level Security (RLS) provides database-level authorization",
+      "Built-in support for email, phone, OAuth, and magic links",
+      "Self-hostable option available"
+    ],
+    "cons": [
+      "Tightly coupled to the Supabase PostgreSQL ecosystem",
+      "Less focused on auth-only use cases - it's part of a larger platform",
+      "Organization and team management features are less mature than Clerk",
+      "RLS policies can become complex to manage at scale"
+    ],
+    "affiliate_url": "[YOUR_SUPABASE_AFFILIATE_LINK]",
+    "short_description": "Supabase Auth is a built-in authentication service within the Supabase platform. It provides a complete auth solution with integrated database access, Row-Level Security, and generous free tiers, making it ideal for Next.js developers already using Supabase.",
+    "rating": 4.4,
+    "dx_details": "Supabase Auth integrates with Next.js through the @supabase/ssr and @supabase/supabase-js packages. The setup is clean: create a Supabase client configured for server components, route handlers, and middleware. The auth() flow works through the supabase-ssr package, which handles cookie-based session management for the App Router. The standout feature is Row-Level Security (RLS) - you can write PostgreSQL policies that tie directly to the authenticated user's ID, creating a secure-by-default data access pattern. For Next.js apps already using Supabase for their database, adding auth takes about 15 minutes and adds zero additional infrastructure. The auth UI is handled through @supabase/auth-ui-react, which provides customizable components. The primary limitation: you are committing to the Supabase ecosystem. If you want auth without their database, other options are more appropriate.",
+    "pricing_pitfall": "Supabase Auth's free tier (50K MAU) is the most generous on this list, making it perfect for prototyping and early-stage apps. The Pro plan at $75/mo includes 100K MAU, which scales reasonably. The trap is that Supabase is not just auth - you will likely also use their database, storage, and realtime features, which all have separate usage costs. A typical production app at scale can easily cost $200-500/mo across all Supabase services. If you want auth-only without the platform dependency, Firebase Auth offers a similar pricing model without requiring you to use Firebase's database. For pure auth needs, Clerk's $199/mo Pro plan may actually be cheaper than Supabase's total platform cost at scale.",
+    "nextjs_integration_score": 7
+  },
+  {
+    "id": "auth0",
+    "name": "Auth0",
+    "starting_price": "Free \u2013 $3,000+/mo",
+    "free_tier": "Yes, up to 7,500 MAU with limited features",
+    "learning_curve": "Medium",
+    "setup_time_nextjs": "30 minutes",
+    "easier_alternative": "Clerk",
+    "easier_alternative_url": "/tools/auth0/alternatives",
+    "pros": [
+      "Enterprise-grade security with SOC 2, HIPAA, and GDPR compliance",
+      "Extensive integration ecosystem and mature SDK ecosystem",
+      "Powerful rule engine and Actions for custom auth flows",
+      "Advanced features: MFA, breach detection, anomaly detection",
+      "Proven at massive scale with Fortune 500 customers"
+    ],
+    "cons": [
+      "Extremely expensive at scale - pricing jumps dramatically at 10K MAU",
+      "Complex configuration with steep learning curve for advanced features",
+      "Overkill for most Next.js SaaS applications",
+      "Next.js SDK experience is less polished than Clerk or Supabase"
+    ],
+    "affiliate_url": "[YOUR_AUTH0_AFFILIATE_LINK]",
+    "short_description": "Auth0 by Okta is the enterprise standard for authentication and authorization. It provides a comprehensive identity platform with advanced security features, but its complexity and cost make it best suited for enterprise applications rather than Next.js startups.",
+    "rating": 4.2,
+    "dx_details": "Auth0's Next.js integration uses the @auth0/nextjs-auth0 package. Setup follows a pattern similar to Auth.js: define an API route handler and wrap your application. The SDK provides withPageAuthRequired for page-level protection, getSession() for server-side session access, and middleware-based protection. Auth0's real power is the extensibility: Actions (JavaScript functions that run during the auth pipeline), Rules (legacy but still supported), and a comprehensive management API. For enterprise features like MFA with biometrics, breach password detection, and progressive profiling, Auth0 is unmatched. The trade-off is complexity: the Auth0 dashboard has dozens of configuration pages, and most teams need dedicated training to use it effectively. For a Next.js SaaS building an MVP, Auth0 introduces unnecessary complexity. The SDK is functional but lacks the DX polish of Clerk's drop-in components.",
+    "pricing_pitfall": "Auth0 has the most aggressive pricing trap on this list. The free tier supports 7,500 MAU, but the jump to B2B ($3,000+/mo) or Enterprise ($12,000+/mo) is staggering. At 10,000 MAU, you are already looking at $3,000/mo. For comparison, Clerk at the same usage level costs $199/mo - a 15x difference. Auth0 is built for enterprises that need SOC 2 compliance, not for Next.js startups. If you need enterprise compliance, WorkOS may be a more cost-effective path. Otherwise, Clerk or Supabase Auth will serve you better at 1/15th the cost.",
+    "nextjs_integration_score": 6
+  },
+  {
+    "id": "logto",
+    "name": "Logto",
+    "starting_price": "Free \u2013 $599/mo",
+    "free_tier": "Yes, up to 5,000 MAU",
+    "learning_curve": "Medium",
+    "setup_time_nextjs": "20 minutes",
+    "easier_alternative": "Clerk",
+    "easier_alternative_url": "/tools/logto/alternatives",
+    "pros": [
+      "Open-source core with self-hosting option",
+      "Built-in management API and admin console",
+      "Support for social sign-in, MFA, and passwordless auth",
+      "User-friendly admin dashboard for non-technical team members"
+    ],
+    "cons": [
+      "Smaller community and fewer third-party integrations",
+      "Next.js SDK is less mature with fewer examples",
+      "Self-hosted version requires significant infrastructure setup",
+      "Documentation quality varies between features"
+    ],
+    "affiliate_url": "[YOUR_LOGTO_AFFILIATE_LINK]",
+    "short_description": "Logto is an open-source identity platform that offers both cloud-hosted and self-hosted options. It provides a clean admin console and developer SDKs, positioning itself as a more affordable alternative to Auth0 for growing teams.",
+    "rating": 4.1,
+    "dx_details": "Logto provides a Next.js SDK that handles the standard authentication flow: redirect users to Logto's hosted sign-in page, handle the callback, and manage sessions. The SDK provides useLogto() hook for client components and getLogtoContext() for server-side access. The Logto admin console is genuinely well-designed - managing users, roles, and audit logs is intuitive. OpenAPI-based management API allows programmatic user administration. Logto's social sign-in supports Google, GitHub, Apple, WeChat, and more with minimal configuration. The self-hosting option uses Docker Compose, which is manageable for teams with Docker experience. The main limitation is ecosystem maturity: fewer community blog posts, fewer StackOverflow answers, and fewer third-party integrations compared to Clerk, Auth.js, or Auth0. For teams that value open-source and want to avoid vendor lock-in, Logto is worth evaluating. For pure DX and speed, Clerk remains the better choice.",
+    "pricing_pitfall": "Logto's pricing looks reasonable at first but has a large jump: the free tier covers 5,000 MAU, but the Team plan at $599/mo only covers 30,000 MAU. For a growing SaaS that crosses 30K users, you are looking at the Enterprise tier (custom pricing, likely $1,000+/mo). Self-hosting eliminates the per-user cost but introduces infrastructure costs ($30-100/mo for a small server) plus ongoing maintenance. Clerk at $199/mo for 20K users offers better value and better Next.js DX. Choose Logto if you need self-hosting for compliance reasons; choose Clerk for cost-effective managed auth.",
+    "nextjs_integration_score": 7
+  },
+  {
+    "id": "workos",
+    "name": "WorkOS",
+    "starting_price": "Custom pricing (enterprise)",
+    "free_tier": "No free tier (enterprise sales)",
+    "learning_curve": "Advanced",
+    "setup_time_nextjs": "45 minutes",
+    "easier_alternative": "Auth0",
+    "easier_alternative_url": "/tools/workos/alternatives",
+    "pros": [
+      "Enterprise-grade SSO with SAML/OIDC support out of the box",
+      "SCIM provisioning for enterprise directory integration",
+      "SOC 2 compliant and enterprise-ready from day one",
+      "Clean API design with excellent documentation",
+      "Used by Vercel, Airbnb, and other top-tier tech companies"
+    ],
+    "cons": [
+      "No free tier - requires sales conversation to get started",
+      "Not designed for consumer auth or B2C applications",
+      "Pricing is opaque and requires a sales call",
+      "Overkill for teams that don't need enterprise SSO"
+    ],
+    "affiliate_url": "[YOUR_WORKOS_AFFILIATE_LINK]",
+    "short_description": "WorkOS is an enterprise auth platform that provides SSO, SCIM, and directory sync. It is designed for B2B SaaS companies that need to support enterprise customers with SAML/OIDC authentication and automated user provisioning.",
+    "rating": 4.0,
+    "dx_details": "WorkOS takes a different approach than traditional auth platforms - it focuses specifically on enterprise features like SSO, SCIM, and directory sync. The Next.js integration is straightforward: install the @workos-inc/node package, configure your API key, and use the SSO and directory sync APIs. WorkOS provides clear, well-documented APIs with a developer experience that feels closer to Stripe than traditional auth platforms. The SSO setup supports Okta, Azure AD, Google Workspace, and any SAML/OIDC provider. SCIM provisioning allows enterprise customers to automatically provision and de-provision users from their HR systems. Where WorkOS differs from Clerk or Auth0 is scope: it does not provide consumer auth (email/password, social login). You use WorkOS alongside a consumer auth solution. For enterprise-focused Next.js B2B SaaS, this separation of concerns is actually cleaner than a monolithic auth platform trying to do everything.",
+    "pricing_pitfall": "WorkOS does not publish pricing and requires a sales call - a red flag for early-stage startups. Enterprise SSO typically costs $5,000-25,000+/year as an add-on with platforms like Auth0. WorkOS is likely similar. Additionally, WorkOS only solves enterprise auth (SSO, SCIM); you still need a separate solution for consumer auth (email/password, social login). The total cost for auth could easily exceed $1,000/mo. For most Next.js B2B SaaS startups, Auth0's comprehensive platform (consumer + SSO) at $3,000/mo may actually be cheaper than running WorkOS + Clerk. Evaluate WorkOS only when you have enterprise customers actively requesting SSO.",
+    "nextjs_integration_score": 5
+  },
+  {
+    "id": "firebase-auth",
+    "name": "Firebase Auth",
+    "starting_price": "Free \u2013 Pay-as-you-go",
+    "free_tier": "Yes, up to 50,000 MAU free tier",
+    "learning_curve": "Easy",
+    "setup_time_nextjs": "15 minutes",
+    "easier_alternative": "Supabase Auth",
+    "easier_alternative_url": "/tools/firebase-auth/alternatives",
+    "pros": [
+      "Massive free tier with 50,000 MAU at no cost",
+      "Tightly integrated with Firebase and Google Cloud ecosystem",
+      "Supports email/password, phone, Google, Apple, and 10+ social providers",
+      "Well-documented with abundant tutorials and community resources",
+      "Anonymous auth for gradual user onboarding"
+    ],
+    "cons": [
+      "Google ecosystem lock-in - less portable than open-source alternatives",
+      "No built-in Next.js App Router server component helpers",
+      "Client-side heavy - requires careful setup for SSR",
+      "Google deprecation history creates platform risk",
+      "Limited organization and role management features"
+    ],
+    "affiliate_url": "[YOUR_FIREBASE_AFFILIATE_LINK]",
+    "short_description": "Firebase Authentication is Google's managed auth service. It offers a generous free tier and deep integration with Firebase and Google Cloud services. It is one of the most popular auth solutions for Next.js applications despite not being Next.js-native.",
+    "rating": 4.3,
+    "dx_details": "Firebase Auth integrates with Next.js through the firebase package, but the DX is notably less smooth than Clerk or Supabase. Because Firebase is a client-side SDK, you need to carefully manage initialization: the Firebase app instance must only be created in the browser, requiring 'use client' boundaries and useEffect initialization. Server-side session management is handled through custom cookie-based solutions using firebase-admin on the server. The community has produced good patterns: createAuthCookies() on sign-in, verifyAuthCookie() in middleware, and getAuth() in server components. Firebase Auth excels at simplicity for client-rendered apps: onAuthStateChanged() handles all session management reactively. It also offers anonymous auth - create a user without credentials and upgrade later - which is powerful for reducing friction. The platform risk is real: Google has sunset Firebase products before. For a long-term Next.js project, consider whether you want Google dependency in your auth layer.",
+    "pricing_pitfall": "Firebase Auth's free tier (50K MAU) is tied with Supabase for the most generous on this list. Usage beyond the free tier costs $0.065 per MAU beyond 50K, which is reasonable. The hidden cost is the Google Cloud platform surrounding Firebase: Firestore, Storage, and Functions all have separate usage-based pricing that adds up quickly. A production app at medium scale can easily cost $100-500/mo across Firebase services. The bigger risk is vendor lock-in: migrating from Firebase Auth to another provider requires a full user data export, password reset for all users, and rebuilding authentication flows. If you want similar pricing without Google dependency, Supabase Auth offers the same economics with an open-source stack. For pure auth without the rest of Firebase, Clerk at $199/mo is a worthwhile investment in portability.",
+    "nextjs_integration_score": 6
+  },
+  {
+    "id": "descope",
+    "name": "Descope",
+    "starting_price": "Free \u2013 $2,000/mo",
+    "free_tier": "Yes, up to 5,000 MAU with 2,000 transactions",
+    "learning_curve": "Medium",
+    "setup_time_nextjs": "20 minutes",
+    "easier_alternative": "Logto",
+    "easier_alternative_url": "/tools/descope/alternatives",
+    "pros": [
+      "Visual drag-and-drop workflow builder for authentication flows",
+      "No-code screens reduce front-end development time",
+      "Built-in analytics and user journey tracking",
+      "Support for passkeys, biometrics, and passwordless auth",
+      "Good documentation with Next.js-specific guides"
+    ],
+    "cons": [
+      "Expensive at scale - pricing jumps at 10K MAU",
+      "Visual builder adds abstraction that can be limiting for custom flows",
+      "Smaller community and less third-party integration",
+      "Newer platform with less battle-testing"
+    ],
+    "affiliate_url": "[YOUR_DESCOPE_AFFILIATE_LINK]",
+    "short_description": "Descope is a visual-first authentication platform that lets you build auth flows with a drag-and-drop workflow editor. It targets teams that want to design sophisticated authentication experiences without extensive front-end development.",
+    "rating": 4.2,
+    "dx_details": "Descope's Next.js SDK provides a familiar provider-based setup with the DescopeProvider wrapping your application. The SDK supports server-side session validation through middleware and provides useDescope() and useSession() hooks for client components. Where Descope truly differentiates is the visual workflow editor - you can design multi-step registration flows, conditional MFA, and progressive profiling entirely through the dashboard. The Screens feature lets you design auth UI visually, reducing front-end work. Descope supports passkeys (WebAuthn), biometric authentication, and one-time passcodes out of the box. The SDK provides TypeScript types and the documentation includes Next.js App Router-specific examples. The trade-off: visual workflows abstract away the underlying auth logic, making custom edge cases harder to implement. For standard auth flows (email + password, social login, magic links), Descope is fast. For deeply customized experiences, you may find yourself fighting against the visual builder abstractions.",
+    "pricing_pitfall": "Descope's free tier (5,000 MAU, 2,000 transactions) is sufficient for prototyping but tight for production. The JumpStart plan at $2,000/mo covers 30,000 MAU - a steep jump that rivals Auth0's B2B plan. At scale, Descope is one of the most expensive options on this list. The visual workflow builder is the value proposition, but it comes at a significant premium. For most Next.js teams, Clerk provides better DX at 1/10th the cost. Consider Descope only if you have non-technical team members who need to build and modify authentication flows independently. Otherwise, the pricing does not justify the visual abstraction layer.",
+    "nextjs_integration_score": 7
+  }
+]

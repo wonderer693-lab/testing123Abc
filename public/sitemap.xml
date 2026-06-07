@@ -6,253 +6,553 @@
     <priority>1</priority>
   </url>
   <url>
-    <loc>https://saaspolarbeam.vercel.app/best</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://saaspolarbeam.vercel.app/tools/clerk</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://saaspolarbeam.vercel.app/for/marketing-agencies</loc>
+    <loc>https://saaspolarbeam.vercel.app/tools/clerk/alternatives</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saaspolarbeam.vercel.app/for/real-estate</loc>
+    <loc>https://saaspolarbeam.vercel.app/compare/clerk-vs-kinde</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/clerk-vs-better-auth</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/clerk-vs-authjs</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/clerk-vs-supabase-auth</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/clerk-vs-auth0</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/clerk-vs-logto</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/clerk-vs-workos</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/clerk-vs-firebase-auth</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/clerk-vs-descope</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/tools/kinde</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/tools/kinde/alternatives</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saaspolarbeam.vercel.app/for/small-business</loc>
+    <loc>https://saaspolarbeam.vercel.app/compare/kinde-vs-clerk</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/kinde-vs-better-auth</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/kinde-vs-authjs</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/kinde-vs-supabase-auth</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/kinde-vs-auth0</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/kinde-vs-logto</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/kinde-vs-workos</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/kinde-vs-firebase-auth</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/kinde-vs-descope</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/tools/better-auth</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/tools/better-auth/alternatives</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saaspolarbeam.vercel.app/for/coaches-consultants</loc>
+    <loc>https://saaspolarbeam.vercel.app/compare/better-auth-vs-clerk</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/better-auth-vs-kinde</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/better-auth-vs-authjs</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/better-auth-vs-supabase-auth</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/better-auth-vs-auth0</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/better-auth-vs-logto</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/better-auth-vs-workos</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/better-auth-vs-firebase-auth</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/better-auth-vs-descope</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/tools/authjs</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/tools/authjs/alternatives</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saaspolarbeam.vercel.app/for/local-services</loc>
+    <loc>https://saaspolarbeam.vercel.app/compare/authjs-vs-clerk</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/authjs-vs-kinde</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/authjs-vs-better-auth</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/authjs-vs-supabase-auth</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/authjs-vs-auth0</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/authjs-vs-logto</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/authjs-vs-workos</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/authjs-vs-firebase-auth</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/authjs-vs-descope</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/tools/supabase-auth</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/tools/supabase-auth/alternatives</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saaspolarbeam.vercel.app/for/home-services</loc>
+    <loc>https://saaspolarbeam.vercel.app/compare/supabase-auth-vs-clerk</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/supabase-auth-vs-kinde</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/supabase-auth-vs-better-auth</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/supabase-auth-vs-authjs</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/supabase-auth-vs-auth0</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/supabase-auth-vs-logto</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/supabase-auth-vs-workos</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/supabase-auth-vs-firebase-auth</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/supabase-auth-vs-descope</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/tools/auth0</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/tools/auth0/alternatives</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saaspolarbeam.vercel.app/for/real-estate-investors</loc>
+    <loc>https://saaspolarbeam.vercel.app/compare/auth0-vs-clerk</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/auth0-vs-kinde</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/auth0-vs-better-auth</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/auth0-vs-authjs</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/auth0-vs-supabase-auth</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/auth0-vs-logto</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/auth0-vs-workos</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/auth0-vs-firebase-auth</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/auth0-vs-descope</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/tools/logto</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/tools/logto/alternatives</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saaspolarbeam.vercel.app/for/dental-practices</loc>
+    <loc>https://saaspolarbeam.vercel.app/compare/logto-vs-clerk</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/logto-vs-kinde</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/logto-vs-better-auth</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/logto-vs-authjs</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/logto-vs-supabase-auth</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/logto-vs-auth0</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/logto-vs-workos</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/logto-vs-firebase-auth</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/logto-vs-descope</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/tools/workos</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/tools/workos/alternatives</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saaspolarbeam.vercel.app/for/medical-practices</loc>
+    <loc>https://saaspolarbeam.vercel.app/compare/workos-vs-clerk</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/workos-vs-kinde</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/workos-vs-better-auth</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/workos-vs-authjs</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/workos-vs-supabase-auth</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/workos-vs-auth0</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/workos-vs-logto</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/workos-vs-firebase-auth</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/workos-vs-descope</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/tools/firebase-auth</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/tools/firebase-auth/alternatives</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saaspolarbeam.vercel.app/for/salons-spas</loc>
+    <loc>https://saaspolarbeam.vercel.app/compare/firebase-auth-vs-clerk</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/firebase-auth-vs-kinde</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/firebase-auth-vs-better-auth</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/firebase-auth-vs-authjs</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/firebase-auth-vs-supabase-auth</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/firebase-auth-vs-auth0</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/firebase-auth-vs-logto</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/firebase-auth-vs-workos</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/compare/firebase-auth-vs-descope</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/tools/descope</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://saaspolarbeam.vercel.app/tools/descope/alternatives</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://saaspolarbeam.vercel.app/solves/missed-leads</loc>
+    <loc>https://saaspolarbeam.vercel.app/compare/descope-vs-clerk</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://saaspolarbeam.vercel.app/solves/tool-sprawl</loc>
+    <loc>https://saaspolarbeam.vercel.app/compare/descope-vs-kinde</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://saaspolarbeam.vercel.app/solves/slow-followup</loc>
+    <loc>https://saaspolarbeam.vercel.app/compare/descope-vs-better-auth</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://saaspolarbeam.vercel.app/solves/no-shows</loc>
+    <loc>https://saaspolarbeam.vercel.app/compare/descope-vs-authjs</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://saaspolarbeam.vercel.app/solves/low-reviews</loc>
+    <loc>https://saaspolarbeam.vercel.app/compare/descope-vs-supabase-auth</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://saaspolarbeam.vercel.app/solves/manual-processes</loc>
+    <loc>https://saaspolarbeam.vercel.app/compare/descope-vs-auth0</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://saaspolarbeam.vercel.app/features/crm</loc>
+    <loc>https://saaspolarbeam.vercel.app/compare/descope-vs-logto</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://saaspolarbeam.vercel.app/features/ai-voice</loc>
+    <loc>https://saaspolarbeam.vercel.app/compare/descope-vs-workos</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://saaspolarbeam.vercel.app/features/funnels</loc>
+    <loc>https://saaspolarbeam.vercel.app/compare/descope-vs-firebase-auth</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://saaspolarbeam.vercel.app/features/email-sms</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://saaspolarbeam.vercel.app/features/booking</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://saaspolarbeam.vercel.app/features/reputation</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://saaspolarbeam.vercel.app/features/memberships</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://saaspolarbeam.vercel.app/features/automations</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://saaspolarbeam.vercel.app/features/analytics</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://saaspolarbeam.vercel.app/features/whitelabel</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://saaspolarbeam.vercel.app/compare/hubspot</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://saaspolarbeam.vercel.app/compare/kajabi</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://saaspolarbeam.vercel.app/compare/clickfunnels</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://saaspolarbeam.vercel.app/compare/mailchimp</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://saaspolarbeam.vercel.app/compare/salesforce</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://saaspolarbeam.vercel.app/guides/setting-up-funnels</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://saaspolarbeam.vercel.app/guides/automated-followups</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://saaspolarbeam.vercel.app/guides/review-generation</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://saaspolarbeam.vercel.app/guides/ai-voice-setup</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://saaspolarbeam.vercel.app/guides/membership-site</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://saaspolarbeam.vercel.app/guides/snapshots-clients</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://saaspolarbeam.vercel.app/glossary/crm</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://saaspolarbeam.vercel.app/glossary/pipeline</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://saaspolarbeam.vercel.app/glossary/lead-scoring</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://saaspolarbeam.vercel.app/glossary/drip-campaign</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://saaspolarbeam.vercel.app/glossary/workflow-automation</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://saaspolarbeam.vercel.app/glossary/white-label</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://saaspolarbeam.vercel.app/glossary/snapshot</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://saaspolarbeam.vercel.app/glossary/ai-voice-agent</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://saaspolarbeam.vercel.app/glossary/sales-funnel</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://saaspolarbeam.vercel.app/glossary/sms-marketing</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://saaspolarbeam.vercel.app/glossary/lead-capture</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://saaspolarbeam.vercel.app/glossary/sub-account</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.9</priority>
   </url>
 </urlset>

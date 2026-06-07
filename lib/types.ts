@@ -1,116 +1,18 @@
-export interface SiteInfo {
+export interface AuthTool {
+  id: string
   name: string
-  url: string
-  tagline: string
-}
-
-export interface Pricing {
-  starter: number
-  unlimited?: number
-  saasPro?: number
-  professional?: number
-  enterprise?: number
-  pro?: number
-  funnelHacker?: number
-  standard?: number
-  premium?: number
-  growth?: number
-  currency: string
-  cycle: string
-  note?: string
-}
-
-export interface Feature {
-  slug: string
-  name: string
-  shortDesc: string
-  details: string
-  benefits: string[]
-  alternativeTools: string[]
-}
-
-export interface Competitor {
-  slug: string
-  name: string
-  tagline: string
-  description: string
-  website: string
-  affiliateLink: string
-  bestFor: string[]
-  pricing: Pricing
+  starting_price: string
+  free_tier: string
+  learning_curve: "Easy" | "Medium" | "Advanced"
+  setup_time_nextjs: string
+  easier_alternative: string
+  easier_alternative_url: string
   pros: string[]
   cons: string[]
-  features: string[]
-}
-
-export interface Audience {
-  slug: string
-  name: string
-  title: string
-  metaDesc: string
-  problem: string
-  realReview: string
-  solution: string
-  keyFeatures?: string[]
-}
-
-export interface Problem {
-  slug: string
-  name: string
-  title: string
-  metaDesc: string
-  explanation: string
-}
-
-export interface Guide {
-  slug: string
-  name: string
-  title: string
-  metaDesc: string
-  intro: string
-  steps: string[]
-  estimatedTime: string
-  difficulty: "Beginner" | "Intermediate" | "Advanced"
-  relatedFeatures: string[]
-}
-
-export interface GlossaryTerm {
-  slug: string
-  term: string
-  definition: string
-  seeAlso: string[]
-}
-
-export interface ToolData {
-  name: string
-  slug: string
-  shortName: string
-  tagline: string
-  description: string
-  website: string
-  affiliateLink: string
-  affiliateLinkAnnual?: string
-  affiliateLinkSaaSPro?: string
-  affiliateLinkBootcamp?: string
-  affiliateLinkAI?: string
-  affiliateLinkUpgrade?: string
-  affiliateLinkSaaSUpgrade?: string
+  affiliate_url: string
+  short_description: string
   rating: number
-  reviewCount: number
-  pricing: Pricing
-  features: Feature[]
-}
-
-export interface RootData {
-  site: SiteInfo
-  tool: ToolData
-  competitors: Competitor[]
-  audiences: Audience[]
-  problems: Problem[]
-  guides: Guide[]
-  glossary: GlossaryTerm[]
-}
-
-export interface PageParams {
-  slug: string
+  dx_details: string
+  pricing_pitfall: string
+  nextjs_integration_score: number
 }

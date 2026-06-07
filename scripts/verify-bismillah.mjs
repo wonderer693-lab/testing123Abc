@@ -6,7 +6,6 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const layoutPath = join(__dirname, "..", "app", "layout.tsx");
 const content = readFileSync(layoutPath, "utf-8");
 
-// Check for Surah Al-Fatihah (verses 1-7), Surah Al-Isra (verses 109-111), and additional verses
 const hasAlFatihah = content.includes("بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ");
 const hasAlIsra = content.includes("قُلِ ادۡعُواْ ٱللَّهَ");
 const hasAdditional = content.includes("مَّا شَآءَ ٱللَّهُ لَا قُوَّةَ إِلَّا بِٱللَّهِ");
