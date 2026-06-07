@@ -76,6 +76,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <a href="/" className="nav-link px-3 py-2 text-sm">Home</a>
               <a href="/#comparisons-grid" className="nav-link px-3 py-2 text-sm">Compare Tools</a>
             </nav>
+            <div className="flex items-center">
+              <a href="/#tool-badges" className="btn-ghost text-sm !py-2">All Tools</a>
+            </div>
           </div>
         </div>
 

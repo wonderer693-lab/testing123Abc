@@ -86,11 +86,11 @@ export default async function ComparePage({ params }: { params: Promise<{ slug: 
       <p className="mb-8 text-lg text-slate-500">Which authentication tool is right for your Next.js project?</p>
 
       <div className="mb-10 grid gap-5 sm:grid-cols-2">
-        <div className="relative ring-2 ring-indigo-600 shadow-lg bg-gradient-to-br from-indigo-50 to-white rounded-xl p-6 overflow-hidden">
-          <span className="absolute top-3 right-3 rounded-full bg-indigo-600 px-3 py-1 text-xs font-bold text-white shadow-sm">
-            👑 Top Pick
+        <div className="relative border-2 border-blue-600 shadow-lg bg-gradient-to-br from-blue-50 to-white rounded-xl p-6 overflow-hidden">
+          <span className="absolute top-3 right-3 rounded-full bg-blue-600 px-3 py-1 text-xs font-bold text-white shadow-sm">
+            Top Pick
           </span>
-          <div className="mb-1 text-xs font-semibold uppercase tracking-wider text-indigo-600">Our Pick</div>
+          <div className="mb-1 text-xs font-semibold uppercase tracking-wider text-blue-600">Our Pick</div>
           <h2 className="text-xl font-bold text-slate-900">{winner.name}</h2>
           <p className="mt-1 text-sm text-slate-500">
             Next.js Score: {winner.nextjs_integration_score}/10 &middot; Rating: {winner.rating} ★
@@ -252,10 +252,10 @@ export default async function ComparePage({ params }: { params: Promise<{ slug: 
 
       <FaqSection items={faqs} />
 
-      <div className="sticky bottom-4 z-40 rounded-xl border border-indigo-200 bg-white/90 p-4 shadow-lg backdrop-blur-xl">
+      <div className="sticky bottom-4 z-40 rounded-xl border border-blue-200 bg-white/90 p-4 shadow-lg backdrop-blur-xl">
         <div className="flex items-center justify-between">
           <p className="font-semibold text-slate-800">
-            Ship faster with <span className="text-indigo-700">{winner.name}</span>
+            Ship faster with <span className="text-blue-700">{winner.name}</span>
           </p>
           <div className="flex gap-3">
             <a href={winner.affiliate_url} target="_blank" rel="noopener noreferrer nofollow" className="btn-primary !py-2 !px-5 text-sm">
