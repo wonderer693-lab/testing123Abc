@@ -25,6 +25,7 @@
   فَلَا مُمۡسِكَ لَهَا
 */
 import type { Metadata, Viewport } from "next";
+import Link from "next/link";
 import { Analytics } from "@vercel/analytics/next";
 import BackToTop from "@/components/BackToTop";
 import ThemeProvider from "@/components/ThemeProvider";
@@ -83,10 +84,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </a>
             <nav className="flex items-center gap-1">
               <a href="/" className="nav-link px-3 py-2 text-sm">Home</a>
-              <a href="/#comparisons-grid" className="nav-link px-3 py-2 text-sm">Compare Tools</a>
+              <a href="/#table-heading" className="nav-link px-3 py-2 text-sm">All Tools</a>
             </nav>
             <div className="flex items-center gap-2">
-              <a href="/#tool-badges" className="btn-ghost text-sm !py-2 max-sm:hidden">All Tools</a>
+              <Link href="/#why-trust-heading" className="btn-ghost text-sm !py-2 max-sm:hidden">About</Link>
               <ThemeToggle />
             </div>
           </div>

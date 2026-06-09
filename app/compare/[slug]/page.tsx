@@ -5,6 +5,7 @@ import { getTools, getToolByName } from "@/lib/data";
 import { breadcrumbSchema, faqSchema, productSchema } from "@/lib/schema";
 import SchemaMarkup from "@/components/SchemaMarkup";
 import FaqSection from "@/components/FaqSection";
+import Breadcrumb from "@/components/Breadcrumb";
 
 export function generateStaticParams() {
   const tools = getTools();
@@ -36,6 +37,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       description: `Detailed comparison of ${a.name} and ${b.name} for Next.js App Router.`,
     },
   };
+}
+
+function diffClass(winnerVal: number, loserVal: number, highIsGood = true): string {
+  if (winnerVal === loserVal) return "text-slate-500 dark:text-slate-400";
+  if (highIsGood ? winnerVal > loserVal : winnerVal < loserVal) return "text-green-600 dark:text-green-400";
+  return "text-red-600 dark:text-red-400";
 }
 
 export default async function ComparePage({ params }: { params: Promise<{ slug: string }> }) {
@@ -73,8 +80,13 @@ export default async function ComparePage({ params }: { params: Promise<{ slug: 
     <>
       <SchemaMarkup schema={productSchema(a.name, a.starting_price, a.rating)} />
       <SchemaMarkup schema={productSchema(b.name, b.starting_price, b.rating)} />
-      <SchemaMarkup schema={breadcrumbSchema([{ name: "Home", url: "/" }, { name: "Comparisons", url: "/" }, { name: `${a.name} vs ${b.name}`, url: `/compare/${slug}` }])} />
+      <SchemaMarkup schema={breadcrumbSchema([{ name: "Home", url: "/" }, { name: `${a.name} vs ${b.name}`, url: `/compare/${slug}` }])} />
       <SchemaMarkup schema={faqSchema(faqs)} />
+
+      <Breadcrumb className="mb-6" items={[
+        { name: "Home", url: "/" },
+        { name: `${a.name} vs ${b.name}`, url: `/compare/${slug}` },
+      ]} />
 
       <div className="mb-4 flex items-center gap-2">
         <span className="pill pill-purple">Comparison</span>
@@ -101,7 +113,7 @@ export default async function ComparePage({ params }: { params: Promise<{ slug: 
             Try {winner.name} Free &rarr;
           </a>
         </div>
-        <div className="rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-800">
+        <div className="relative rounded-xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-6 dark:border-slate-700 dark:from-slate-800 dark:to-slate-800/50">
           <h2 className="text-xl font-bold text-slate-900 dark:text-slate-100">{loser.name}</h2>
           <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
             Next.js Score: {loser.nextjs_integration_score}/10 &middot; Rating: {loser.rating} ★
@@ -160,13 +172,13 @@ export default async function ComparePage({ params }: { params: Promise<{ slug: 
               </tr>
               <tr>
                 <td className="px-5 py-3 font-medium text-slate-600 dark:text-slate-400">Next.js Integration</td>
-                <td className="px-5 py-3 text-slate-800 dark:text-slate-200">{a.nextjs_integration_score}/10</td>
-                <td className="px-5 py-3 text-slate-800 dark:text-slate-200">{b.nextjs_integration_score}/10</td>
+                <td className={`px-5 py-3 ${diffClass(a.nextjs_integration_score, b.nextjs_integration_score)}`}>{a.nextjs_integration_score}/10</td>
+                <td className={`px-5 py-3 ${diffClass(b.nextjs_integration_score, a.nextjs_integration_score)}`}>{b.nextjs_integration_score}/10</td>
               </tr>
               <tr>
                 <td className="px-5 py-3 font-medium text-slate-600 dark:text-slate-400">Rating</td>
-                <td className="px-5 py-3 text-slate-800 dark:text-slate-200">{a.rating} ★</td>
-                <td className="px-5 py-3 text-slate-800 dark:text-slate-200">{b.rating} ★</td>
+                <td className={`px-5 py-3 ${diffClass(a.rating, b.rating)}`}>{a.rating} ★</td>
+                <td className={`px-5 py-3 ${diffClass(b.rating, a.rating)}`}>{b.rating} ★</td>
               </tr>
             </tbody>
           </table>
@@ -225,27 +237,23 @@ export default async function ComparePage({ params }: { params: Promise<{ slug: 
           <div className="rounded-xl border border-blue-200 bg-blue-50/50 p-5 dark:border-blue-800 dark:bg-blue-950/30">
             <h3 className="font-semibold text-blue-800 dark:text-blue-300">Choose {a.name} if you need:</h3>
             <ul className="mt-3 space-y-2">
-              <li className="flex items-start gap-2 text-sm text-blue-700 dark:text-blue-300">
-                <svg className="mt-0.5 h-4 w-4 shrink-0 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
-                {a.pros[0] ?? "Well-rounded feature set"}
-              </li>
-              <li className="flex items-start gap-2 text-sm text-blue-700 dark:text-blue-300">
-                <svg className="mt-0.5 h-4 w-4 shrink-0 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
-                {a.pros[1] ?? "Flexible integration options"}
-              </li>
+              {a.pros.slice(0, 3).map((p, i) => (
+                <li key={i} className="flex items-start gap-2 text-sm text-blue-700 dark:text-blue-300">
+                  <svg className="mt-0.5 h-4 w-4 shrink-0 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
+                  {p}
+                </li>
+              ))}
             </ul>
           </div>
           <div className="rounded-xl border border-slate-200 bg-white p-5 dark:border-slate-700 dark:bg-slate-800">
             <h3 className="font-semibold text-slate-800 dark:text-slate-200">Choose {b.name} if you need:</h3>
             <ul className="mt-3 space-y-2">
-              <li className="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400">
-                <svg className="mt-0.5 h-4 w-4 shrink-0 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
-                {b.pros[0] ?? "Well-rounded feature set"}
-              </li>
-              <li className="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400">
-                <svg className="mt-0.5 h-4 w-4 shrink-0 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
-                {b.pros[1] ?? "Flexible integration options"}
-              </li>
+              {b.pros.slice(0, 3).map((p, i) => (
+                <li key={i} className="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400">
+                  <svg className="mt-0.5 h-4 w-4 shrink-0 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
+                  {p}
+                </li>
+              ))}
             </ul>
           </div>
         </div>
@@ -253,7 +261,7 @@ export default async function ComparePage({ params }: { params: Promise<{ slug: 
 
       <FaqSection items={faqs} />
 
-      <div className="sticky bottom-4 z-40 rounded-xl border border-blue-200 bg-white/90 p-4 shadow-lg backdrop-blur-xl dark:border-blue-800 dark:bg-slate-900/90">
+      <div className="sticky bottom-4 z-40 rounded-xl border border-blue-200 bg-white/90 p-4 shadow-lg backdrop-blur-xl dark:border-blue-800 dark:bg-slate-900/90 hidden sm:block">
         <div className="flex items-center justify-between">
           <p className="font-semibold text-slate-800 dark:text-slate-200">
             Ship faster with <span className="text-blue-700 dark:text-blue-400">{winner.name}</span>

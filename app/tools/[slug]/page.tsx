@@ -4,6 +4,7 @@ import Link from "next/link";
 import { getTools, getToolByName } from "@/lib/data";
 import { breadcrumbSchema, productSchema } from "@/lib/schema";
 import SchemaMarkup from "@/components/SchemaMarkup";
+import Breadcrumb from "@/components/Breadcrumb";
 
 export function generateStaticParams() {
   return getTools().map((t) => ({ slug: t.id }));
@@ -37,12 +38,26 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
 
   const others = getTools().filter((t) => t.id !== slug).slice(0, 3);
 
+  const sections = [
+    { id: "developer-experience", label: "Developer Experience" },
+    { id: "quick-stats", label: "Quick Stats" },
+    { id: "who-should-use", label: "Who Should Use" },
+    { id: "pros-cons", label: "Pros & Cons" },
+    { id: "pricing-pitfall", label: "Pricing Pitfall" },
+    { id: "related-comparisons", label: "Related Comparisons" },
+  ];
+
   return (
     <>
       <SchemaMarkup schema={productSchema(tool.name, tool.starting_price, tool.rating)} />
       <SchemaMarkup schema={breadcrumbSchema([{ name: "Home", url: "/" }, { name: tool.name, url: `/tools/${tool.id}` }])} />
 
-      <div className="mb-4 flex items-center gap-2">
+      <Breadcrumb className="mb-6" items={[
+        { name: "Home", url: "/" },
+        { name: tool.name, url: `/tools/${tool.id}` },
+      ]} />
+
+      <div className="flex items-center gap-2 mb-4">
         <span className="pill pill-blue">{tool.learning_curve}</span>
         <span className="text-xs text-slate-400 dark:text-slate-500">Updated 2026</span>
       </div>
@@ -68,7 +83,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
         </div>
       </section>
 
-      <div className="mb-8 flex flex-wrap gap-3">
+      <div className="mb-10 flex flex-wrap gap-3">
         <a href={tool.affiliate_url} target="_blank" rel="noopener noreferrer nofollow" className="btn-primary">
           Try {tool.name} Free &rarr;
         </a>
@@ -77,14 +92,24 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
         </Link>
       </div>
 
-      <section className="mb-10">
+      <div className="mb-10 overflow-x-auto">
+        <nav className="flex gap-2 min-w-max" aria-label="Page sections">
+          {sections.map((s) => (
+            <a key={s.id} href={`#${s.id}`} className="whitespace-nowrap text-xs font-medium text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors px-3 py-1.5 bg-slate-50 dark:bg-slate-800/50 rounded-full border border-slate-200 dark:border-slate-700">
+              {s.label}
+            </a>
+          ))}
+        </nav>
+      </div>
+
+      <section id="developer-experience" className="mb-10 scroll-mt-20">
         <h2 className="section-title text-xl">Developer Experience in Next.js</h2>
-        <div className="card-glass p-6">
+        <div className="rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-6 shadow-sm">
           <p className="leading-relaxed text-slate-700 whitespace-pre-line dark:text-slate-300">{tool.dx_details}</p>
         </div>
       </section>
 
-      <section className="mb-10">
+      <section id="quick-stats" className="mb-10 scroll-mt-20">
         <h2 className="section-title text-xl">Quick Stats</h2>
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
           <div className="card-solid p-4 text-center">
@@ -106,14 +131,14 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
         </div>
       </section>
 
-      <section className="mb-10">
+      <section id="who-should-use" className="mb-10 scroll-mt-20">
         <h2 className="section-title text-xl">Who Should Use {tool.name}?</h2>
-        <div className="card-glass p-6">
+        <div className="rounded-xl border border-blue-200 dark:border-blue-800 bg-blue-50/50 dark:bg-blue-950/20 p-6 shadow-sm">
           <p className="leading-relaxed text-slate-700 whitespace-pre-line dark:text-slate-300">{tool.best_for_detailed}</p>
         </div>
       </section>
 
-      <section className="mb-10">
+      <section id="pros-cons" className="mb-10 scroll-mt-20">
         <h2 className="section-title text-xl">Pros &amp; Cons</h2>
         <div className="grid gap-5 sm:grid-cols-2">
           <div className="rounded-xl border border-green-200 bg-green-50/50 p-5 dark:border-green-800 dark:bg-green-950/30">
@@ -141,20 +166,22 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
         </div>
       </section>
 
-      <section className="mb-10 rounded-xl border-2 border-amber-200 bg-gradient-to-br from-amber-50 to-white p-6 dark:border-amber-800 dark:from-amber-950/30 dark:to-slate-900">
+      <section id="pricing-pitfall" className="mb-10 scroll-mt-20">
         <h2 className="section-title text-xl">Pricing Pitfall</h2>
-        <p className="mb-4 leading-relaxed text-slate-700 whitespace-pre-line dark:text-slate-300">{tool.pricing_pitfall}</p>
-        <div className="flex flex-wrap gap-3">
-          <a href={tool.affiliate_url} target="_blank" rel="noopener noreferrer nofollow" className="btn-primary">
-            Try {tool.name} Free &rarr;
-          </a>
-          <Link href={`/tools/${tool.id}/alternatives`} className="btn-secondary">
-            Explore Cheaper Alternatives
-          </Link>
+        <div className="rounded-xl border-2 border-amber-200 bg-amber-50/80 p-6 dark:border-amber-800 dark:bg-amber-950/20 shadow-sm">
+          <p className="mb-4 leading-relaxed text-slate-700 whitespace-pre-line dark:text-slate-300">{tool.pricing_pitfall}</p>
+          <div className="flex flex-wrap gap-3">
+            <a href={tool.affiliate_url} target="_blank" rel="noopener noreferrer nofollow" className="btn-primary">
+              Try {tool.name} Free &rarr;
+            </a>
+            <Link href={`/tools/${tool.id}/alternatives`} className="btn-secondary">
+              Explore Cheaper Alternatives
+            </Link>
+          </div>
         </div>
       </section>
 
-      <section className="mb-10">
+      <section id="related-comparisons" className="mb-10 scroll-mt-20">
         <h2 className="section-title text-xl">Related Comparisons</h2>
         <div className="grid gap-4 sm:grid-cols-3">
           {others.map((other) => (
@@ -171,6 +198,22 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
           ))}
         </div>
       </section>
+
+      <div className="sticky bottom-4 z-40 rounded-xl border border-blue-200 bg-white/90 p-4 shadow-lg backdrop-blur-xl dark:border-blue-800 dark:bg-slate-900/90 hidden sm:block">
+        <div className="flex items-center justify-between">
+          <p className="font-semibold text-slate-800 dark:text-slate-200">
+            <span className="text-blue-700 dark:text-blue-400">{tool.name}</span> — {tool.learning_curve} learning curve, {tool.setup_time_nextjs} setup
+          </p>
+          <div className="flex gap-3">
+            <a href={tool.affiliate_url} target="_blank" rel="noopener noreferrer nofollow" className="btn-primary !py-2 !px-5 text-sm">
+              Try Free &rarr;
+            </a>
+            <Link href={`/tools/${tool.id}/alternatives`} className="btn-secondary !py-2 !px-5 text-sm">
+              Alternatives
+            </Link>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
