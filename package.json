@@ -10,8 +10,6 @@
     "start": "serve out"
   },
   "dependencies": {
-    "@types/node": "^25.7.0",
-    "@types/react": "^19.2.14",
     "@vercel/analytics": "^2.0.1",
     "next": "^15.5.18",
     "next-themes": "^0.4.6",
@@ -20,6 +18,8 @@
     "typescript": "^6.0.3"
   },
   "devDependencies": {
+    "@types/node": "^25.7.0",
+    "@types/react": "^19.2.14",
     "@tailwindcss/postcss": "^4.3.0",
     "postcss": "^8.5.14",
     "serve": "^14.2.6",

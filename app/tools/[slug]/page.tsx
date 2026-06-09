@@ -16,6 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${tool.name} Review: Next.js Authentication in 2026 — Features, Pricing & DX`,
     description: tool.short_description,
+    alternates: { canonical: `https://saaspolarbeam.vercel.app/tools/${slug}` },
     openGraph: {
       title: `${tool.name} Review & Developer Experience Analysis`,
       description: tool.short_description.slice(0, 160),

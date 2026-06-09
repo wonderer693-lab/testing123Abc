@@ -30,6 +30,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${a.name} vs ${b.name} for Next.js App Router (2026 Comparison)`,
     description: `Compare ${a.name} vs ${b.name} for Next.js authentication. Pricing, developer experience, setup time, and pros & cons. Find the best auth solution for your Next.js app in 2026.`,
+    alternates: { canonical: `https://saaspolarbeam.vercel.app/compare/${slug}` },
     openGraph: {
       title: `${a.name} vs ${b.name} — Next.js Auth Comparison`,
       description: `Detailed comparison of ${a.name} and ${b.name} for Next.js App Router.`,
@@ -148,12 +149,12 @@ export default async function ComparePage({ params }: { params: Promise<{ slug: 
                 <td className="px-5 py-3 font-medium text-slate-600 dark:text-slate-400">Easier Alternative</td>
                 <td className="px-5 py-3">
                   <Link href={a.easier_alternative_url} className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 transition-colors">
-                    {a.easier_alternative}
+                    See alternatives
                   </Link>
                 </td>
                 <td className="px-5 py-3">
                   <Link href={b.easier_alternative_url} className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 transition-colors">
-                    {b.easier_alternative}
+                    See alternatives
                   </Link>
                 </td>
               </tr>
@@ -226,11 +227,11 @@ export default async function ComparePage({ params }: { params: Promise<{ slug: 
             <ul className="mt-3 space-y-2">
               <li className="flex items-start gap-2 text-sm text-blue-700 dark:text-blue-300">
                 <svg className="mt-0.5 h-4 w-4 shrink-0 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
-                {a.pros[0]}
+                {a.pros[0] ?? "Well-rounded feature set"}
               </li>
               <li className="flex items-start gap-2 text-sm text-blue-700 dark:text-blue-300">
                 <svg className="mt-0.5 h-4 w-4 shrink-0 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
-                {a.pros[1]}
+                {a.pros[1] ?? "Flexible integration options"}
               </li>
             </ul>
           </div>
@@ -239,11 +240,11 @@ export default async function ComparePage({ params }: { params: Promise<{ slug: 
             <ul className="mt-3 space-y-2">
               <li className="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400">
                 <svg className="mt-0.5 h-4 w-4 shrink-0 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
-                {b.pros[0]}
+                {b.pros[0] ?? "Well-rounded feature set"}
               </li>
               <li className="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400">
                 <svg className="mt-0.5 h-4 w-4 shrink-0 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
-                {b.pros[1]}
+                {b.pros[1] ?? "Flexible integration options"}
               </li>
             </ul>
           </div>

@@ -16,6 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `Best 5 ${tool.name} Alternatives for Next.js Developers (2026)`,
     description: `Compare the top 5 alternatives to ${tool.name} for Next.js authentication. Find the best fit for your project based on pricing, DX, and learning curve.`,
+    alternates: { canonical: `https://saaspolarbeam.vercel.app/tools/${slug}/alternatives` },
     openGraph: {
       title: `Best 5 ${tool.name} Alternatives`,
       description: `Top alternatives to ${tool.name} for Next.js developers.`,

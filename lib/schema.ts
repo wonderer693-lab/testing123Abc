@@ -51,3 +51,34 @@ export function productSchema(name: string, price: string, rating: number): Sche
     },
   };
 }
+
+export function websiteSchema(siteUrl: string, siteName: string): SchemaOrg {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: siteName,
+    url: siteUrl,
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `${siteUrl}/compare/{query}`,
+      },
+      "query-input": "required name=query",
+    },
+  };
+}
+
+export function organizationSchema(siteUrl: string, siteName: string): SchemaOrg {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: siteName,
+    url: siteUrl,
+    logo: `${siteUrl}/logo.svg`,
+    sameAs: [
+      "https://github.com/saaspolarbeam",
+      "https://twitter.com/saaspolarbeam",
+    ],
+  };
+}

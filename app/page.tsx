@@ -1,12 +1,40 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { getTools } from "@/lib/data";
+import { organizationSchema, websiteSchema } from "@/lib/schema";
+import SchemaMarkup from "@/components/SchemaMarkup";
+
+const siteName = "NextAuthCompare";
+const siteUrl = "https://saaspolarbeam.vercel.app";
+
+export function generateMetadata(): Metadata {
+  return {
+    title: siteName,
+    description: "Compare the best Next.js authentication tools. In-depth reviews, pricing breakdowns, and developer experience analysis for the top Next.js auth solutions in 2026.",
+    openGraph: {
+      title: siteName,
+      description: "Compare the best Next.js authentication tools. In-depth reviews, pricing breakdowns, and developer experience analysis for the top Next.js auth solutions in 2026.",
+      siteName,
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: siteName,
+      description: "Compare the best Next.js authentication tools. In-depth reviews, pricing breakdowns, and developer experience analysis for the top Next.js auth solutions in 2026.",
+      site: "@saaspolarbeam",
+    },
+  };
+}
 
 export default function HomePage() {
   const tools = getTools();
   const total = tools.length;
 
   return (
-    <div className="animate-fade-in">
+    <>
+      <SchemaMarkup schema={organizationSchema(siteUrl, siteName)} />
+      <SchemaMarkup schema={websiteSchema(siteUrl, siteName)} />
+      <div className="animate-fade-in">
       <section className="mb-10 text-center">
         <div className="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-gray-200 bg-gray-50 px-4 py-1.5 text-xs font-semibold text-gray-600 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300">
           Next.js Developer Infrastructure
@@ -91,5 +119,6 @@ export default function HomePage() {
         })}
       </div>
     </div>
+    </>
   );
 }

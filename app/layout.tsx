@@ -52,6 +52,12 @@ export const metadata: Metadata = {
     siteName: siteName,
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: siteName,
+    description: siteTagline,
+    site: "@saaspolarbeam",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

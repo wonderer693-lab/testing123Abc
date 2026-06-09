@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: false,
   },
-  outputFileTracingRoot: path.join(__dirname, "../../"),
+  outputFileTracingRoot: __dirname,
 };
 
 export default nextConfig;

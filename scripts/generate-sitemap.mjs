@@ -26,10 +26,12 @@ for (const tool of tools) {
   }
 }
 
+const today = new Date().toISOString().split("T")[0];
 const urls = routes
   .map(
     (r) => `  <url>
     <loc>${BASE}${r.path}</loc>
+    <lastmod>${today}</lastmod>
     <changefreq>${r.changefreq}</changefreq>
     <priority>${r.priority}</priority>
   </url>`
