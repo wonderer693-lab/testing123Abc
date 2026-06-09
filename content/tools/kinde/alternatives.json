@@ -1,0 +1,23 @@
+{
+  "page_type": "ALTERNATIVES",
+  "tool_id": "kinde",
+  "seo": {
+    "meta_title": "Best Kinde Alternatives for Next.js Developers (2026)",
+    "meta_description": "Looking for alternatives to Kinde? Compare the top Next.js auth tools — Clerk, Better Auth, Auth.js — and find the right fit for your project.",
+    "og_title": "Best Alternatives to Kinde for Next.js",
+    "og_description": "Top Kinde alternatives ranked by Next.js integration score, pricing, and developer experience."
+  },
+  "hero": {
+    "headline": "Best Kinde Alternatives for Next.js (2026)",
+    "subheadline": "Kinde not quite right? Here are the top alternatives, ranked by how well they integrate with Next.js App Router."
+  },
+  "intro_paragraphs": [
+    "Kinde is a solid choice for Next.js authentication — kinde is a modern authentication platform designed for simplicity and speed. But depending on your budget, team size, or feature requirements, one of these alternatives might be a better fit."
+  ],
+  "faq": [
+    {
+      "question": "Why would I choose something over Kinde?",
+      "answer": "While Kinde scores 7/10 for Next.js integration, other tools may offer better pricing at scale (Free – $300/mo with Yes, up to 7,500 MAU), different learning curves, or features that Kinde lacks such as next.js sdk is less mature than clerk with fewer component abstractions, smaller community and fewer third-party integrations."
+    }
+  ]
+}

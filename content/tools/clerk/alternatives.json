@@ -1,0 +1,23 @@
+{
+  "page_type": "ALTERNATIVES",
+  "tool_id": "clerk",
+  "seo": {
+    "meta_title": "Best Clerk Alternatives for Next.js Developers (2026)",
+    "meta_description": "Looking for alternatives to Clerk? Compare the top Next.js auth tools — Kinde, Better Auth, Auth.js — and find the right fit for your project.",
+    "og_title": "Best Alternatives to Clerk for Next.js",
+    "og_description": "Top Clerk alternatives ranked by Next.js integration score, pricing, and developer experience."
+  },
+  "hero": {
+    "headline": "Best Clerk Alternatives for Next.js (2026)",
+    "subheadline": "Clerk not quite right? Here are the top alternatives, ranked by how well they integrate with Next.js App Router."
+  },
+  "intro_paragraphs": [
+    "Clerk is a solid choice for Next.js authentication — clerk is a developer-first authentication and user management platform built specifically for modern next.js applications. But depending on your budget, team size, or feature requirements, one of these alternatives might be a better fit."
+  ],
+  "faq": [
+    {
+      "question": "Why would I choose something over Clerk?",
+      "answer": "While Clerk scores 9/10 for Next.js integration, other tools may offer better pricing at scale (Free – $199/mo with Yes, up to 10,000 monthly active users), different learning curves, or features that Clerk lacks such as pricing scales quickly at higher mau tiers, limited customization of hosted ui pages without enterprise plan."
+    }
+  ]
+}

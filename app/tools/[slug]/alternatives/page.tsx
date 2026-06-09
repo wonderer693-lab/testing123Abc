@@ -5,6 +5,7 @@ import { getTools, getToolByName, getAlternatives } from "@/lib/data";
 import { breadcrumbSchema } from "@/lib/schema";
 import SchemaMarkup from "@/components/SchemaMarkup";
 import Breadcrumb from "@/components/Breadcrumb";
+import { loadAlternativesContent } from "@/lib/content-loader";
 
 export function generateStaticParams() {
   return getTools().map((t) => ({ slug: t.id }));
@@ -14,6 +15,21 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const tool = getToolByName(slug);
   if (!tool) return {};
+
+  const content = loadAlternativesContent(slug);
+
+  if (content) {
+    return {
+      title: content.seo.meta_title,
+      description: content.seo.meta_description,
+      alternates: { canonical: `https://saaspolarbeam.vercel.app/tools/${slug}/alternatives` },
+      openGraph: {
+        title: content.seo.og_title,
+        description: content.seo.og_description,
+      },
+    };
+  }
+
   return {
     title: `Best 5 ${tool.name} Alternatives for Next.js Developers (2026)`,
     description: `Compare the top 5 alternatives to ${tool.name} for Next.js authentication. Find the best fit for your project based on pricing, DX, and learning curve.`,

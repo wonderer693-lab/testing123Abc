@@ -2,9 +2,11 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getTools, getToolByName } from "@/lib/data";
-import { breadcrumbSchema, productSchema } from "@/lib/schema";
+import { breadcrumbSchema, faqSchema, productSchema } from "@/lib/schema";
 import SchemaMarkup from "@/components/SchemaMarkup";
+import FaqSection from "@/components/FaqSection";
 import Breadcrumb from "@/components/Breadcrumb";
+import { loadToolPageContent } from "@/lib/content-loader";
 
 export function generateStaticParams() {
   return getTools().map((t) => ({ slug: t.id }));
@@ -14,6 +16,27 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const tool = getToolByName(slug);
   if (!tool) return {};
+
+  const content = loadToolPageContent(slug);
+
+  if (content) {
+    return {
+      title: content.seo.meta_title,
+      description: content.seo.meta_description,
+      alternates: { canonical: `https://saaspolarbeam.vercel.app/tools/${slug}` },
+      openGraph: {
+        title: content.seo.og_title,
+        description: content.seo.og_description,
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: content.seo.og_title,
+        description: content.seo.og_description.slice(0, 120),
+        site: "@saaspolarbeam",
+      },
+    };
+  }
+
   return {
     title: `${tool.name} Review: Next.js Authentication in 2026 — Features, Pricing & DX`,
     description: tool.short_description,
@@ -36,6 +59,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
   const tool = getToolByName(slug);
   if (!tool) notFound();
 
+  const content = loadToolPageContent(slug);
   const others = getTools().filter((t) => t.id !== slug).slice(0, 3);
 
   const sections = [
@@ -180,6 +204,16 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
           </div>
         </div>
       </section>
+
+      {content && content.faq.length > 0 && (
+        <>
+          <SchemaMarkup schema={faqSchema(content.faq.map((f) => ({ q: f.question, a: f.answer })))} />
+          <section className="mb-10">
+            <h2 className="section-title text-xl">Frequently Asked Questions</h2>
+            <FaqSection items={content.faq.map((f) => ({ q: f.question, a: f.answer }))} />
+          </section>
+        </>
+      )}
 
       <section id="related-comparisons" className="mb-10 scroll-mt-20">
         <h2 className="section-title text-xl">Related Comparisons</h2>

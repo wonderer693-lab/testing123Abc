@@ -29,6 +29,13 @@ export function generateMetadata(): Metadata {
 export default function HomePage() {
   const tools = getTools();
 
+  const categories = [
+    { name: "Managed Auth", desc: "Plug and play, pay as you grow", tools: ["Clerk", "Kinde", "Descope"], borderClass: "border-t-blue-500" },
+    { name: "Open Source", desc: "Free, self-hosted, full control", tools: ["Better Auth", "Auth.js"], borderClass: "border-t-green-500" },
+    { name: "Platform-Bundled", desc: "Comes with your database", tools: ["Supabase Auth", "Firebase Auth"], borderClass: "border-t-purple-500" },
+    { name: "Enterprise", desc: "SSO, compliance, scale", tools: ["Auth0", "WorkOS"], borderClass: "border-t-amber-500" },
+  ];
+
   const keyFeatures = (tool: typeof tools[0]) => {
     const features: string[] = [];
     if (tool.id === "clerk") features.push("Pre-built UI components", "Multi-tenancy / orgs", "Edge middleware", "TypeScript-first");
@@ -65,6 +72,31 @@ export default function HomePage() {
                 {tool.name}
               </Link>
             ))}
+          </div>
+        </section>
+
+        <section className="mb-12" aria-labelledby="browse-heading">
+          <h2 id="browse-heading" className="mb-6 text-xl font-bold text-slate-900 dark:text-slate-100">Browse by Category</h2>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {categories.map((cat) => {
+              const catTools = tools.filter((t) => cat.tools.includes(t.name));
+              return (
+                <div key={cat.name} className={`card-solid p-4 border-t-2 ${cat.borderClass}`}>
+                  <h3 className="font-semibold text-slate-800 dark:text-slate-200">{cat.name}</h3>
+                  <p className="mt-1 text-xs text-slate-400 dark:text-slate-500">{cat.desc}</p>
+                  <ul className="mt-3 space-y-1.5">
+                    {catTools.map((t) => (
+                      <li key={t.id}>
+                        <Link href={`/tools/${t.id}`} className="text-sm text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 transition-colors">
+                          {t.name}
+                        </Link>
+                        <span className="ml-2 text-xs text-slate-400 dark:text-slate-500">{t.rating}★</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              );
+            })}
           </div>
         </section>
 

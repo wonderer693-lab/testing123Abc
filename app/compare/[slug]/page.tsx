@@ -6,6 +6,7 @@ import { breadcrumbSchema, faqSchema, productSchema } from "@/lib/schema";
 import SchemaMarkup from "@/components/SchemaMarkup";
 import FaqSection from "@/components/FaqSection";
 import Breadcrumb from "@/components/Breadcrumb";
+import { loadCompareContent } from "@/lib/content-loader";
 
 export function generateStaticParams() {
   const tools = getTools();
@@ -28,6 +29,21 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const a = getToolByName(toolA);
   const b = getToolByName(toolB);
   if (!a || !b) return {};
+
+  const content = loadCompareContent(slug);
+
+  if (content) {
+    return {
+      title: content.seo.meta_title,
+      description: content.seo.meta_description,
+      alternates: { canonical: `https://saaspolarbeam.vercel.app/compare/${slug}` },
+      openGraph: {
+        title: content.seo.og_title,
+        description: content.seo.og_description,
+      },
+    };
+  }
+
   return {
     title: `${a.name} vs ${b.name} for Next.js App Router (2026 Comparison)`,
     description: `Compare ${a.name} vs ${b.name} for Next.js authentication. Pricing, developer experience, setup time, and pros & cons. Find the best auth solution for your Next.js app in 2026.`,
@@ -54,27 +70,31 @@ export default async function ComparePage({ params }: { params: Promise<{ slug: 
   const b = getToolByName(toolB);
   if (!a || !b) notFound();
 
+  const content = loadCompareContent(slug);
+
   const winner = a.nextjs_integration_score >= b.nextjs_integration_score ? a : b;
   const loser = winner.id === a.id ? b : a;
 
-  const faqs = [
-    {
-      q: `Should I choose ${a.name} or ${b.name} for my Next.js app?`,
-      a: `It depends on your priorities. ${a.name} scores ${a.nextjs_integration_score}/10 for Next.js integration with a ${a.learning_curve} learning curve. ${b.name} scores ${b.nextjs_integration_score}/10 with a ${b.learning_curve} learning curve. Choose ${winner.name} if you prioritize Next.js DX above all else.`,
-    },
-    {
-      q: `Is ${a.name} cheaper than ${b.name}?`,
-      a: `${a.name} starts at ${a.starting_price} with ${a.free_tier}. ${b.name} starts at ${b.starting_price} with ${b.free_tier}. Factor in usage limits to determine the best value for your scale.`,
-    },
-    {
-      q: `Which has better developer experience: ${a.name} or ${b.name}?`,
-      a: `${a.name} has a ${a.learning_curve} learning curve with a Next.js integration score of ${a.nextjs_integration_score}/10. ${b.name} has a ${b.learning_curve} learning curve scoring ${b.nextjs_integration_score}/10. For pure developer experience, ${winner.name} leads in our evaluation.`,
-    },
-    {
-      q: `Can I use ${a.name} and ${b.name} together?`,
-      a: `Most production setups use a single auth provider. Using both ${a.name} and ${b.name} would create conflicting session management. Choose one based on your requirements: ${winner.name} is our recommendation for most Next.js projects.`,
-    },
-  ];
+  const faqs = content
+    ? content.faq.map((f) => ({ q: f.question, a: f.answer }))
+    : [
+        {
+          q: `Should I choose ${a.name} or ${b.name} for my Next.js app?`,
+          a: `It depends on your priorities. ${a.name} scores ${a.nextjs_integration_score}/10 for Next.js integration with a ${a.learning_curve} learning curve. ${b.name} scores ${b.nextjs_integration_score}/10 with a ${b.learning_curve} learning curve. Choose ${winner.name} if you prioritize Next.js DX above all else.`,
+        },
+        {
+          q: `Is ${a.name} cheaper than ${b.name}?`,
+          a: `${a.name} starts at ${a.starting_price} with ${a.free_tier}. ${b.name} starts at ${b.starting_price} with ${b.free_tier}. Factor in usage limits to determine the best value for your scale.`,
+        },
+        {
+          q: `Which has better developer experience: ${a.name} or ${b.name}?`,
+          a: `${a.name} has a ${a.learning_curve} learning curve with a Next.js integration score of ${a.nextjs_integration_score}/10. ${b.name} has a ${b.learning_curve} learning curve scoring ${b.nextjs_integration_score}/10. For pure developer experience, ${winner.name} leads in our evaluation.`,
+        },
+        {
+          q: `Can I use ${a.name} and ${b.name} together?`,
+          a: `Most production setups use a single auth provider. Using both ${a.name} and ${b.name} would create conflicting session management. Choose one based on your requirements: ${winner.name} is our recommendation for most Next.js projects.`,
+        },
+      ];
 
   return (
     <>
@@ -97,6 +117,16 @@ export default async function ComparePage({ params }: { params: Promise<{ slug: 
         {a.name} vs {b.name}
       </h1>
       <p className="mb-8 text-lg text-slate-500 dark:text-slate-400">Which authentication tool is right for your Next.js project?</p>
+
+      {content && (
+        <section className="mb-8 rounded-xl border border-blue-100 bg-blue-50/50 p-5 dark:border-blue-800 dark:bg-blue-950/20">
+          <p className="text-sm leading-relaxed text-slate-700 dark:text-slate-300">{content.quick_summary}</p>
+          <div className="mt-3 flex items-center gap-2 text-sm">
+            <span className="font-semibold text-blue-700 dark:text-blue-400">Our verdict:</span>
+            <span className="text-slate-600 dark:text-slate-400">{content.verdict_text}</span>
+          </div>
+        </section>
+      )}
 
       <div className="mb-10 grid gap-5 sm:grid-cols-2">
         <div className="relative border-2 border-blue-600 shadow-lg bg-gradient-to-br from-blue-50 to-white rounded-xl p-6 overflow-hidden dark:from-blue-950 dark:to-slate-900">

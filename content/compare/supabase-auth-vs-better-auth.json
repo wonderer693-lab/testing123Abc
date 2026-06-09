@@ -1,0 +1,109 @@
+{
+  "page_type": "VS_COMPARISON",
+  "tool_1_id": "supabase-auth",
+  "tool_2_id": "better-auth",
+  "seo": {
+    "meta_title": "Supabase Auth vs Better Auth for Next.js App Router (2026): Which Auth Tool Wins?",
+    "meta_description": "Detailed Supabase Auth vs Better Auth comparison for Next.js App Router. See how they stack up on pricing, developer experience, and real-world trade-offs.",
+    "og_title": "Supabase Auth vs Better Auth: Next.js Auth Comparison (2026)",
+    "og_description": "We compared Supabase Auth and Better Auth head-to-head. Pricing: Free – $75/mo vs Free (Open Source). Read our full analysis."
+  },
+  "hero": {
+    "headline": "Supabase Auth vs Better Auth for Next.js Authentication",
+    "subheadline": "An honest comparison of Supabase Auth and Better Auth — pricing, DX, setup time, and which one we recommend for Next.js App Router projects in 2026."
+  },
+  "quick_summary": "Supabase Auth vs Better Auth is a common comparison we hear from Next.js developers. Supabase Auth (4.4★) and Better Auth (4.5★) both have loyal followings. Our analysis shows Better Auth has the edge for most Next.js projects due to its 8/10 DX score. Supabase Auth is a strong alternative if yes, 50,000 mau included in free tier better matches your budget.",
+  "verdict_winner_id": "better-auth",
+  "verdict_text": "We recommend Better Auth for most Next.js App Router projects. Its medium learning curve and 30 minutes setup time make it immediately productive. Supabase Auth is a worthy alternative, particularly if you need yes, 50,000 mau included in free tier or prefer Supabase Auth's approach to authentication.",
+  "structured_data_points": [
+    {
+      "label": "Starting Price",
+      "t1": "Free – $75/mo",
+      "t2": "Free (Open Source)",
+      "w": null
+    },
+    {
+      "label": "Free Tier",
+      "t1": "Yes, 50,000 MAU included in Free tier",
+      "t2": "Yes, fully open source with self-hosting",
+      "w": null
+    },
+    {
+      "label": "Learning Curve",
+      "t1": "Easy",
+      "t2": "Medium",
+      "w": null
+    },
+    {
+      "label": "Setup Time",
+      "t1": "15 minutes",
+      "t2": "30 minutes",
+      "w": null
+    },
+    {
+      "label": "Next.js Integration",
+      "t1": "7/10",
+      "t2": "8/10",
+      "w": "better-auth"
+    },
+    {
+      "label": "User Rating",
+      "t1": "4.4★",
+      "t2": "4.5★",
+      "w": "better-auth"
+    }
+  ],
+  "pros_and_cons": {
+    "tool_1": {
+      "pros": [
+        "Extremely generous free tier with 50,000 monthly active users",
+        "Integrated with Supabase database, storage, and realtime subscriptions",
+        "Row-Level Security (RLS) provides database-level authorization",
+        "Built-in support for email, phone, OAuth, and magic links",
+        "Self-hostable option available"
+      ],
+      "cons": [
+        "Tightly coupled to the Supabase PostgreSQL ecosystem",
+        "Less focused on auth-only use cases - it's part of a larger platform",
+        "Organization and team management features are less mature than Clerk",
+        "RLS policies can become complex to manage at scale"
+      ]
+    },
+    "tool_2": {
+      "pros": [
+        "Fully open source with no vendor lock-in or usage limits",
+        "Self-hosted on your own infrastructure - complete data control",
+        "Plugin architecture for extensibility",
+        "Growing community and active development on GitHub"
+      ],
+      "cons": [
+        "Requires database setup and self-hosting infrastructure",
+        "Smaller ecosystem than Auth0 or Clerk",
+        "Fewer pre-built UI components compared to managed alternatives",
+        "Documentation still maturing"
+      ]
+    }
+  },
+  "faq": [
+    {
+      "question": "Should I choose Supabase Auth or Better Auth for my Next.js app?",
+      "answer": "It depends on your specific needs. Supabase Auth scores 7/10 for Next.js integration with a Easy learning curve. Better Auth scores 8/10 with a Medium learning curve. For most projects, we recommend Better Auth because of its stronger DX and better alignment with App Router patterns. However, if Yes, 50,000 MAU included in Free tier or Yes, fully open source with self-hosting is a deciding factor, the cheaper option may serve you well."
+    },
+    {
+      "question": "Is Supabase Auth or Better Auth more affordable?",
+      "answer": "Supabase Auth starts at Free – $75/mo with a free tier of Yes, 50,000 MAU included in Free tier. Better Auth starts at Free (Open Source) with a free tier of Yes, fully open source with self-hosting. The total cost of ownership depends on your MAU (monthly active users). At lower volumes, the free tiers of both are sufficient. As you scale, Supabase Auth offers better value at scale. Factor in hidden costs like enterprise features, SSO, and database infrastructure when comparing."
+    },
+    {
+      "question": "Is Supabase Auth or Better Auth easier to set up with Next.js?",
+      "answer": "Supabase Auth has a Easy learning curve with an estimated setup time of 15 minutes. Better Auth has a Medium learning curve with an estimated setup time of 30 minutes. Supabase Auth is faster to set up, but ease of integration also depends on your team's familiarity with the framework and whether you want pre-built UI components or prefer to build your own."
+    },
+    {
+      "question": "Can I use Supabase Auth and Better Auth together?",
+      "answer": "Using both Supabase Auth and Better Auth in the same Next.js application is not recommended. They would create separate session management systems, conflicting middleware, and competing cookies. Choose one auth provider and stick with it. Migrating between auth providers later is possible but requires user data export and rebuilding authentication flows."
+    },
+    {
+      "question": "Which has better developer experience: Supabase Auth or Better Auth?",
+      "answer": "Supabase Auth has a Easy learning curve, a Next.js integration score of 7/10, and a user rating of 4.4★. Better Auth has a Medium learning curve, 8/10, and 4.5★. On paper, Better Auth leads in DX. In practice, your specific requirements around pre-built components, customization, and team expertise matter just as much. Try both free tiers to see what clicks."
+    }
+  ]
+}

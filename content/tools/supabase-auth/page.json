@@ -1,0 +1,35 @@
+{
+  "page_type": "TOOL_PAGE",
+  "tool_id": "supabase-auth",
+  "seo": {
+    "meta_title": "Supabase Auth Review: Next.js Auth in 2026 — Pricing, DX & Setup",
+    "meta_description": "Supabase Auth is a built-in authentication service within the Supabase platform. It provides a complete auth solution with integrated database access, Row-",
+    "og_title": "Supabase Auth — Pricing, Developer Experience & Best Use Cases",
+    "og_description": "Supabase Auth for Next.js App Router: Easy learning curve, Free – $75/mo, 15 minutes setup. Already on Supabase? 50K MAU free, RLS = database-level auth, zero extra infra"
+  },
+  "hero": {
+    "headline": "Supabase Auth: Complete Review for Next.js Developers",
+    "subheadline": "A thorough breakdown of Supabase Auth's pricing, developer experience, and fit for Next.js App Router projects."
+  },
+  "intro_paragraphs": [
+    "For Next.js developers evaluating auth solutions, Supabase Auth stands out for already on supabase? 50k mau free, rls = database-level auth, zero extra infra. With a rating of 4.4★ and a Next.js integration score of 7/10, it is one of the most approachable options available."
+  ],
+  "who_should_use_paragraphs": [
+    "Supabase Auth works best for Next.js projects where ease of integration matters most. The easy learning curve means your whole team can be productive within hours. We recommend it for teams that want a managed solution with minimal ops overhead."
+  ],
+  "pricing_context": "Supabase Auth's free tier (50K MAU) is the most generous on this list, making it perfect for prototyping and early-stage apps. The Pro plan at $75/mo includes 100K MAU, which scales reasonably. The trap is that Supabase is not just auth - you will likely also use their database, storage, and realtime features, which all have separate usage costs. A typical production app at scale can easily cost $200-500/mo across all Supabase services. If you want auth-only without the platform dependency, Firebase Auth offers a similar pricing model without requiring you to use Firebase's database. For pure auth needs, Clerk's $199/mo Pro plan may actually be cheaper than Supabase's total platform cost at scale.",
+  "faq": [
+    {
+      "question": "Is Supabase Auth good for Next.js App Router?",
+      "answer": "Supabase Auth has a Next.js integration score of 7/10. Supabase Auth integrates with Next. Supabase Auth is a capable option for App Router projects."
+    },
+    {
+      "question": "How much does Supabase Auth cost?",
+      "answer": "Supabase Auth starts at Free – $75/mo with Yes, 50,000 MAU included in Free tier. Supabase Auth's free tier (50K MAU) is the most generous on this list, making it perfect for prototyping and early-stage apps. Factor in your expected MAU when evaluating total cost."
+    },
+    {
+      "question": "How long does it take to set up Supabase Auth with Next.js?",
+      "answer": "Setup time is approximately 15 minutes with an easy learning curve. js through the @supabase/ssr and @supabase/supabase-js packages."
+    }
+  ]
+}

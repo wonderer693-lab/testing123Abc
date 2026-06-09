@@ -1,0 +1,109 @@
+{
+  "page_type": "VS_COMPARISON",
+  "tool_1_id": "kinde",
+  "tool_2_id": "workos",
+  "seo": {
+    "meta_title": "Kinde vs WorkOS for Next.js App Router (2026): Which Auth Tool Wins?",
+    "meta_description": "Looking for Kinde vs WorkOS for your Next.js app? We compare pricing (Free – $300/mo vs Custom pricing (enterprise)), DX scores, setup time, and give you our honest pick.",
+    "og_title": "Kinde or WorkOS for Next.js? Our Honest Comparison",
+    "og_description": "Kinde (4.3★) vs WorkOS (4★). Easy learning curve vs Advanced. Find your ideal Next.js auth solution."
+  },
+  "hero": {
+    "headline": "Kinde vs WorkOS for Next.js Authentication",
+    "subheadline": "An honest comparison of Kinde and WorkOS — pricing, DX, setup time, and which one we recommend for Next.js App Router projects in 2026."
+  },
+  "quick_summary": "Both Kinde and WorkOS are solid choices for Next.js authentication, but they serve different needs. Kinde edges ahead with a stronger Next.js integration score (7/10 vs 5/10). Where WorkOS shines is No free tier (enterprise sales). If you are optimizing for developer experience in the App Router, Kinde is the safer bet.",
+  "verdict_winner_id": "kinde",
+  "verdict_text": "Kinde is our pick for this matchup. The 7/10 Next.js score reflects how well it integrates with server components, middleware, and edge runtime. WorkOS is not far behind at 5/10, but Kinde's developer experience gives it the edge for most projects.",
+  "structured_data_points": [
+    {
+      "label": "Starting Price",
+      "t1": "Free – $300/mo",
+      "t2": "Custom pricing (enterprise)",
+      "w": null
+    },
+    {
+      "label": "Free Tier",
+      "t1": "Yes, up to 7,500 MAU",
+      "t2": "No free tier (enterprise sales)",
+      "w": null
+    },
+    {
+      "label": "Learning Curve",
+      "t1": "Easy",
+      "t2": "Advanced",
+      "w": null
+    },
+    {
+      "label": "Setup Time",
+      "t1": "15 minutes",
+      "t2": "45 minutes",
+      "w": null
+    },
+    {
+      "label": "Next.js Integration",
+      "t1": "7/10",
+      "t2": "5/10",
+      "w": "kinde"
+    },
+    {
+      "label": "User Rating",
+      "t1": "4.3★",
+      "t2": "4★",
+      "w": "kinde"
+    }
+  ],
+  "pros_and_cons": {
+    "tool_1": {
+      "pros": [
+        "Generous free tier with 7,500 MAU including most Pro features",
+        "Clean developer dashboard with visual workflow builder",
+        "Feature flags and remote configuration built into auth platform",
+        "Good Next.js SDK with documentation for App Router",
+        "Fast and responsive support team"
+      ],
+      "cons": [
+        "Next.js SDK is less mature than Clerk with fewer component abstractions",
+        "Smaller community and fewer third-party integrations",
+        "Advanced customization often requires self-hosting the hosted pages"
+      ]
+    },
+    "tool_2": {
+      "pros": [
+        "Enterprise-grade SSO with SAML/OIDC support out of the box",
+        "SCIM provisioning for enterprise directory integration",
+        "SOC 2 compliant and enterprise-ready from day one",
+        "Clean API design with excellent documentation",
+        "Used by Vercel, Airbnb, and other top-tier tech companies"
+      ],
+      "cons": [
+        "No free tier - requires sales conversation to get started",
+        "Not designed for consumer auth or B2C applications",
+        "Pricing is opaque and requires a sales call",
+        "Overkill for teams that don't need enterprise SSO"
+      ]
+    }
+  },
+  "faq": [
+    {
+      "question": "Should I choose Kinde or WorkOS for my Next.js app?",
+      "answer": "It depends on your specific needs. Kinde scores 7/10 for Next.js integration with a Easy learning curve. WorkOS scores 5/10 with a Advanced learning curve. For most projects, we recommend Kinde because of its stronger DX and better alignment with App Router patterns. However, if Yes, up to 7,500 MAU or No free tier (enterprise sales) is a deciding factor, the cheaper option may serve you well."
+    },
+    {
+      "question": "Is Kinde or WorkOS more affordable?",
+      "answer": "Kinde starts at Free – $300/mo with a free tier of Yes, up to 7,500 MAU. WorkOS starts at Custom pricing (enterprise) with a free tier of No free tier (enterprise sales). The total cost of ownership depends on your MAU (monthly active users). At lower volumes, the free tiers of both are sufficient. As you scale, Kinde offers better value at scale. Factor in hidden costs like enterprise features, SSO, and database infrastructure when comparing."
+    },
+    {
+      "question": "Is Kinde or WorkOS easier to set up with Next.js?",
+      "answer": "Kinde has a Easy learning curve with an estimated setup time of 15 minutes. WorkOS has a Advanced learning curve with an estimated setup time of 45 minutes. Kinde is faster to set up, but ease of integration also depends on your team's familiarity with the framework and whether you want pre-built UI components or prefer to build your own."
+    },
+    {
+      "question": "Can I use Kinde and WorkOS together?",
+      "answer": "Using both Kinde and WorkOS in the same Next.js application is not recommended. They would create separate session management systems, conflicting middleware, and competing cookies. Choose one auth provider and stick with it. Migrating between auth providers later is possible but requires user data export and rebuilding authentication flows."
+    },
+    {
+      "question": "Which has better developer experience: Kinde or WorkOS?",
+      "answer": "Kinde has a Easy learning curve, a Next.js integration score of 7/10, and a user rating of 4.3★. WorkOS has a Advanced learning curve, 5/10, and 4★. On paper, Kinde leads in DX. In practice, your specific requirements around pre-built components, customization, and team expertise matter just as much. Try both free tiers to see what clicks."
+    }
+  ]
+}

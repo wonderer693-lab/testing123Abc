@@ -1,0 +1,35 @@
+{
+  "page_type": "TOOL_PAGE",
+  "tool_id": "better-auth",
+  "seo": {
+    "meta_title": "Better Auth Review: Next.js Auth in 2026 — Pricing, DX & Setup",
+    "meta_description": "Better Auth is an open-source authentication framework for Next.js applications. It provides a self-hosted alternative to managed auth services, giving dev",
+    "og_title": "Better Auth — Pricing, Developer Experience & Best Use Cases",
+    "og_description": "Better Auth for Next.js App Router: Medium learning curve, Free (Open Source), 30 minutes setup. Open-source control, zero vendor lock-in, plugin architecture for custom auth flows"
+  },
+  "hero": {
+    "headline": "Better Auth: Complete Review for Next.js Developers",
+    "subheadline": "A thorough breakdown of Better Auth's pricing, developer experience, and fit for Next.js App Router projects."
+  },
+  "intro_paragraphs": [
+    "For Next.js developers evaluating auth solutions, Better Auth stands out for open-source control, zero vendor lock-in, plugin architecture for custom auth flows. With a rating of 4.5★ and a Next.js integration score of 8/10, it offers depth at the cost of a steeper learning curve."
+  ],
+  "who_should_use_paragraphs": [
+    "Better Auth is ideal for teams that want the best possible developer experience for Next.js App Router. Better Auth gives you a self-hosted, open-source auth framework with a plugin system that lets you add MFA, RBAC, rate limiting, and passkeys without rewriting core logic. If you are building a Next.js SaaS and value seamless integration, Better Auth deserves serious consideration."
+  ],
+  "pricing_context": "Better Auth itself is free and open source, but 'free' here is misleading when you factor in infrastructure costs. You need a database (Postgres, MySQL, or SQLite), a server or serverless functions to host the API routes, and ongoing maintenance for security patches and updates. For a production Next.js app, you are looking at $20-50/mo in hosting costs plus engineering time for setup and maintenance. While there is no per-user pricing, the operational cost can rival or exceed managed auth services for small teams. Auth.js offers a similar open-source model with a larger community and more battle-tested codebase.",
+  "faq": [
+    {
+      "question": "Is Better Auth good for Next.js App Router?",
+      "answer": "Better Auth has a Next.js integration score of 8/10. Better Auth takes a framework-first approach with deep Next. Better Auth is one of the best options available for App Router projects."
+    },
+    {
+      "question": "How much does Better Auth cost?",
+      "answer": "Better Auth starts at Free (Open Source) with Yes, fully open source with self-hosting. Better Auth itself is free and open source, but 'free' here is misleading when you factor in infrastructure costs. Factor in your expected MAU when evaluating total cost."
+    },
+    {
+      "question": "How long does it take to set up Better Auth with Next.js?",
+      "answer": "Setup time is approximately 30 minutes with a medium learning curve. js App Router integration."
+    }
+  ]
+}

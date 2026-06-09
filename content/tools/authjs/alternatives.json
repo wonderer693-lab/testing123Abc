@@ -1,0 +1,23 @@
+{
+  "page_type": "ALTERNATIVES",
+  "tool_id": "authjs",
+  "seo": {
+    "meta_title": "Best Auth.js Alternatives for Next.js Developers (2026)",
+    "meta_description": "Looking for alternatives to Auth.js? Compare the top Next.js auth tools — Clerk, Kinde, Better Auth — and find the right fit for your project.",
+    "og_title": "Best Alternatives to Auth.js for Next.js",
+    "og_description": "Top Auth.js alternatives ranked by Next.js integration score, pricing, and developer experience."
+  },
+  "hero": {
+    "headline": "Best Auth.js Alternatives for Next.js (2026)",
+    "subheadline": "Auth.js not quite right? Here are the top alternatives, ranked by how well they integrate with Next.js App Router."
+  },
+  "intro_paragraphs": [
+    "Auth.js is a solid choice for Next.js authentication — auth.js (formerly nextauth.js) is the most widely adopted open-source authentication library for next.js. But depending on your budget, team size, or feature requirements, one of these alternatives might be a better fit."
+  ],
+  "faq": [
+    {
+      "question": "Why would I choose something over Auth.js?",
+      "answer": "While Auth.js scores 8/10 for Next.js integration, other tools may offer better pricing at scale (Free (Open Source) with Yes, fully open source), different learning curves, or features that Auth.js lacks such as no built-in ui components - you build your own login pages, configuration can become complex for advanced use cases."
+    }
+  ]
+}

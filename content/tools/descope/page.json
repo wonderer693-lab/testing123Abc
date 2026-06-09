@@ -1,0 +1,35 @@
+{
+  "page_type": "TOOL_PAGE",
+  "tool_id": "descope",
+  "seo": {
+    "meta_title": "Descope Review: Next.js Auth in 2026 — Pricing, DX & Setup",
+    "meta_description": "Descope is a visual-first authentication platform that lets you build auth flows with a drag-and-drop workflow editor. It targets teams that want to design",
+    "og_title": "Descope — Pricing, Developer Experience & Best Use Cases",
+    "og_description": "Descope for Next.js App Router: Medium learning curve, Free – $2,000/mo, 20 minutes setup. Visual drag-and-drop auth flows for non-technical teams — but $2K/mo at 30K MAU, premium for abstrac"
+  },
+  "hero": {
+    "headline": "Descope: Complete Review for Next.js Developers",
+    "subheadline": "A thorough breakdown of Descope's pricing, developer experience, and fit for Next.js App Router projects."
+  },
+  "intro_paragraphs": [
+    "Descope is a medium authentication solution with a starting price of Free – $2,000/mo. It is designed for Next.js App Router and supports authentication patterns like visual drag-and-drop workflow builder for authentication flows and no-code screens reduce front-end development time. Estimated setup time is 20 minutes for a basic integration."
+  ],
+  "who_should_use_paragraphs": [
+    "Descope is ideal for teams that need a reliable auth solution with specific strengths around visual drag-and-drop workflow builder for authentication flows and no-code screens reduce front-end development time. Descope's visual workflow editor lets product managers design multi-step registration, conditional MFA, and progressive profiling without writing front-end code. If you are building a Next.js SaaS and value seamless integration, Descope deserves serious consideration."
+  ],
+  "pricing_context": "Descope's free tier (5,000 MAU, 2,000 transactions) is sufficient for prototyping but tight for production. The JumpStart plan at $2,000/mo covers 30,000 MAU - a steep jump that rivals Auth0's B2B plan. At scale, Descope is one of the most expensive options on this list. The visual workflow builder is the value proposition, but it comes at a significant premium. For most Next.js teams, Clerk provides better DX at 1/10th the cost. Consider Descope only if you have non-technical team members who need to build and modify authentication flows independently. Otherwise, the pricing does not justify the visual abstraction layer.",
+  "faq": [
+    {
+      "question": "Is Descope good for Next.js App Router?",
+      "answer": "Descope has a Next.js integration score of 7/10. Descope's Next. Descope is a capable option for App Router projects."
+    },
+    {
+      "question": "How much does Descope cost?",
+      "answer": "Descope starts at Free – $2,000/mo with Yes, up to 5,000 MAU with 2,000 transactions. Descope's free tier (5,000 MAU, 2,000 transactions) is sufficient for prototyping but tight for production. Factor in your expected MAU when evaluating total cost."
+    },
+    {
+      "question": "How long does it take to set up Descope with Next.js?",
+      "answer": "Setup time is approximately 20 minutes with a medium learning curve. js SDK provides a familiar provider-based setup with the DescopeProvider wrapping your application."
+    }
+  ]
+}

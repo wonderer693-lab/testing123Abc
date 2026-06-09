@@ -1,0 +1,23 @@
+{
+  "page_type": "ALTERNATIVES",
+  "tool_id": "logto",
+  "seo": {
+    "meta_title": "Best Logto Alternatives for Next.js Developers (2026)",
+    "meta_description": "Looking for alternatives to Logto? Compare the top Next.js auth tools — Clerk, Kinde, Better Auth — and find the right fit for your project.",
+    "og_title": "Best Alternatives to Logto for Next.js",
+    "og_description": "Top Logto alternatives ranked by Next.js integration score, pricing, and developer experience."
+  },
+  "hero": {
+    "headline": "Best Logto Alternatives for Next.js (2026)",
+    "subheadline": "Logto not quite right? Here are the top alternatives, ranked by how well they integrate with Next.js App Router."
+  },
+  "intro_paragraphs": [
+    "Logto is a solid choice for Next.js authentication — logto is an open-source identity platform that offers both cloud-hosted and self-hosted options. But depending on your budget, team size, or feature requirements, one of these alternatives might be a better fit."
+  ],
+  "faq": [
+    {
+      "question": "Why would I choose something over Logto?",
+      "answer": "While Logto scores 7/10 for Next.js integration, other tools may offer better pricing at scale (Free – $599/mo with Yes, up to 5,000 MAU), different learning curves, or features that Logto lacks such as smaller community and fewer third-party integrations, next.js sdk is less mature with fewer examples."
+    }
+  ]
+}

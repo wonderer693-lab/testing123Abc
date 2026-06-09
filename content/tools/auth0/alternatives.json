@@ -1,0 +1,23 @@
+{
+  "page_type": "ALTERNATIVES",
+  "tool_id": "auth0",
+  "seo": {
+    "meta_title": "Best Auth0 Alternatives for Next.js Developers (2026)",
+    "meta_description": "Looking for alternatives to Auth0? Compare the top Next.js auth tools — Clerk, Kinde, Better Auth — and find the right fit for your project.",
+    "og_title": "Best Alternatives to Auth0 for Next.js",
+    "og_description": "Top Auth0 alternatives ranked by Next.js integration score, pricing, and developer experience."
+  },
+  "hero": {
+    "headline": "Best Auth0 Alternatives for Next.js (2026)",
+    "subheadline": "Auth0 not quite right? Here are the top alternatives, ranked by how well they integrate with Next.js App Router."
+  },
+  "intro_paragraphs": [
+    "Auth0 is a solid choice for Next.js authentication — auth0 by okta is the enterprise standard for authentication and authorization. But depending on your budget, team size, or feature requirements, one of these alternatives might be a better fit."
+  ],
+  "faq": [
+    {
+      "question": "Why would I choose something over Auth0?",
+      "answer": "While Auth0 scores 6/10 for Next.js integration, other tools may offer better pricing at scale (Free – $3,000+/mo with Yes, up to 7,500 MAU with limited features), different learning curves, or features that Auth0 lacks such as extremely expensive at scale - pricing jumps dramatically at 10k mau, complex configuration with steep learning curve for advanced features."
+    }
+  ]
+}

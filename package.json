@@ -5,8 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "verify": "node scripts/verify-bismillah.mjs",
+    "precontent": "node scripts/generate-content.mjs",
     "presitemap": "node scripts/generate-sitemap.mjs",
-    "build": "npm run verify && npm run presitemap && next build",
+    "build": "npm run verify && npm run precontent && npm run presitemap && next build",
     "start": "serve out"
   },
   "dependencies": {

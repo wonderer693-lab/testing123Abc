@@ -1,0 +1,23 @@
+{
+  "page_type": "ALTERNATIVES",
+  "tool_id": "descope",
+  "seo": {
+    "meta_title": "Best Descope Alternatives for Next.js Developers (2026)",
+    "meta_description": "Looking for alternatives to Descope? Compare the top Next.js auth tools — Clerk, Kinde, Better Auth — and find the right fit for your project.",
+    "og_title": "Best Alternatives to Descope for Next.js",
+    "og_description": "Top Descope alternatives ranked by Next.js integration score, pricing, and developer experience."
+  },
+  "hero": {
+    "headline": "Best Descope Alternatives for Next.js (2026)",
+    "subheadline": "Descope not quite right? Here are the top alternatives, ranked by how well they integrate with Next.js App Router."
+  },
+  "intro_paragraphs": [
+    "Descope is a solid choice for Next.js authentication — descope is a visual-first authentication platform that lets you build auth flows with a drag-and-drop workflow editor. But depending on your budget, team size, or feature requirements, one of these alternatives might be a better fit."
+  ],
+  "faq": [
+    {
+      "question": "Why would I choose something over Descope?",
+      "answer": "While Descope scores 7/10 for Next.js integration, other tools may offer better pricing at scale (Free – $2,000/mo with Yes, up to 5,000 MAU with 2,000 transactions), different learning curves, or features that Descope lacks such as expensive at scale - pricing jumps at 10k mau, visual builder adds abstraction that can be limiting for custom flows."
+    }
+  ]
+}

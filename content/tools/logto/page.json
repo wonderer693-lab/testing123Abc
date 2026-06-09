@@ -1,0 +1,35 @@
+{
+  "page_type": "TOOL_PAGE",
+  "tool_id": "logto",
+  "seo": {
+    "meta_title": "Logto Review: Next.js Auth in 2026 — Pricing, DX & Setup",
+    "meta_description": "Logto is an open-source identity platform that offers both cloud-hosted and self-hosted options. It provides a clean admin console and developer SDKs, posi",
+    "og_title": "Logto — Pricing, Developer Experience & Best Use Cases",
+    "og_description": "Logto for Next.js App Router: Medium learning curve, Free – $599/mo, 20 minutes setup. Open-source core, self-hostable, clean admin console — good Auth0 alternative for compliance"
+  },
+  "hero": {
+    "headline": "Logto: Complete Review for Next.js Developers",
+    "subheadline": "A thorough breakdown of Logto's pricing, developer experience, and fit for Next.js App Router projects."
+  },
+  "intro_paragraphs": [
+    "For Next.js developers evaluating auth solutions, Logto stands out for open-source core, self-hostable, clean admin console — good auth0 alternative for compliance. With a rating of 4.1★ and a Next.js integration score of 7/10, it offers depth at the cost of a steeper learning curve."
+  ],
+  "who_should_use_paragraphs": [
+    "Logto is ideal for teams that need a reliable auth solution with specific strengths around open-source core with self-hosting option and built-in management api and admin console. Logto gives you an open-source identity platform with a genuinely well-designed admin console and the option to self-host via Docker Compose. If you are building a Next.js SaaS and value seamless integration, Logto deserves serious consideration."
+  ],
+  "pricing_context": "Logto's pricing looks reasonable at first but has a large jump: the free tier covers 5,000 MAU, but the Team plan at $599/mo only covers 30,000 MAU. For a growing SaaS that crosses 30K users, you are looking at the Enterprise tier (custom pricing, likely $1,000+/mo). Self-hosting eliminates the per-user cost but introduces infrastructure costs ($30-100/mo for a small server) plus ongoing maintenance. Clerk at $199/mo for 20K users offers better value and better Next.js DX. Choose Logto if you need self-hosting for compliance reasons; choose Clerk for cost-effective managed auth.",
+  "faq": [
+    {
+      "question": "Is Logto good for Next.js App Router?",
+      "answer": "Logto has a Next.js integration score of 7/10. Logto provides a Next. Logto is a capable option for App Router projects."
+    },
+    {
+      "question": "How much does Logto cost?",
+      "answer": "Logto starts at Free – $599/mo with Yes, up to 5,000 MAU. Logto's pricing looks reasonable at first but has a large jump: the free tier covers 5,000 MAU, but the Team plan at $599/mo only covers 30,000 MAU. Factor in your expected MAU when evaluating total cost."
+    },
+    {
+      "question": "How long does it take to set up Logto with Next.js?",
+      "answer": "Setup time is approximately 20 minutes with a medium learning curve. js SDK that handles the standard authentication flow: redirect users to Logto's hosted sign-in page, handle the callback, and manage sessions."
+    }
+  ]
+}
