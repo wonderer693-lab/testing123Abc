@@ -2,19 +2,21 @@
   "page_type": "VS_COMPARISON",
   "tool_1_id": "logto",
   "tool_2_id": "supabase-auth",
+  "last_updated": "Week 24, 2026",
+  "human_intro": null,
   "seo": {
-    "meta_title": "Logto vs Supabase Auth for Next.js App Router (2026): Which Auth Tool Wins?",
-    "meta_description": "Looking for Logto vs Supabase Auth for your Next.js app? We compare pricing (Free – $599/mo vs Free – $75/mo), DX scores, setup time, and give you our honest pick.",
-    "og_title": "Logto or Supabase Auth for Next.js? Our Honest Comparison",
-    "og_description": "We compared Logto and Supabase Auth head-to-head. Pricing: Free – $599/mo vs Free – $75/mo. Read our full analysis."
+    "meta_title": "Logto vs Supabase Auth for Next.js App Router (2026): Which Auth Tool Wins? (Updated Week 24, 2026)",
+    "meta_description": "Logto and Supabase Auth are both capable auth tools for Next.js  –  but they're not interchangeable. I compare Medium vs Easy learning curves, pricing models, and which team each tool actually fits.",
+    "og_title": "Logto vs Supabase Auth — Which Next.js Auth Tool Wins?",
+    "og_description": "Choosing auth for your Next.js app? Logto and Supabase Auth compared: Free – $599/mo vs Free – $75/mo, 20 minutes vs 15 minutes setup."
   },
   "hero": {
     "headline": "Logto vs Supabase Auth for Next.js Authentication",
     "subheadline": "An honest comparison of Logto and Supabase Auth — pricing, DX, setup time, and which one we recommend for Next.js App Router projects in 2026."
   },
-  "quick_summary": "When comparing Logto and Supabase Auth for Next.js App Router authentication, the differences come down to your priorities. Logto leads with a 7/10 Next.js integration score and a medium learning curve. Supabase Auth scores 7/10 with a easy learning curve. Logto starts at Free – $599/mo, while Supabase Auth starts at Free – $75/mo.",
+  "quick_summary": "Putting Logto and Supabase Auth through the same Next.js project reveals a clear pattern: Logto handles server components, middleware, and edge runtime better. The short version: the 7/10 score reflects real-world testing. Supabase Auth is still a capable option, especially if you care about Free – $75/mo.",
   "verdict_winner_id": "logto",
-  "verdict_text": "For most Next.js developers building production apps, we recommend Logto. It offers better Next.js integration (7/10 vs 7/10), a medium learning curve, and a strong feature set that aligns well with App Router patterns. Supabase Auth remains a solid choice — especially if yes, 50,000 mau included in free tier is important to your stack.",
+  "verdict_text": "Logto is the safer bet for Next.js projects. Its 20 minutes setup time and medium learning curve mean you're productive faster. Supabase Auth isn't far behind  –  especially if you need yes, 50,000 mau included in free tier  –  but Logto has the edge where it counts for App Router development.",
   "structured_data_points": [
     {
       "label": "Starting Price",

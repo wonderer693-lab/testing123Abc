@@ -2,19 +2,21 @@
   "page_type": "VS_COMPARISON",
   "tool_1_id": "logto",
   "tool_2_id": "firebase-auth",
+  "last_updated": "Week 24, 2026",
+  "human_intro": null,
   "seo": {
-    "meta_title": "Logto vs Firebase Auth for Next.js App Router (2026): Which Auth Tool Wins?",
-    "meta_description": "Looking for Logto vs Firebase Auth for your Next.js app? We compare pricing (Free – $599/mo vs Free – Pay-as-you-go), DX scores, setup time, and give you our honest pick.",
-    "og_title": "Logto vs Firebase Auth — Which Next.js Auth Tool Wins?",
+    "meta_title": "Logto vs Firebase Auth for Next.js App Router (2026): Which Auth Tool Wins? (Updated Week 24, 2026)",
+    "meta_description": "Logto and Firebase Auth are both capable auth tools for Next.js  –  but they're not interchangeable. I compare Medium vs Easy learning curves, pricing models, and which team each tool actually fits.",
+    "og_title": "Picking Logto or Firebase Auth? Here's My Verdict",
     "og_description": "We compared Logto and Firebase Auth head-to-head. Pricing: Free – $599/mo vs Free – Pay-as-you-go. Read our full analysis."
   },
   "hero": {
     "headline": "Logto vs Firebase Auth for Next.js Authentication",
     "subheadline": "An honest comparison of Logto and Firebase Auth — pricing, DX, setup time, and which one we recommend for Next.js App Router projects in 2026."
   },
-  "quick_summary": "Logto vs Firebase Auth is a common comparison we hear from Next.js developers. Logto (4.1★) and Firebase Auth (4.3★) both have loyal followings. Our analysis shows Logto has the edge for most Next.js projects due to its 7/10 DX score. Firebase Auth is a strong alternative if yes, up to 50,000 mau free tier better matches your budget.",
+  "quick_summary": "When comparing Logto and Firebase Auth for Next.js App Router authentication, the differences come down to your priorities. Logto leads with a 7/10 Next.js integration score and a medium learning curve. Here's the thing: firebase Auth scores 6/10 with a easy learning curve. Logto starts at Free – $599/mo, while Firebase Auth starts at Free – Pay-as-you-go.",
   "verdict_winner_id": "logto",
-  "verdict_text": "For most Next.js developers building production apps, we recommend Logto. It offers better Next.js integration (7/10 vs 6/10), a medium learning curve, and a strong feature set that aligns well with App Router patterns. Firebase Auth remains a solid choice — especially if yes, up to 50,000 mau free tier is important to your stack.",
+  "verdict_text": "I'd pick Logto for this one. It integrates more naturally with Next.js App Router (7/10), and the medium learning curve means your team ships faster. Firebase Auth is a solid alternative  –  particularly if yes, up to 50,000 mau free tier matters more than pure DX.",
   "structured_data_points": [
     {
       "label": "Starting Price",

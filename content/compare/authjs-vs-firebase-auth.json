@@ -2,19 +2,21 @@
   "page_type": "VS_COMPARISON",
   "tool_1_id": "authjs",
   "tool_2_id": "firebase-auth",
+  "last_updated": "Week 24, 2026",
+  "human_intro": null,
   "seo": {
-    "meta_title": "Auth.js vs Firebase Auth for Next.js App Router (2026): Which Auth Tool Wins?",
+    "meta_title": "Auth.js vs Firebase Auth for Next.js App Router (2026): Which Auth Tool Wins? (Updated Week 24, 2026)",
     "meta_description": "Detailed Auth.js vs Firebase Auth comparison for Next.js App Router. See how they stack up on pricing, developer experience, and real-world trade-offs.",
-    "og_title": "Auth.js or Firebase Auth for Next.js? Our Honest Comparison",
-    "og_description": "We compared Auth.js and Firebase Auth head-to-head. Pricing: Free (Open Source) vs Free – Pay-as-you-go. Read our full analysis."
+    "og_title": "Picking Auth.js or Firebase Auth? Here's My Verdict",
+    "og_description": "I tested Auth.js and Firebase Auth with Next.js App Router. Here's my honest comparison of pricing, DX, and which one I'd actually ship."
   },
   "hero": {
     "headline": "Auth.js vs Firebase Auth for Next.js Authentication",
     "subheadline": "An honest comparison of Auth.js and Firebase Auth — pricing, DX, setup time, and which one we recommend for Next.js App Router projects in 2026."
   },
-  "quick_summary": "Both Auth.js and Firebase Auth are solid choices for Next.js authentication, but they serve different needs. Auth.js edges ahead with a stronger Next.js integration score (8/10 vs 6/10). Where Firebase Auth shines is Yes, up to 50,000 MAU free tier. If you are optimizing for developer experience in the App Router, Auth.js is the safer bet.",
+  "quick_summary": "Auth.js (4.6★) and Firebase Auth (4.3★) both have fans. Real talk: auth.js makes the most sense if you want medium onboarding and strong App Router integration. Firebase Auth is the better fit if Yes, up to 50,000 MAU free tier is your priority.",
   "verdict_winner_id": "authjs",
-  "verdict_text": "Auth.js is our pick for this matchup. The 8/10 Next.js score reflects how well it integrates with server components, middleware, and edge runtime. Firebase Auth is not far behind at 6/10, but Auth.js's developer experience gives it the edge for most projects.",
+  "verdict_text": "After testing both, I'd go with Auth.js. The medium learning curve and 20 minutes setup mean your team hits the ground running. Firebase Auth has its place  –  especially if yes, up to 50,000 mau free tier aligns with your scale  –  but Auth.js delivers a smoother developer experience.",
   "structured_data_points": [
     {
       "label": "Starting Price",

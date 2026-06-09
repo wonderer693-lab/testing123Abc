@@ -2,19 +2,21 @@
   "page_type": "VS_COMPARISON",
   "tool_1_id": "logto",
   "tool_2_id": "kinde",
+  "last_updated": "Week 24, 2026",
+  "human_intro": null,
   "seo": {
-    "meta_title": "Logto vs Kinde for Next.js App Router (2026): Which Auth Tool Wins?",
-    "meta_description": "Choosing between Logto and Kinde? We break down the differences in pricing, setup, and Next.js integration to help you decide.",
-    "og_title": "Logto or Kinde for Next.js? Our Honest Comparison",
-    "og_description": "We compared Logto and Kinde head-to-head. Pricing: Free – $599/mo vs Free – $300/mo. Read our full analysis."
+    "meta_title": "Logto vs Kinde for Next.js App Router (2026): Which Auth Tool Wins? (Updated Week 24, 2026)",
+    "meta_description": "Looking for Logto vs Kinde for your Next.js app? We compare pricing (Free – $599/mo vs Free – $300/mo), DX scores, setup time, and give you our honest pick.",
+    "og_title": "Logto vs Kinde: Next.js Auth Comparison (2026)",
+    "og_description": "Choosing auth for your Next.js app? Logto and Kinde compared: Free – $599/mo vs Free – $300/mo, 20 minutes vs 15 minutes setup."
   },
   "hero": {
     "headline": "Logto vs Kinde for Next.js Authentication",
     "subheadline": "An honest comparison of Logto and Kinde — pricing, DX, setup time, and which one we recommend for Next.js App Router projects in 2026."
   },
-  "quick_summary": "Both Logto and Kinde are solid choices for Next.js authentication, but they serve different needs. Logto edges ahead with a stronger Next.js integration score (7/10 vs 7/10). Where Kinde shines is Yes, up to 7,500 MAU. If you are optimizing for developer experience in the App Router, Logto is the safer bet.",
+  "quick_summary": "Testing Logto vs Kinde side by side reveals clear trade-offs. Logto integrates more naturally with App Router (7/10), while Kinde counters with Yes, up to 7,500 MAU. If you're optimizing for DX, Logto is the answer. If budget dominates, Kinde holds its ground.",
   "verdict_winner_id": "logto",
-  "verdict_text": "We recommend Logto for most Next.js App Router projects. Its medium learning curve and 20 minutes setup time make it immediately productive. Kinde is a worthy alternative, particularly if you need yes, up to 7,500 mau or prefer Kinde's approach to authentication.",
+  "verdict_text": "I recommend 0 for production Next.js apps. Here's why: Logto. It offers better Next.js integration (7/10 vs 7/10), a medium learning curve, and a strong feature set that aligns well with App Router patterns. Kinde remains a solid choice  –  especially if yes, up to 7,500 mau is important to your stack.",
   "structured_data_points": [
     {
       "label": "Starting Price",

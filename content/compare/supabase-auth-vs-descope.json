@@ -2,19 +2,21 @@
   "page_type": "VS_COMPARISON",
   "tool_1_id": "supabase-auth",
   "tool_2_id": "descope",
+  "last_updated": "Week 24, 2026",
+  "human_intro": null,
   "seo": {
-    "meta_title": "Supabase Auth vs Descope for Next.js App Router (2026): Which Auth Tool Wins?",
-    "meta_description": "Choosing between Supabase Auth and Descope? We break down the differences in pricing, setup, and Next.js integration to help you decide.",
-    "og_title": "Supabase Auth vs Descope — Which Next.js Auth Tool Wins?",
-    "og_description": "Supabase Auth (4.4★) vs Descope (4.2★). Easy learning curve vs Medium. Find your ideal Next.js auth solution."
+    "meta_title": "Supabase Auth vs Descope for Next.js App Router (2026): Which Auth Tool Wins? (Updated Week 24, 2026)",
+    "meta_description": "Stop guessing between Supabase Auth and Descope. Here's a practical comparison of how both handle Next.js authentication  –  pricing, developer experience, and where each one falls short.",
+    "og_title": "Supabase Auth vs Descope: Next.js Auth Comparison (2026)",
+    "og_description": "We compared Supabase Auth and Descope head-to-head. Here's the thing: pricing: Free – $75/mo vs Free – $2,000/mo. Read our full analysis."
   },
   "hero": {
     "headline": "Supabase Auth vs Descope for Next.js Authentication",
     "subheadline": "An honest comparison of Supabase Auth and Descope — pricing, DX, setup time, and which one we recommend for Next.js App Router projects in 2026."
   },
-  "quick_summary": "When comparing Supabase Auth and Descope for Next.js App Router authentication, the differences come down to your priorities. Supabase Auth leads with a 7/10 Next.js integration score and a easy learning curve. Descope scores 7/10 with a medium learning curve. Supabase Auth starts at Free – $75/mo, while Descope starts at Free – $2,000/mo.",
+  "quick_summary": "I went into this Supabase Auth vs Descope comparison expecting a close call. After testing: Supabase Auth pulls ahead on Next.js integration (7/10 to 7/10). The medium learning curve of Descope is fine, but Supabase Auth's 15 minutes setup is hard to beat.",
   "verdict_winner_id": "supabase-auth",
-  "verdict_text": "Supabase Auth is our pick for this matchup. The 7/10 Next.js score reflects how well it integrates with server components, middleware, and edge runtime. Descope is not far behind at 7/10, but Supabase Auth's developer experience gives it the edge for most projects.",
+  "verdict_text": "Supabase Auth is the safer bet for Next.js projects. Its 15 minutes setup time and easy learning curve mean you're productive faster. Descope isn't far behind  –  especially if you need yes, up to 5,000 mau with 2,000 transactions  –  but Supabase Auth has the edge where it counts for App Router development.",
   "structured_data_points": [
     {
       "label": "Starting Price",

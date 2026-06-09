@@ -2,17 +2,19 @@
   "page_type": "VS_COMPARISON",
   "tool_1_id": "logto",
   "tool_2_id": "workos",
+  "last_updated": "Week 24, 2026",
+  "human_intro": null,
   "seo": {
-    "meta_title": "Logto vs WorkOS for Next.js App Router (2026): Which Auth Tool Wins?",
+    "meta_title": "Logto vs WorkOS for Next.js App Router (2026): Which Auth Tool Wins? (Updated Week 24, 2026)",
     "meta_description": "Choosing between Logto and WorkOS? We break down the differences in pricing, setup, and Next.js integration to help you decide.",
-    "og_title": "Logto vs WorkOS: Next.js Auth Comparison (2026)",
-    "og_description": "Logto scores 7/10 for Next.js DX. WorkOS scores 5/10. See how they compare on pricing, features, and setup time."
+    "og_title": "Logto vs WorkOS — Which Next.js Auth Tool Wins?",
+    "og_description": "Logto or WorkOS for Next.js? My hands-on comparison covers pricing traps, middleware setup, and which tool actually scales."
   },
   "hero": {
     "headline": "Logto vs WorkOS for Next.js Authentication",
     "subheadline": "An honest comparison of Logto and WorkOS — pricing, DX, setup time, and which one we recommend for Next.js App Router projects in 2026."
   },
-  "quick_summary": "Both Logto and WorkOS are solid choices for Next.js authentication, but they serve different needs. Logto edges ahead with a stronger Next.js integration score (7/10 vs 5/10). Where WorkOS shines is No free tier (enterprise sales). If you are optimizing for developer experience in the App Router, Logto is the safer bet.",
+  "quick_summary": "Logto and WorkOS are both solid — I've tested each — but they serve different needs. for Next.js authentication, but they serve different needs. Logto edges ahead with a stronger Next.js integration score (7/10 vs 5/10). Where WorkOS shines is No free tier (enterprise sales). If you are optimizing for developer experience in the App Router, Logto is the safer bet.",
   "verdict_winner_id": "logto",
   "verdict_text": "Logto is our pick for this matchup. The 7/10 Next.js score reflects how well it integrates with server components, middleware, and edge runtime. WorkOS is not far behind at 5/10, but Logto's developer experience gives it the edge for most projects.",
   "structured_data_points": [

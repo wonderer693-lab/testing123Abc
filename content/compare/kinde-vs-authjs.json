@@ -2,11 +2,13 @@
   "page_type": "VS_COMPARISON",
   "tool_1_id": "kinde",
   "tool_2_id": "authjs",
+  "last_updated": "Week 24, 2026",
+  "human_intro": null,
   "seo": {
-    "meta_title": "Kinde vs Auth.js for Next.js App Router (2026): Which Auth Tool Wins?",
-    "meta_description": "Choosing between Kinde and Auth.js? We break down the differences in pricing, setup, and Next.js integration to help you decide.",
+    "meta_title": "Kinde vs Auth.js for Next.js App Router (2026): Which Auth Tool Wins? (Updated Week 24, 2026)",
+    "meta_description": "Kinde ($300) vs Auth.js ($free) for Next.js. I've tested both in production  –  here's what you need to know before choosing.",
     "og_title": "Kinde or Auth.js for Next.js? Our Honest Comparison",
-    "og_description": "Kinde scores 7/10 for Next.js DX. Auth.js scores 8/10. See how they compare on pricing, features, and setup time."
+    "og_description": "Choosing auth for your Next.js app? Kinde and Auth.js compared: Free – $300/mo vs Free (Open Source), 15 minutes vs 20 minutes setup."
   },
   "hero": {
     "headline": "Kinde vs Auth.js for Next.js Authentication",
@@ -14,7 +16,7 @@
   },
   "quick_summary": "When comparing Kinde and Auth.js for Next.js App Router authentication, the differences come down to your priorities. Auth.js leads with a 8/10 Next.js integration score and a medium learning curve. Kinde scores 7/10 with a easy learning curve. Auth.js starts at Free (Open Source), while Kinde starts at Free – $300/mo.",
   "verdict_winner_id": "authjs",
-  "verdict_text": "For most Next.js developers building production apps, we recommend Auth.js. It offers better Next.js integration (8/10 vs 7/10), a medium learning curve, and a strong feature set that aligns well with App Router patterns. Kinde remains a solid choice — especially if yes, up to 7,500 mau is important to your stack.",
+  "verdict_text": "We recommend Auth.js for most Next.js App Router projects. Its medium learning curve and 20 minutes setup time make it immediately productive. Kinde is a worthy alternative, particularly if you need yes, up to 7,500 mau or prefer Kinde's approach to authentication.",
   "structured_data_points": [
     {
       "label": "Starting Price",

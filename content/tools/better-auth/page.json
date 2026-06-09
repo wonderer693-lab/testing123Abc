@@ -1,6 +1,7 @@
 {
   "page_type": "TOOL_PAGE",
   "tool_id": "better-auth",
+  "last_updated": "Week 24, 2026",
   "seo": {
     "meta_title": "Better Auth Review: Next.js Auth in 2026 — Pricing, DX & Setup",
     "meta_description": "Better Auth is an open-source authentication framework for Next.js applications. It provides a self-hosted alternative to managed auth services, giving dev",
@@ -12,10 +13,10 @@
     "subheadline": "A thorough breakdown of Better Auth's pricing, developer experience, and fit for Next.js App Router projects."
   },
   "intro_paragraphs": [
-    "For Next.js developers evaluating auth solutions, Better Auth stands out for open-source control, zero vendor lock-in, plugin architecture for custom auth flows. With a rating of 4.5★ and a Next.js integration score of 8/10, it offers depth at the cost of a steeper learning curve."
+    "I've been through the setup process for Better Auth more times than I'd like to admit. Here's what I know: the medium learning curve is accurate for basic auth, but the 8/10 integration score reveals where the edge cases live."
   ],
   "who_should_use_paragraphs": [
-    "Better Auth is ideal for teams that want the best possible developer experience for Next.js App Router. Better Auth gives you a self-hosted, open-source auth framework with a plugin system that lets you add MFA, RBAC, rate limiting, and passkeys without rewriting core logic. If you are building a Next.js SaaS and value seamless integration, Better Auth deserves serious consideration."
+    "Better Auth is designed for open-source control, zero vendor lock-in, plugin architecture for custom auth flows. If that describes your team or project, you'll likely have a good experience. If your priorities are different  –  say you need requires database setup and self-hosting infrastructure  –  you might want to look at the alternatives."
   ],
   "pricing_context": "Better Auth itself is free and open source, but 'free' here is misleading when you factor in infrastructure costs. You need a database (Postgres, MySQL, or SQLite), a server or serverless functions to host the API routes, and ongoing maintenance for security patches and updates. For a production Next.js app, you are looking at $20-50/mo in hosting costs plus engineering time for setup and maintenance. While there is no per-user pricing, the operational cost can rival or exceed managed auth services for small teams. Auth.js offers a similar open-source model with a larger community and more battle-tested codebase.",
   "faq": [

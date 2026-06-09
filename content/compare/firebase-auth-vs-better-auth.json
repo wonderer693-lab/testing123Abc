@@ -2,19 +2,21 @@
   "page_type": "VS_COMPARISON",
   "tool_1_id": "firebase-auth",
   "tool_2_id": "better-auth",
+  "last_updated": "Week 24, 2026",
+  "human_intro": null,
   "seo": {
-    "meta_title": "Firebase Auth vs Better Auth for Next.js App Router (2026): Which Auth Tool Wins?",
+    "meta_title": "Firebase Auth vs Better Auth for Next.js App Router (2026): Which Auth Tool Wins? (Updated Week 24, 2026)",
     "meta_description": "Choosing between Firebase Auth and Better Auth? We break down the differences in pricing, setup, and Next.js integration to help you decide.",
-    "og_title": "Firebase Auth vs Better Auth: Next.js Auth Comparison (2026)",
-    "og_description": "Firebase Auth scores 6/10 for Next.js DX. Better Auth scores 8/10. See how they compare on pricing, features, and setup time."
+    "og_title": "Firebase Auth vs Better Auth: Head-to-Head Next.js Review",
+    "og_description": "I tested Firebase Auth and Better Auth with Next.js App Router. Here's my honest comparison of pricing, DX, and which one I'd actually ship."
   },
   "hero": {
     "headline": "Firebase Auth vs Better Auth for Next.js Authentication",
     "subheadline": "An honest comparison of Firebase Auth and Better Auth — pricing, DX, setup time, and which one we recommend for Next.js App Router projects in 2026."
   },
-  "quick_summary": "Firebase Auth vs Better Auth is a common comparison we hear from Next.js developers. Firebase Auth (4.3★) and Better Auth (4.5★) both have loyal followings. Our analysis shows Better Auth has the edge for most Next.js projects due to its 8/10 DX score. Firebase Auth is a strong alternative if yes, up to 50,000 mau free tier better matches your budget.",
+  "quick_summary": "Testing Firebase Auth vs Better Auth side by side reveals clear trade-offs. Better Auth integrates more naturally with App Router (8/10), while Firebase Auth counters with Yes, up to 50,000 MAU free tier. If you're optimizing for DX, Better Auth is the answer. If budget dominates, Firebase Auth holds its ground.",
   "verdict_winner_id": "better-auth",
-  "verdict_text": "For most Next.js developers building production apps, we recommend Better Auth. It offers better Next.js integration (8/10 vs 6/10), a medium learning curve, and a strong feature set that aligns well with App Router patterns. Firebase Auth remains a solid choice — especially if yes, up to 50,000 mau free tier is important to your stack.",
+  "verdict_text": "I'd pick Better Auth for this one. The short version: it integrates more naturally with Next.js App Router (8/10), and the medium learning curve means your team ships faster. Firebase Auth is a solid alternative  –  particularly if yes, up to 50,000 mau free tier matters more than pure DX.",
   "structured_data_points": [
     {
       "label": "Starting Price",

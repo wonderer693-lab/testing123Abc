@@ -21,6 +21,19 @@ export function generateStaticParams() {
   return params;
 }
 
+const PRIORITY_PAIRS = new Set([
+  "clerk-vs-auth0", "auth0-vs-clerk",
+  "supabase-auth-vs-firebase-auth", "firebase-auth-vs-supabase-auth",
+  "clerk-vs-supabase-auth", "supabase-auth-vs-clerk",
+  "clerk-vs-kinde", "kinde-vs-clerk",
+  "clerk-vs-better-auth", "better-auth-vs-clerk",
+  "clerk-vs-authjs", "authjs-vs-clerk",
+  "auth0-vs-workos", "workos-vs-auth0",
+  "better-auth-vs-authjs", "authjs-vs-better-auth",
+  "clerk-vs-firebase-auth", "firebase-auth-vs-clerk",
+  "auth0-vs-kinde", "kinde-vs-auth0",
+]);
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const parts = slug.split("-vs-");
@@ -31,16 +44,22 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!a || !b) return {};
 
   const content = loadCompareContent(slug);
+  const isPriority = PRIORITY_PAIRS.has(slug);
 
   const fallbackTitle = `${a.name} vs ${b.name} for Next.js App Router (2026 Comparison)`;
   const fallbackDesc = `Compare ${a.name} vs ${b.name} for Next.js authentication. ${a.nextjs_integration_score}/10 vs ${b.nextjs_integration_score}/10 DX scores, pricing (${a.starting_price} vs ${b.starting_price}), setup time, and honest recommendations.`;
   const fallbackOgTitle = `${a.name} vs ${b.name} — Next.js Auth Comparison`;
 
+  const base: Metadata = {
+    robots: isPriority ? { index: true, follow: true } : { index: false, follow: true },
+    alternates: { canonical: `https://saaspolarbeam.vercel.app/compare/${slug}` },
+  };
+
   if (content) {
     return {
+      ...base,
       title: content.seo.meta_title,
       description: content.seo.meta_description,
-      alternates: { canonical: `https://saaspolarbeam.vercel.app/compare/${slug}` },
       openGraph: {
         title: content.seo.og_title,
         description: content.seo.og_description,
@@ -59,9 +78,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   }
 
   return {
+    ...base,
     title: fallbackTitle,
     description: fallbackDesc,
-    alternates: { canonical: `https://saaspolarbeam.vercel.app/compare/${slug}` },
     openGraph: {
       title: fallbackOgTitle,
       description: fallbackDesc,
@@ -135,7 +154,9 @@ export default async function ComparePage({ params }: { params: Promise<{ slug: 
 
       <div className="mb-4 flex items-center gap-2">
         <span className="pill pill-purple">Comparison</span>
-        <span className="text-xs text-slate-400 dark:text-slate-500">Updated 2026</span>
+        {content?.last_updated && (
+          <span className="text-xs text-slate-400 dark:text-slate-500">Updated {content.last_updated}</span>
+        )}
       </div>
 
       <h1 className="mb-2 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl dark:text-slate-100">
@@ -143,7 +164,17 @@ export default async function ComparePage({ params }: { params: Promise<{ slug: 
       </h1>
       <p className="mb-8 text-lg text-slate-500 dark:text-slate-400">Which authentication tool is right for your Next.js project?</p>
 
-      {content && (
+      {content?.human_intro && (
+        <section className="mb-6 rounded-xl border border-amber-200 bg-amber-50/80 p-5 dark:border-amber-800 dark:bg-amber-950/20">
+          <div className="mb-2 flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-amber-700 dark:text-amber-400">
+            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" /></svg>
+            My Honest Take
+          </div>
+          <p className="text-sm leading-relaxed text-slate-700 dark:text-slate-300">{content.human_intro}</p>
+        </section>
+      )}
+
+      {content?.quick_summary && (
         <section className="mb-8 rounded-xl border border-blue-100 bg-blue-50/50 p-5 dark:border-blue-800 dark:bg-blue-950/20">
           <p className="text-sm leading-relaxed text-slate-700 dark:text-slate-300">{content.quick_summary}</p>
           <div className="mt-3 flex items-center gap-2 text-sm">

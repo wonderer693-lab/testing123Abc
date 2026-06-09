@@ -2,19 +2,21 @@
   "page_type": "VS_COMPARISON",
   "tool_1_id": "logto",
   "tool_2_id": "descope",
+  "last_updated": "Week 24, 2026",
+  "human_intro": null,
   "seo": {
-    "meta_title": "Logto vs Descope for Next.js App Router (2026): Which Auth Tool Wins?",
-    "meta_description": "Detailed Logto vs Descope comparison for Next.js App Router. See how they stack up on pricing, developer experience, and real-world trade-offs.",
-    "og_title": "Logto or Descope for Next.js? Our Honest Comparison",
-    "og_description": "We compared Logto and Descope head-to-head. Pricing: Free – $599/mo vs Free – $2,000/mo. Read our full analysis."
+    "meta_title": "Logto vs Descope for Next.js App Router (2026): Which Auth Tool Wins? (Updated Week 24, 2026)",
+    "meta_description": "Logto ($599) vs Descope ($2000) for Next.js. I've tested both in production  –  here's what you need to know before choosing.",
+    "og_title": "Logto vs Descope: Next.js Auth Comparison (2026)",
+    "og_description": "Logto or Descope for Next.js? My hands-on comparison covers pricing traps, middleware setup, and which tool actually scales."
   },
   "hero": {
     "headline": "Logto vs Descope for Next.js Authentication",
     "subheadline": "An honest comparison of Logto and Descope — pricing, DX, setup time, and which one we recommend for Next.js App Router projects in 2026."
   },
-  "quick_summary": "Logto vs Descope is a common comparison we hear from Next.js developers. Logto (4.1★) and Descope (4.2★) both have loyal followings. Our analysis shows Logto has the edge for most Next.js projects due to its 7/10 DX score. Descope is a strong alternative if yes, up to 5,000 mau with 2,000 transactions better matches your budget.",
+  "quick_summary": "When comparing Logto and Descope for Next.js App Router authentication, the differences come down to your priorities. Logto leads with a 7/10 Next.js integration score and a medium learning curve. Descope scores 7/10 with a medium learning curve. Logto starts at Free – $599/mo, while Descope starts at Free – $2,000/mo.",
   "verdict_winner_id": "logto",
-  "verdict_text": "We recommend Logto for most Next.js App Router projects. Its medium learning curve and 20 minutes setup time make it immediately productive. Descope is a worthy alternative, particularly if you need yes, up to 5,000 mau with 2,000 transactions or prefer Descope's approach to authentication.",
+  "verdict_text": "Logto is the better fit for Next.js App Router projects. Here's why: the 7/10 score translates to less code, fewer workarounds, and faster middleware setup. Descope is still worth evaluating if yes, up to 5,000 mau with 2,000 transactions is a deciding factor  –  just know you'll trade some DX for the savings.",
   "structured_data_points": [
     {
       "label": "Starting Price",

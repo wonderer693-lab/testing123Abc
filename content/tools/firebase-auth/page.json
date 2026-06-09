@@ -1,21 +1,22 @@
 {
   "page_type": "TOOL_PAGE",
   "tool_id": "firebase-auth",
+  "last_updated": "Week 24, 2026",
   "seo": {
     "meta_title": "Firebase Auth Review: Next.js Auth in 2026 — Pricing, DX & Setup",
     "meta_description": "Firebase Authentication is Google's managed auth service. It offers a generous free tier and deep integration with Firebase and Google Cloud services. It i",
     "og_title": "Firebase Auth — Pricing, Developer Experience & Best Use Cases",
-    "og_description": "Firebase Auth for Next.js App Router: Easy learning curve, Free – Pay-as-you-go, 15 minutes setup. 50K MAU free, Google ecosystem, anonymous auth for low-friction onboarding — but client-side heavy"
+    "og_description": "Firebase Auth for Next.js App Router: Easy learning curve, Free – Pay-as-you-go, 15 minutes setup. 50K MAU free, Google ecosystem, anonymous auth for low-friction onboarding  –  but client-side heavy"
   },
   "hero": {
     "headline": "Firebase Auth: Complete Review for Next.js Developers",
     "subheadline": "A thorough breakdown of Firebase Auth's pricing, developer experience, and fit for Next.js App Router projects."
   },
   "intro_paragraphs": [
-    "Firebase Auth is an easy authentication solution with a starting price of Free – Pay-as-you-go. It is designed for Next.js App Router and supports authentication patterns like massive free tier with 50,000 mau at no cost and tightly integrated with firebase and google cloud ecosystem. Estimated setup time is 15 minutes for a basic integration."
+    "Firebase Auth targets 50k mau free, google ecosystem, anonymous auth for low-friction onboarding  –  but client-side heavy. With a Next.js integration score of 6/10 and a easy learning curve, it fits a specific niche in the auth space. The real question: does that niche match your project?"
   ],
   "who_should_use_paragraphs": [
-    "Firebase Auth works best for Next.js projects where ease of integration matters most. The easy learning curve means your whole team can be productive within hours. We recommend it for teams that want a managed solution with minimal ops overhead."
+    "If you're asking whether Firebase Auth is right for your Next.js app, start here: 50K MAU free, Google ecosystem, anonymous auth for low-friction onboarding  –  but client-side heavy. The easy learning curve and Free – Pay-as-you-go pricing will tell you quickly if this is the right neighborhood."
   ],
   "pricing_context": "Firebase Auth's free tier (50K MAU) is tied with Supabase for the most generous on this list. Usage beyond the free tier costs $0.065 per MAU beyond 50K, which is reasonable. The hidden cost is the Google Cloud platform surrounding Firebase: Firestore, Storage, and Functions all have separate usage-based pricing that adds up quickly. A production app at medium scale can easily cost $100-500/mo across Firebase services. The bigger risk is vendor lock-in: migrating from Firebase Auth to another provider requires a full user data export, password reset for all users, and rebuilding authentication flows. If you want similar pricing without Google dependency, Supabase Auth offers the same economics with an open-source stack. For pure auth without the rest of Firebase, Clerk at $199/mo is a worthwhile investment in portability.",
   "faq": [

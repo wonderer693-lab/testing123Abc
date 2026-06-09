@@ -2,6 +2,8 @@ export interface CompareContent {
   page_type: "VS_COMPARISON";
   tool_1_id: string;
   tool_2_id: string;
+  last_updated?: string;
+  human_intro?: string | null;
   seo: {
     meta_title: string;
     meta_description: string;
@@ -31,6 +33,7 @@ export interface CompareContent {
 export interface ToolPageContent {
   page_type: "TOOL_PAGE";
   tool_id: string;
+  last_updated?: string;
   seo: {
     meta_title: string;
     meta_description: string;
@@ -50,6 +53,7 @@ export interface ToolPageContent {
 export interface AlternativesContent {
   page_type: "ALTERNATIVES";
   tool_id: string;
+  last_updated?: string;
   seo: {
     meta_title: string;
     meta_description: string;

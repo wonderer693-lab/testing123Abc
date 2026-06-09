@@ -2,19 +2,21 @@
   "page_type": "VS_COMPARISON",
   "tool_1_id": "firebase-auth",
   "tool_2_id": "kinde",
+  "last_updated": "Week 24, 2026",
+  "human_intro": null,
   "seo": {
-    "meta_title": "Firebase Auth vs Kinde for Next.js App Router (2026): Which Auth Tool Wins?",
+    "meta_title": "Firebase Auth vs Kinde for Next.js App Router (2026): Which Auth Tool Wins? (Updated Week 24, 2026)",
     "meta_description": "Firebase Auth or Kinde for Next.js authentication? Compare features, pricing, learning curves, and find out which auth tool fits your 2026 project.",
-    "og_title": "Firebase Auth vs Kinde — Which Next.js Auth Tool Wins?",
-    "og_description": "We compared Firebase Auth and Kinde head-to-head. Pricing: Free – Pay-as-you-go vs Free – $300/mo. Read our full analysis."
+    "og_title": "Firebase Auth or Kinde for Next.js? Our Honest Comparison",
+    "og_description": "Firebase Auth vs Kinde: pricing (Free – Pay-as-you-go vs Free – $300/mo), DX scores, setup time, and my verdict on which tool wins for Next.js development."
   },
   "hero": {
     "headline": "Firebase Auth vs Kinde for Next.js Authentication",
     "subheadline": "An honest comparison of Firebase Auth and Kinde — pricing, DX, setup time, and which one we recommend for Next.js App Router projects in 2026."
   },
-  "quick_summary": "When comparing Firebase Auth and Kinde for Next.js App Router authentication, the differences come down to your priorities. Kinde leads with a 7/10 Next.js integration score and a easy learning curve. Firebase Auth scores 6/10 with a easy learning curve. Kinde starts at Free – $300/mo, while Firebase Auth starts at Free – Pay-as-you-go.",
+  "quick_summary": "Both Firebase Auth and Kinde are solid choices for Next.js authentication, but they serve different needs. Kinde edges ahead with a stronger Next.js integration score (7/10 vs 6/10). Where Firebase Auth shines is Yes, up to 50,000 MAU free tier. If you are optimizing for developer experience in the App Router, Kinde is the safer bet.",
   "verdict_winner_id": "kinde",
-  "verdict_text": "Kinde is our pick for this matchup. The 7/10 Next.js score reflects how well it integrates with server components, middleware, and edge runtime. Firebase Auth is not far behind at 6/10, but Kinde's developer experience gives it the edge for most projects.",
+  "verdict_text": "Kinde is the safer bet for Next.js projects. Its 15 minutes setup time and easy learning curve mean you're productive faster. Firebase Auth isn't far behind  –  especially if you need yes, up to 50,000 mau free tier  –  but Kinde has the edge where it counts for App Router development.",
   "structured_data_points": [
     {
       "label": "Starting Price",

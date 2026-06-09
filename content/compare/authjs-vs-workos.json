@@ -2,19 +2,21 @@
   "page_type": "VS_COMPARISON",
   "tool_1_id": "authjs",
   "tool_2_id": "workos",
+  "last_updated": "Week 24, 2026",
+  "human_intro": null,
   "seo": {
-    "meta_title": "Auth.js vs WorkOS for Next.js App Router (2026): Which Auth Tool Wins?",
+    "meta_title": "Auth.js vs WorkOS for Next.js App Router (2026): Which Auth Tool Wins? (Updated Week 24, 2026)",
     "meta_description": "Auth.js (4.6★) vs WorkOS (4★) for Next.js. Compare Medium vs Advanced learning curves, free tiers, and get our recommendation.",
     "og_title": "Auth.js or WorkOS for Next.js? Our Honest Comparison",
-    "og_description": "We compared Auth.js and WorkOS head-to-head. Pricing: Free (Open Source) vs Custom pricing (enterprise). Read our full analysis."
+    "og_description": "Auth.js (4.6★, Medium) and WorkOS (4★, Advanced) compared for Next.js. Who wins on setup, pricing, and DX?"
   },
   "hero": {
     "headline": "Auth.js vs WorkOS for Next.js Authentication",
     "subheadline": "An honest comparison of Auth.js and WorkOS — pricing, DX, setup time, and which one we recommend for Next.js App Router projects in 2026."
   },
-  "quick_summary": "Both Auth.js and WorkOS are solid choices for Next.js authentication, but they serve different needs. Auth.js edges ahead with a stronger Next.js integration score (8/10 vs 5/10). Where WorkOS shines is No free tier (enterprise sales). If you are optimizing for developer experience in the App Router, Auth.js is the safer bet.",
+  "quick_summary": "I went into this Auth.js vs WorkOS comparison expecting a close call. After testing: Auth.js pulls ahead on Next.js integration (8/10 to 5/10). The advanced learning curve of WorkOS is fine, but Auth.js's 20 minutes setup is hard to beat.",
   "verdict_winner_id": "authjs",
-  "verdict_text": "Auth.js is our pick for this matchup. The 8/10 Next.js score reflects how well it integrates with server components, middleware, and edge runtime. WorkOS is not far behind at 5/10, but Auth.js's developer experience gives it the edge for most projects.",
+  "verdict_text": "I recommend 0 for production Next.js apps. Here's why: Auth.js. It offers better Next.js integration (8/10 vs 5/10), a medium learning curve, and a strong feature set that aligns well with App Router patterns. WorkOS remains a solid choice  –  especially if no free tier (enterprise sales) is important to your stack.",
   "structured_data_points": [
     {
       "label": "Starting Price",

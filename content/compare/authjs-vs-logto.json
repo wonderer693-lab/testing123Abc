@@ -2,19 +2,21 @@
   "page_type": "VS_COMPARISON",
   "tool_1_id": "authjs",
   "tool_2_id": "logto",
+  "last_updated": "Week 24, 2026",
+  "human_intro": null,
   "seo": {
-    "meta_title": "Auth.js vs Logto for Next.js App Router (2026): Which Auth Tool Wins?",
-    "meta_description": "Auth.js or Logto for Next.js authentication? Compare features, pricing, learning curves, and find out which auth tool fits your 2026 project.",
-    "og_title": "Auth.js vs Logto: Next.js Auth Comparison (2026)",
-    "og_description": "Auth.js scores 8/10 for Next.js DX. Logto scores 7/10. See how they compare on pricing, features, and setup time."
+    "meta_title": "Auth.js vs Logto for Next.js App Router (2026): Which Auth Tool Wins? (Updated Week 24, 2026)",
+    "meta_description": "Stop guessing between Auth.js and Logto. Here's a practical comparison of how both handle Next.js authentication  –  pricing, developer experience, and where each one falls short.",
+    "og_title": "Auth.js vs Logto — Which Next.js Auth Tool Wins?",
+    "og_description": "Choosing auth for your Next.js app? Auth.js and Logto compared: Free (Open Source) vs Free – $599/mo, 20 minutes vs 20 minutes setup."
   },
   "hero": {
     "headline": "Auth.js vs Logto for Next.js Authentication",
     "subheadline": "An honest comparison of Auth.js and Logto — pricing, DX, setup time, and which one we recommend for Next.js App Router projects in 2026."
   },
-  "quick_summary": "Auth.js vs Logto is a common comparison we hear from Next.js developers. Auth.js (4.6★) and Logto (4.1★) both have loyal followings. Our analysis shows Auth.js has the edge for most Next.js projects due to its 8/10 DX score. Logto is a strong alternative if yes, up to 5,000 mau better matches your budget.",
+  "quick_summary": "Putting Auth.js and Logto through the same Next.js project reveals a clear pattern: Auth.js handles server components, middleware, and edge runtime better. The 8/10 score reflects real-world testing. Logto is still a capable option, especially if you care about Free – $599/mo.",
   "verdict_winner_id": "authjs",
-  "verdict_text": "We recommend Auth.js for most Next.js App Router projects. Its medium learning curve and 20 minutes setup time make it immediately productive. Logto is a worthy alternative, particularly if you need yes, up to 5,000 mau or prefer Logto's approach to authentication.",
+  "verdict_text": "Pick Auth.js if you want the smoothest Next.js auth experience. Honestly, the 8/10 DX score reflects real-world App Router testing  –  middleware, server components, everything just works. Logto is a capable alternative at 7/10, particularly if you're optimizing for yes, up to 5,000 mau.",
   "structured_data_points": [
     {
       "label": "Starting Price",

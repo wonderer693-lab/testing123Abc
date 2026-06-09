@@ -2,19 +2,21 @@
   "page_type": "VS_COMPARISON",
   "tool_1_id": "supabase-auth",
   "tool_2_id": "kinde",
+  "last_updated": "Week 24, 2026",
+  "human_intro": null,
   "seo": {
-    "meta_title": "Supabase Auth vs Kinde for Next.js App Router (2026): Which Auth Tool Wins?",
-    "meta_description": "Looking for Supabase Auth vs Kinde for your Next.js app? We compare pricing (Free – $75/mo vs Free – $300/mo), DX scores, setup time, and give you our honest pick.",
-    "og_title": "Supabase Auth vs Kinde — Which Next.js Auth Tool Wins?",
-    "og_description": "Supabase Auth scores 7/10 for Next.js DX. Kinde scores 7/10. See how they compare on pricing, features, and setup time."
+    "meta_title": "Supabase Auth vs Kinde for Next.js App Router (2026): Which Auth Tool Wins? (Updated Week 24, 2026)",
+    "meta_description": "Need to pick between Supabase Auth and Kinde? Supabase Auth has a higher user rating (4.4★). But rating is only part of the story. Read our full breakdown.",
+    "og_title": "Supabase Auth vs Kinde — Which Auth Tool Ships Faster?",
+    "og_description": "Supabase Auth (4.4★, Easy) and Kinde (4.3★, Easy) compared for Next.js. Who wins on setup, pricing, and DX?"
   },
   "hero": {
     "headline": "Supabase Auth vs Kinde for Next.js Authentication",
     "subheadline": "An honest comparison of Supabase Auth and Kinde — pricing, DX, setup time, and which one we recommend for Next.js App Router projects in 2026."
   },
-  "quick_summary": "Both Supabase Auth and Kinde are solid choices for Next.js authentication, but they serve different needs. Supabase Auth edges ahead with a stronger Next.js integration score (7/10 vs 7/10). Where Kinde shines is Yes, up to 7,500 MAU. If you are optimizing for developer experience in the App Router, Supabase Auth is the safer bet.",
+  "quick_summary": "Here's the honest take: both Supabase Auth and Kinde will get the job done. The short version: but Supabase Auth makes it noticeably easier. The 7/10 vs 7/10 gap in Next.js scores tells the story. Kinde makes sense if you are optimizing for Yes, up to 7,500 MAU. Otherwise, Supabase Auth wins.",
   "verdict_winner_id": "supabase-auth",
-  "verdict_text": "For most Next.js developers building production apps, we recommend Supabase Auth. It offers better Next.js integration (7/10 vs 7/10), a easy learning curve, and a strong feature set that aligns well with App Router patterns. Kinde remains a solid choice — especially if yes, up to 7,500 mau is important to your stack.",
+  "verdict_text": "Supabase Auth is the better fit for Next.js App Router projects. Here's why: the 7/10 score translates to less code, fewer workarounds, and faster middleware setup. Kinde is still worth evaluating if yes, up to 7,500 mau is a deciding factor  –  just know you'll trade some DX for the savings.",
   "structured_data_points": [
     {
       "label": "Starting Price",

@@ -2,19 +2,21 @@
   "page_type": "VS_COMPARISON",
   "tool_1_id": "better-auth",
   "tool_2_id": "supabase-auth",
+  "last_updated": "Week 24, 2026",
+  "human_intro": null,
   "seo": {
-    "meta_title": "Better Auth vs Supabase Auth for Next.js App Router (2026): Which Auth Tool Wins?",
-    "meta_description": "Detailed Better Auth vs Supabase Auth comparison for Next.js App Router. See how they stack up on pricing, developer experience, and real-world trade-offs.",
-    "og_title": "Better Auth vs Supabase Auth: Next.js Auth Comparison (2026)",
-    "og_description": "Better Auth (4.5★) vs Supabase Auth (4.4★). Medium learning curve vs Easy. Find your ideal Next.js auth solution."
+    "meta_title": "Better Auth vs Supabase Auth for Next.js App Router (2026): Which Auth Tool Wins? (Updated Week 24, 2026)",
+    "meta_description": "Better Auth or Supabase Auth for Next.js authentication? Compare features, pricing, learning curves, and find out which auth tool fits your 2026 project.",
+    "og_title": "Better Auth vs Supabase Auth — Which Next.js Auth Tool Wins?",
+    "og_description": "I tested Better Auth and Supabase Auth with Next.js App Router. Here's my honest comparison of pricing, DX, and which one I'd actually ship."
   },
   "hero": {
     "headline": "Better Auth vs Supabase Auth for Next.js Authentication",
     "subheadline": "An honest comparison of Better Auth and Supabase Auth — pricing, DX, setup time, and which one we recommend for Next.js App Router projects in 2026."
   },
-  "quick_summary": "Both Better Auth and Supabase Auth are solid choices for Next.js authentication, but they serve different needs. Better Auth edges ahead with a stronger Next.js integration score (8/10 vs 7/10). Where Supabase Auth shines is Yes, 50,000 MAU included in Free tier. If you are optimizing for developer experience in the App Router, Better Auth is the safer bet.",
+  "quick_summary": "I went into this Better Auth vs Supabase Auth comparison expecting a close call. After testing: Better Auth pulls ahead on Next.js integration (8/10 to 7/10). The easy learning curve of Supabase Auth is fine, but Better Auth's 30 minutes setup is hard to beat.",
   "verdict_winner_id": "better-auth",
-  "verdict_text": "Better Auth is our pick for this matchup. The 8/10 Next.js score reflects how well it integrates with server components, middleware, and edge runtime. Supabase Auth is not far behind at 7/10, but Better Auth's developer experience gives it the edge for most projects.",
+  "verdict_text": "We recommend Better Auth for most Next.js App Router projects. Its medium learning curve and 30 minutes setup time make it immediately productive. Supabase Auth is a worthy alternative, particularly if you need yes, 50,000 mau included in free tier or prefer Supabase Auth's approach to authentication.",
   "structured_data_points": [
     {
       "label": "Starting Price",

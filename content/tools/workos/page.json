@@ -1,21 +1,22 @@
 {
   "page_type": "TOOL_PAGE",
   "tool_id": "workos",
+  "last_updated": "Week 24, 2026",
   "seo": {
     "meta_title": "WorkOS Review: Next.js Auth in 2026 — Pricing, DX & Setup",
     "meta_description": "WorkOS is an enterprise auth platform that provides SSO, SCIM, and directory sync. It is designed for B2B SaaS companies that need to support enterprise cu",
     "og_title": "WorkOS — Pricing, Developer Experience & Best Use Cases",
-    "og_description": "WorkOS for Next.js App Router: Advanced learning curve, Custom pricing (enterprise), 45 minutes setup. Enterprise SSO/SCIM for B2B SaaS — no free tier, sales call required, pair with consumer auth"
+    "og_description": "WorkOS for Next.js App Router: Advanced learning curve, Custom pricing (enterprise), 45 minutes setup. Enterprise SSO/SCIM for B2B SaaS  –  no free tier, sales call required, pair with consumer auth"
   },
   "hero": {
     "headline": "WorkOS: Complete Review for Next.js Developers",
     "subheadline": "A thorough breakdown of WorkOS's pricing, developer experience, and fit for Next.js App Router projects."
   },
   "intro_paragraphs": [
-    "WorkOS serves a specific role in the Next.js auth ecosystem. WorkOS is an enterprise auth platform that provides SSO, SCIM, and directory sync. The advanced learning curve and 45 minutes setup time make it better suited for teams with dedicated auth infrastructure experience."
+    "Let's talk about WorkOS. It's priced at Custom pricing (enterprise) with a No free tier (enterprise sales) free tier and scores 5/10 on Next.js integration. The advanced learning curve is a signal that this tool prioritizes depth over speed. I'll help you decide."
   ],
   "who_should_use_paragraphs": [
-    "WorkOS works best for Next.js projects where ease of integration matters most. The advanced learning curve means you should budget time for setup and configuration. We recommend it for teams that want a managed solution with minimal ops overhead."
+    "In my experience, WorkOS suits teams that value enterprise-grade sso with saml/oidc support out of the and scim provisioning for enterprise directory integration. It's less ideal if you need no free tier - requires sales conversation to get started."
   ],
   "pricing_context": "WorkOS does not publish pricing and requires a sales call - a red flag for early-stage startups. Enterprise SSO typically costs $5,000-25,000+/year as an add-on with platforms like Auth0. WorkOS is likely similar. Additionally, WorkOS only solves enterprise auth (SSO, SCIM); you still need a separate solution for consumer auth (email/password, social login). The total cost for auth could easily exceed $1,000/mo. For most Next.js B2B SaaS startups, Auth0's comprehensive platform (consumer + SSO) at $3,000/mo may actually be cheaper than running WorkOS + Clerk. Evaluate WorkOS only when you have enterprise customers actively requesting SSO.",
   "faq": [

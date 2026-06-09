@@ -1,6 +1,7 @@
 {
   "page_type": "TOOL_PAGE",
   "tool_id": "kinde",
+  "last_updated": "Week 24, 2026",
   "seo": {
     "meta_title": "Kinde Review: Next.js Auth in 2026 — Pricing, DX & Setup",
     "meta_description": "Kinde is a modern authentication platform designed for simplicity and speed. It combines authentication, feature flags, and remote config into a single das",
@@ -12,10 +13,10 @@
     "subheadline": "A thorough breakdown of Kinde's pricing, developer experience, and fit for Next.js App Router projects."
   },
   "intro_paragraphs": [
-    "For Next.js developers evaluating auth solutions, Kinde stands out for teams wanting feature flags + auth in one platform, generous free tier for early growth. With a rating of 4.3★ and a Next.js integration score of 7/10, it is one of the most approachable options available."
+    "Kinde targets teams wanting feature flags + auth in one platform, generous free tier for early growth. With a Next.js integration score of 7/10 and a easy learning curve, it fits a specific niche in the auth space. The real question: does that niche match your project?"
   ],
   "who_should_use_paragraphs": [
-    "Kinde works best for Next.js projects where ease of integration matters most. The easy learning curve means your whole team can be productive within hours. We recommend it for teams that want a managed solution with minimal ops overhead."
+    "In my experience, Kinde suits teams that value generous free tier with 7,500 mau including most pro and clean developer dashboard with visual workflow builder. It's less ideal if you need next.js sdk is less mature than clerk with fewer component abstractions."
   ],
   "pricing_context": "Kinde's pricing appears competitive at $300/mo for Scale plan, but the 7,500 MAU limit on the free tier is tight for a growing app. At 15K MAU you hit $300/mo, and advanced features like MFA and SSO require the Growth plan at $600/mo. For a Next.js startup with modest revenue, auth costs of $300-600/mo are hard to justify. Clerk's free tier (10K MAU) or Supabase Auth (50K MAU free) offer better economics at scale.",
   "faq": [

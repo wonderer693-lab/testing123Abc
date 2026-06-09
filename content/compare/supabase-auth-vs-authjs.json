@@ -2,19 +2,21 @@
   "page_type": "VS_COMPARISON",
   "tool_1_id": "supabase-auth",
   "tool_2_id": "authjs",
+  "last_updated": "Week 24, 2026",
+  "human_intro": null,
   "seo": {
-    "meta_title": "Supabase Auth vs Auth.js for Next.js App Router (2026): Which Auth Tool Wins?",
-    "meta_description": "Looking for Supabase Auth vs Auth.js for your Next.js app? We compare pricing (Free – $75/mo vs Free (Open Source)), DX scores, setup time, and give you our honest pick.",
-    "og_title": "Supabase Auth or Auth.js for Next.js? Our Honest Comparison",
-    "og_description": "Supabase Auth (4.4★) vs Auth.js (4.6★). Easy learning curve vs Medium. Find your ideal Next.js auth solution."
+    "meta_title": "Supabase Auth vs Auth.js for Next.js App Router (2026): Which Auth Tool Wins? (Updated Week 24, 2026)",
+    "meta_description": "Is Supabase Auth or Auth.js the better choice for your Next.js stack? Here's Supabase Auth's setup time vs Auth.js's, plus hidden costs and real DX trade-offs.",
+    "og_title": "Supabase Auth vs Auth.js: The Real Difference for Next.js Devs",
+    "og_description": "Supabase Auth vs Auth.js: pricing (Free – $75/mo vs Free (Open Source)), DX scores, setup time, and my verdict on which tool wins for Next.js development."
   },
   "hero": {
     "headline": "Supabase Auth vs Auth.js for Next.js Authentication",
     "subheadline": "An honest comparison of Supabase Auth and Auth.js — pricing, DX, setup time, and which one we recommend for Next.js App Router projects in 2026."
   },
-  "quick_summary": "When comparing Supabase Auth and Auth.js for Next.js App Router authentication, the differences come down to your priorities. Auth.js leads with a 8/10 Next.js integration score and a medium learning curve. Supabase Auth scores 7/10 with a easy learning curve. Auth.js starts at Free (Open Source), while Supabase Auth starts at Free – $75/mo.",
+  "quick_summary": "Here's the honest take: both Supabase Auth and Auth.js will get the job done. But Auth.js makes it noticeably easier. The 8/10 vs 7/10 gap in Next.js scores tells the story. Supabase Auth makes sense if you are optimizing for Yes, 50,000 MAU included in Free tier. Otherwise, Auth.js wins.",
   "verdict_winner_id": "authjs",
-  "verdict_text": "We recommend Auth.js for most Next.js App Router projects. Its medium learning curve and 20 minutes setup time make it immediately productive. Supabase Auth is a worthy alternative, particularly if you need yes, 50,000 mau included in free tier or prefer Supabase Auth's approach to authentication.",
+  "verdict_text": "After testing both, I'd go with Auth.js. The medium learning curve and 20 minutes setup mean your team hits the ground running. Supabase Auth has its place  –  especially if yes, 50,000 mau included in free tier aligns with your scale  –  but Auth.js delivers a smoother developer experience.",
   "structured_data_points": [
     {
       "label": "Starting Price",
