@@ -11,21 +11,33 @@ const tools = JSON.parse(raw);
 
 const BASE = "https://saaspolarbeam.vercel.app";
 
+const PRIORITY_PAIRS = new Set([
+  "auth0-vs-clerk",
+  "auth0-vs-kinde",
+  "auth0-vs-workos",
+  "authjs-vs-better-auth",
+  "authjs-vs-clerk",
+  "better-auth-vs-clerk",
+  "clerk-vs-firebase-auth",
+  "clerk-vs-kinde",
+  "clerk-vs-supabase-auth",
+  "firebase-auth-vs-supabase-auth",
+]);
+
 const routes = [
   { path: "", priority: 1.0, changefreq: "weekly" },
   { path: "/compare", priority: 0.9, changefreq: "weekly" },
+  { path: "/about", priority: 0.5, changefreq: "monthly" },
   { path: "/disclosure", priority: 0.1, changefreq: "yearly" },
 ];
 
 for (const tool of tools) {
   routes.push({ path: `/tools/${tool.id}`, priority: 0.9, changefreq: "monthly" });
   routes.push({ path: `/tools/${tool.id}/alternatives`, priority: 0.8, changefreq: "monthly" });
+}
 
-  for (const other of tools) {
-    if (tool.id !== other.id) {
-      routes.push({ path: `/compare/${tool.id}-vs-${other.id}`, priority: 0.9, changefreq: "monthly" });
-    }
-  }
+for (const pair of PRIORITY_PAIRS) {
+  routes.push({ path: `/compare/${pair}`, priority: 0.9, changefreq: "monthly" });
 }
 
 const today = new Date().toISOString().split("T")[0];

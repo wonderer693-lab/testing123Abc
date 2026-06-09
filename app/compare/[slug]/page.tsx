@@ -21,17 +21,26 @@ export function generateStaticParams() {
   return params;
 }
 
+const siteUrl = "https://saaspolarbeam.vercel.app";
+
+function canonicalSlug(slug: string): string {
+  const parts = slug.split("-vs-");
+  if (parts.length !== 2) return slug;
+  const [a, b] = parts;
+  return a < b ? `${a}-vs-${b}` : `${b}-vs-${a}`;
+}
+
 const PRIORITY_PAIRS = new Set([
-  "clerk-vs-auth0", "auth0-vs-clerk",
-  "supabase-auth-vs-firebase-auth", "firebase-auth-vs-supabase-auth",
-  "clerk-vs-supabase-auth", "supabase-auth-vs-clerk",
-  "clerk-vs-kinde", "kinde-vs-clerk",
-  "clerk-vs-better-auth", "better-auth-vs-clerk",
-  "clerk-vs-authjs", "authjs-vs-clerk",
-  "auth0-vs-workos", "workos-vs-auth0",
-  "better-auth-vs-authjs", "authjs-vs-better-auth",
-  "clerk-vs-firebase-auth", "firebase-auth-vs-clerk",
-  "auth0-vs-kinde", "kinde-vs-auth0",
+  "auth0-vs-clerk",
+  "auth0-vs-kinde",
+  "auth0-vs-workos",
+  "authjs-vs-better-auth",
+  "authjs-vs-clerk",
+  "better-auth-vs-clerk",
+  "clerk-vs-firebase-auth",
+  "clerk-vs-kinde",
+  "clerk-vs-supabase-auth",
+  "firebase-auth-vs-supabase-auth",
 ]);
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
@@ -43,8 +52,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const b = getToolByName(toolB);
   if (!a || !b) return {};
 
+  const canonSlug = canonicalSlug(slug);
   const content = loadCompareContent(slug);
-  const isPriority = PRIORITY_PAIRS.has(slug);
+  const isPriority = PRIORITY_PAIRS.has(canonSlug);
 
   const fallbackTitle = `${a.name} vs ${b.name} for Next.js App Router (2026 Comparison)`;
   const fallbackDesc = `Compare ${a.name} vs ${b.name} for Next.js authentication. ${a.nextjs_integration_score}/10 vs ${b.nextjs_integration_score}/10 DX scores, pricing (${a.starting_price} vs ${b.starting_price}), setup time, and honest recommendations.`;
@@ -52,7 +62,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   const base: Metadata = {
     robots: isPriority ? { index: true, follow: true } : { index: false, follow: true },
-    alternates: { canonical: `https://saaspolarbeam.vercel.app/compare/${slug}` },
+    alternates: { canonical: `${siteUrl}/compare/${canonSlug}` },
   };
 
   if (content) {

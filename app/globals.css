@@ -395,6 +395,23 @@
   50% { box-shadow: 0 0 0 8px rgba(59, 130, 246, 0); }
 }
 
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in,
+  .animate-slide-up,
+  .animate-pulse-glow,
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Sticky nav anchor offset */
+html {
+  scroll-padding-top: 80px;
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: transparent; }

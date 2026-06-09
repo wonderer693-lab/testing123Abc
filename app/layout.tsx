@@ -45,7 +45,8 @@ export const metadata: Metadata = {
   description: siteTagline,
   metadataBase: new URL(siteUrl),
   icons: {
-    icon: "/icon.svg",
+    icon: [{ url: "/icon.svg", type: "image/svg+xml" }, { url: "/favicon.ico", sizes: "any" }],
+    apple: "/icon.svg",
   },
   robots: {
     index: true,
@@ -60,6 +61,7 @@ export const metadata: Metadata = {
     siteName: siteName,
     type: "website",
     locale: "en_US",
+    images: [{ url: "/og-default.svg", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
@@ -67,6 +69,7 @@ export const metadata: Metadata = {
     description: siteTagline,
     site: "@saaspolarbeam",
     creator: "@saaspolarbeam",
+    images: [{ url: "/og-default.svg", width: 1200, height: 630 }],
   },
   other: {
     "google-site-verification": "YOUR_VERIFICATION_CODE",
@@ -100,7 +103,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <a href="/#table-heading" className="nav-link px-3 py-2 text-sm">All Tools</a>
             </nav>
             <div className="flex items-center gap-2">
-              <Link href="/#why-trust-heading" className="btn-ghost text-sm !py-2 max-sm:hidden">About</Link>
+              <Link href="/about" className="btn-ghost text-sm !py-2 max-sm:hidden">About</Link>
               <ThemeToggle />
             </div>
           </div>
@@ -122,6 +125,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <div className="space-y-2">
                   <a href="/" className="block text-sm text-slate-500 hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors">Home</a>
                   <a href="/compare" className="block text-sm text-slate-500 hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors">All Comparisons</a>
+                  <a href="/about" className="block text-sm text-slate-500 hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors">About &amp; Methodology</a>
                   <a href="/disclosure" className="block text-sm text-slate-500 hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors">Affiliate Disclosure</a>
                 </div>
               </div>

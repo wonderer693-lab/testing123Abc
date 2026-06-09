@@ -12,6 +12,8 @@ export function generateStaticParams() {
   return getTools().map((t) => ({ slug: t.id }));
 }
 
+const siteUrl = "https://saaspolarbeam.vercel.app";
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const tool = getToolByName(slug);
@@ -23,7 +25,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     return {
       title: content.seo.meta_title,
       description: content.seo.meta_description,
-      alternates: { canonical: `https://saaspolarbeam.vercel.app/tools/${slug}` },
+      alternates: { canonical: `${siteUrl}/tools/${slug}` },
       openGraph: {
         title: content.seo.og_title,
         description: content.seo.og_description,

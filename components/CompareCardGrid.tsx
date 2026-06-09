@@ -66,7 +66,7 @@ export default function CompareCardGrid({ pairs, categories }: CompareCardGridPr
           <Link
             key={slug}
             href={`/compare/${slug}`}
-            className="card-solid group relative flex flex-col p-4 hover:ring-2 hover:ring-blue-400 transition-all"
+            className="card-solid group relative flex flex-col p-4 hover:ring-2 hover:ring-blue-400 transition-all cursor-pointer"
           >
             <div className="mb-3 flex items-center gap-2">
               <img

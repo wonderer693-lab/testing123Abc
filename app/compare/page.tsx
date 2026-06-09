@@ -71,6 +71,7 @@ export default function CompareListingPage() {
         </p>
       </section>
 
+      <h2 className="sr-only">Filter by category</h2>
       <CompareCardGrid pairs={pairs} categories={categories} />
 
       <div className="mt-8">
