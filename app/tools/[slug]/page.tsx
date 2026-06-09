@@ -18,8 +18,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     description: tool.short_description,
     alternates: { canonical: `https://saaspolarbeam.vercel.app/tools/${slug}` },
     openGraph: {
-      title: `${tool.name} Review & Developer Experience Analysis`,
-      description: tool.short_description.slice(0, 160),
+      title: `${tool.name} Review — Pricing, Developer Experience & Best Use Cases`,
+      description: `${tool.name} for Next.js App Router: ${tool.learning_curve} learning curve, ${tool.starting_price} starting price, ${tool.setup_time_nextjs} setup. ${tool.best_for_short}`,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${tool.name} — Next.js Auth Review & Expert Analysis`,
+      description: `${tool.name} reviewed for Next.js 2026: pricing, DX, setup. ${tool.best_for_short.slice(0, 120)}`,
+      site: "@saaspolarbeam",
     },
   };
 }
@@ -97,6 +103,13 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
             <div className="text-xs font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500">Setup Time</div>
             <div className="mt-1 text-lg font-bold text-slate-800 dark:text-slate-200">{tool.setup_time_nextjs}</div>
           </div>
+        </div>
+      </section>
+
+      <section className="mb-10">
+        <h2 className="section-title text-xl">Who Should Use {tool.name}?</h2>
+        <div className="card-glass p-6">
+          <p className="leading-relaxed text-slate-700 whitespace-pre-line dark:text-slate-300">{tool.best_for_detailed}</p>
         </div>
       </section>
 

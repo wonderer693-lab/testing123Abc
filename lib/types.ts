@@ -15,4 +15,6 @@ export interface AuthTool {
   dx_details: string
   pricing_pitfall: string
   nextjs_integration_score: number
+  best_for_short: string
+  best_for_detailed: string
 }
