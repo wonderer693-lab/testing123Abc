@@ -3,6 +3,19 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Affiliate Disclosure — NextAuthCompare",
   description: "How NextAuthCompare makes money through affiliate links. Transparency about our affiliate partnerships and how they support our work.",
+  robots: { index: true, follow: true },
+  openGraph: {
+    title: "Affiliate Disclosure — NextAuthCompare",
+    description: "Transparency about our affiliate partnerships with authentication tool providers.",
+    locale: "en_US",
+    siteName: "NextAuthCompare",
+  },
+  twitter: {
+    card: "summary",
+    title: "Affiliate Disclosure — NextAuthCompare",
+    description: "Transparency about our affiliate partnerships. We may earn commissions from some links.",
+    site: "@saaspolarbeam",
+  },
 };
 
 export default function DisclosurePage() {

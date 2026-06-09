@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getTools, getToolByName } from "@/lib/data";
-import { breadcrumbSchema, faqSchema, productSchema } from "@/lib/schema";
+import { breadcrumbSchema, faqSchema, productSchema, articleSchema } from "@/lib/schema";
 import SchemaMarkup from "@/components/SchemaMarkup";
 import FaqSection from "@/components/FaqSection";
 import Breadcrumb from "@/components/Breadcrumb";
@@ -32,6 +32,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   const content = loadCompareContent(slug);
 
+  const fallbackTitle = `${a.name} vs ${b.name} for Next.js App Router (2026 Comparison)`;
+  const fallbackDesc = `Compare ${a.name} vs ${b.name} for Next.js authentication. ${a.nextjs_integration_score}/10 vs ${b.nextjs_integration_score}/10 DX scores, pricing (${a.starting_price} vs ${b.starting_price}), setup time, and honest recommendations.`;
+  const fallbackOgTitle = `${a.name} vs ${b.name} — Next.js Auth Comparison`;
+
   if (content) {
     return {
       title: content.seo.meta_title,
@@ -40,17 +44,37 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       openGraph: {
         title: content.seo.og_title,
         description: content.seo.og_description,
+        type: "article",
+        locale: "en_US",
+        siteName: "NextAuthCompare",
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: content.seo.og_title,
+        description: content.seo.og_description.slice(0, 120),
+        site: "@saaspolarbeam",
+        creator: "@saaspolarbeam",
       },
     };
   }
 
   return {
-    title: `${a.name} vs ${b.name} for Next.js App Router (2026 Comparison)`,
-    description: `Compare ${a.name} vs ${b.name} for Next.js authentication. Pricing, developer experience, setup time, and pros & cons. Find the best auth solution for your Next.js app in 2026.`,
+    title: fallbackTitle,
+    description: fallbackDesc,
     alternates: { canonical: `https://saaspolarbeam.vercel.app/compare/${slug}` },
     openGraph: {
-      title: `${a.name} vs ${b.name} — Next.js Auth Comparison`,
-      description: `Detailed comparison of ${a.name} and ${b.name} for Next.js App Router.`,
+      title: fallbackOgTitle,
+      description: fallbackDesc,
+      type: "article",
+      locale: "en_US",
+      siteName: "NextAuthCompare",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: fallbackOgTitle,
+      description: fallbackDesc.slice(0, 120),
+      site: "@saaspolarbeam",
+      creator: "@saaspolarbeam",
     },
   };
 }
@@ -101,6 +125,7 @@ export default async function ComparePage({ params }: { params: Promise<{ slug: 
       <SchemaMarkup schema={productSchema(a.name, a.starting_price, a.rating)} />
       <SchemaMarkup schema={productSchema(b.name, b.starting_price, b.rating)} />
       <SchemaMarkup schema={breadcrumbSchema([{ name: "Home", url: "/" }, { name: `${a.name} vs ${b.name}`, url: `/compare/${slug}` }])} />
+      <SchemaMarkup schema={articleSchema(`${a.name} vs ${b.name}: Head-to-Head Comparison for Next.js 2026`, `Compare ${a.name} and ${b.name} for Next.js App Router authentication. Detailed analysis of pricing, developer experience, features, and use cases.`, "2026-06-09")} />
       <SchemaMarkup schema={faqSchema(faqs)} />
 
       <Breadcrumb className="mb-6" items={[

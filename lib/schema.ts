@@ -82,3 +82,17 @@ export function organizationSchema(siteUrl: string, siteName: string): SchemaOrg
     ],
   };
 }
+
+export function articleSchema(headline: string, description: string, datePublished: string, authorName = "NextAuthCompare Team"): SchemaOrg {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline,
+    description,
+    datePublished,
+    author: {
+      "@type": "Organization",
+      name: authorName,
+    },
+  };
+}

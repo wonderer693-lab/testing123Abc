@@ -7,6 +7,19 @@ import Newsletter from "@/components/Newsletter";
 export const metadata: Metadata = {
   title: "All Comparisons — NextAuthCompare",
   description: "Browse all 90+ side-by-side comparisons of Next.js authentication tools. Find the best auth solution for your project with our detailed analysis.",
+  openGraph: {
+    title: "Next.js Auth Tool Comparisons — All 90+ Head-to-Head Reviews",
+    description: "Side-by-side comparisons of every major Next.js authentication provider. Pricing, DX scores, features, and honest verdicts.",
+    locale: "en_US",
+    siteName: "NextAuthCompare",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Next.js Auth Tool Comparisons — All 90+ Reviews",
+    description: "Side-by-side comparisons of every major Next.js authentication provider.",
+    site: "@saaspolarbeam",
+    creator: "@saaspolarbeam",
+  },
 };
 
 const categories = [

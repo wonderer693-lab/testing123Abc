@@ -18,6 +18,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   const content = loadAlternativesContent(slug);
 
+  const fallbackTitle = `Best 5 ${tool.name} Alternatives for Next.js Developers (2026)`;
+  const fallbackDesc = `Compare the top 5 alternatives to ${tool.name} for Next.js authentication. Find the best fit for your project based on pricing, DX, and learning curve.`;
+
   if (content) {
     return {
       title: content.seo.meta_title,
@@ -26,17 +29,35 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       openGraph: {
         title: content.seo.og_title,
         description: content.seo.og_description,
+        locale: "en_US",
+        siteName: "NextAuthCompare",
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: content.seo.og_title,
+        description: content.seo.og_description.slice(0, 120),
+        site: "@saaspolarbeam",
+        creator: "@saaspolarbeam",
       },
     };
   }
 
   return {
-    title: `Best 5 ${tool.name} Alternatives for Next.js Developers (2026)`,
-    description: `Compare the top 5 alternatives to ${tool.name} for Next.js authentication. Find the best fit for your project based on pricing, DX, and learning curve.`,
+    title: fallbackTitle,
+    description: fallbackDesc,
     alternates: { canonical: `https://saaspolarbeam.vercel.app/tools/${slug}/alternatives` },
     openGraph: {
       title: `Best 5 ${tool.name} Alternatives`,
       description: `Top alternatives to ${tool.name} for Next.js developers.`,
+      locale: "en_US",
+      siteName: "NextAuthCompare",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `Best 5 ${tool.name} Alternatives`,
+      description: fallbackDesc.slice(0, 120),
+      site: "@saaspolarbeam",
+      creator: "@saaspolarbeam",
     },
   };
 }
