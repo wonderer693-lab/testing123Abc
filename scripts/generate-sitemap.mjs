@@ -13,6 +13,8 @@ const BASE = "https://saaspolarbeam.vercel.app";
 
 const routes = [
   { path: "", priority: 1.0, changefreq: "weekly" },
+  { path: "/compare", priority: 0.9, changefreq: "weekly" },
+  { path: "/disclosure", priority: 0.1, changefreq: "yearly" },
 ];
 
 for (const tool of tools) {

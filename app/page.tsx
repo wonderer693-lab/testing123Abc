@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getTools } from "@/lib/data";
 import { organizationSchema, websiteSchema } from "@/lib/schema";
 import SchemaMarkup from "@/components/SchemaMarkup";
+import Newsletter from "@/components/Newsletter";
 
 const siteName = "NextAuthCompare";
 const siteUrl = "https://saaspolarbeam.vercel.app";
@@ -185,6 +186,8 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        <Newsletter />
       </div>
     </>
   );

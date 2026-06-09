@@ -84,6 +84,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </a>
             <nav className="flex items-center gap-1">
               <a href="/" className="nav-link px-3 py-2 text-sm">Home</a>
+              <a href="/compare" className="nav-link px-3 py-2 text-sm">Compare</a>
               <a href="/#table-heading" className="nav-link px-3 py-2 text-sm">All Tools</a>
             </nav>
             <div className="flex items-center gap-2">
@@ -108,7 +109,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <h3 className="mb-3 text-sm font-semibold text-slate-800 dark:text-slate-200">Quick Links</h3>
                 <div className="space-y-2">
                   <a href="/" className="block text-sm text-slate-500 hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors">Home</a>
-                  <a href="/#comparisons-grid" className="block text-sm text-slate-500 hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors">All Comparisons</a>
+                  <a href="/compare" className="block text-sm text-slate-500 hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors">All Comparisons</a>
+                  <a href="/disclosure" className="block text-sm text-slate-500 hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors">Affiliate Disclosure</a>
                 </div>
               </div>
               <div>
