@@ -67,3 +67,24 @@ export interface AlternativesContent {
   intro_paragraphs: string[];
   faq: Array<{ question: string; answer: string }>;
 }
+
+export interface GuideContent {
+  page_type: "GUIDE";
+  guide_id: string;
+  last_updated?: string;
+  seo: {
+    meta_title: string;
+    meta_description: string;
+    og_title: string;
+    og_description: string;
+  };
+  hero: {
+    headline: string;
+    subheadline: string;
+  };
+  sections: Array<{
+    heading: string;
+    body: string;
+  }>;
+  faq: Array<{ question: string; answer: string }>;
+}

@@ -1,0 +1,59 @@
+{
+  "page_type": "GUIDE",
+  "guide_id": "nextjs-auth-pricing-guide",
+  "last_updated": "Week 24, 2026",
+  "seo": {
+    "meta_title": "Next.js Auth Pricing Guide 2026 — Which Provider Saves the Most?",
+    "meta_description": "Compare pricing across Clerk, Auth0, Supabase Auth, Firebase Auth, and more. Free tier limits, MAU pricing, and hidden costs exposed.",
+    "og_title": "Next.js Auth Pricing Comparison — 2026 Guide",
+    "og_description": "Complete pricing breakdown for all major Next.js auth providers. Free tiers, MAU limits, scaling costs, and which provider saves you the most."
+  },
+  "hero": {
+    "headline": "Next.js Auth Pricing Guide 2026 — Which Provider Saves the Most?",
+    "subheadline": "Compare pricing across Clerk, Auth0, Supabase Auth, Firebase Auth, and more. Free tier limits, MAU pricing, and hidden costs exposed."
+  },
+  "sections": [
+    {
+      "heading": "Free tier comparison",
+      "body": "All major Next.js auth providers offer free tiers, but the limits vary dramatically. Real talk: clerk gives you Yes, up to 10,000 monthly active users. Supabase Auth and Firebase Auth both offer Yes, 50,000 MAU included in Free tier. Better Auth and Auth.js are completely free since they're open-source. The free tier you choose should match your expected MAU for at least 6 months  –  migrating auth providers is costly."
+    },
+    {
+      "heading": "Pricing at scale (10K-50K MAU)",
+      "body": "At 10K-50K MAU, pricing differences become significant. Look, clerk jumps from Free to $199/mo at 20K MAU. Supabase Auth Pro costs $75/mo and covers 50K MAU. In practice, kinde scales to $300/mo. Auth0 starts at $3K+/mo for B2B features. Open-source options (Better Auth, Auth.js) cost nothing in licensing  –  only your infrastructure bills."
+    },
+    {
+      "heading": "Hidden costs to watch for",
+      "body": "Clerk's pricing model looks generous at first glance with a free tier supporting 10K MAU, but the jump from Free ($0) to Pro ($199/mo) is steep for early-stage startups. At 20K MAU you're already paying $199/mo, and Enterprise pricing quickly exceeds $1,000/mo. For a B2B SaaS that hasn't found product-market fit yet, that's significant burn. Consider Supabase Auth if you need a cost-effective alternative that still provides excellent Next.js integration at a fraction of the cost. Auth0 has the most aggressive pricing trap on this list. The free tier supports 7,500 MAU, but the jump to B2B ($3,000+/mo) or Enterprise ($12,000+/mo) is staggering. Look, at 10,000 MAU, you are already looking at $3,000/mo. For comparison, Clerk at the same usage level costs $199/mo - a 15x difference. Auth0 is built for enterprises that need SOC 2 compliance, not for Next.js startups. If you need enterprise compliance, WorkOS may be a more cost-effective path. Otherwise, Clerk or Supabase Auth will serve you better at 1/15th the cost. Descope's free tier (5,000 MAU, 2,000 transactions) is sufficient for prototyping but tight for production. The JumpStart plan at $2,000/mo covers 30,000 MAU - a steep jump that rivals Auth0's B2B plan. At scale, Descope is one of the most expensive options on this list. Here's the thing: the visual workflow builder is the value proposition, but it comes at a significant premium. For most Next.js teams, Clerk provides better DX at 1/10th the cost. Consider Descope only if you have non-technical team members who need to build and modify authentication flows independently. Otherwise, the pricing does not justify the visual abstraction layer. Look, supabase Auth's free tier (50K MAU) is the most generous on this list, making it perfect for prototyping and early-stage apps. The Pro plan at $75/mo includes 100K MAU, which scales reasonably. The trap is that Supabase is not just auth - you will likely also use their database, storage, and realtime features, which all have separate usage costs. A typical production app at scale can easily cost $200-500/mo across all Supabase services. If you want auth-only without the platform dependency, Firebase Auth offers a similar pricing model without requiring you to use Firebase's database. For pure auth needs, Clerk's $199/mo Pro plan may actually be cheaper than Supabase's total platform cost at scale. Beyond MAU limits, watch for: enterprise SSO upcharges, API rate limiting at lower tiers, database read costs for self-hosted solutions, and migration costs when you outgrow a provider."
+    },
+    {
+      "heading": "Open-source: free but not cheap",
+      "body": "Better Auth and Auth.js charge nothing for the software, but self-hosting has real costs: server infrastructure, database hosting, developer time for setup and maintenance, security patching, and scaling infrastructure as you grow. A self-hosted auth setup costs roughly $20-100/mo in infrastructure for a moderate-traffic app, plus engineering time. Compare this to $75-199/mo for managed solutions that include support and uptime SLAs."
+    },
+    {
+      "heading": "Enterprise pricing (100K+ MAU)",
+      "body": "At enterprise scale, Auth0 and WorkOS dominate. Auth0 starts around $3K/mo with a minimum commitment. Here's the thing: workOS requires a sales call  –  expect $5K-25K+/year depending on SSO connections and SCIM provisioning. Clerk Enterprise exceeds $1K/mo. Supabase Auth at this scale costs $599/mo for the Team plan. Firebase Auth remains usage-based but can spike unpredictably. Open-source options scale cost-effectively if you have the DevOps expertise to manage them."
+    },
+    {
+      "heading": "Cost-saving strategies",
+      "body": "Start with an open-source or generous free tier (Supabase Auth or Better Auth). Don't commit to an expensive enterprise plan until you have product-market fit. Use a single auth provider  –  multiple providers multiply costs and complexity. Negotiate enterprise pricing: most providers offer 20-40% discounts on annual commitments. Factor in migration costs when choosing  –  switching from Clerk to Supabase costs engineering time."
+    },
+    {
+      "heading": "Which provider saves the most?",
+      "body": "For a hobby project (under 1K MAU): any free tier works  –  Supabase Auth or Clerk are the easiest to set up. For an early startup (under 10K MAU): Supabase Auth's 50K MAU free tier gives you the most room to grow before paying. For a growing SaaS (10K-50K MAU): Supabase Pro at $75/mo is the best value. For enterprise (100K+ MAU): negotiate with Auth0, WorkOS, or stick with Supabase if your needs are standard."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Which auth provider has the best free tier?",
+      "answer": "Supabase Auth and Firebase Auth both offer 50K MAU free — the most generous free tiers for managed auth. Better Auth and Auth.js are open-source and completely free (you only pay for infrastructure). Clerk gives 10K MAU free."
+    },
+    {
+      "question": "At what MAU should I switch from free to paid?",
+      "answer": "Switch when you hit 80% of the free tier limit. For Clerk (10K MAU), start evaluating paid options at 8K MAU. For Supabase (50K MAU), you have significant runway before paying. Plan for 3-6 months of growth when choosing your initial provider."
+    },
+    {
+      "question": "Is self-hosting auth cheaper than managed?",
+      "answer": "At low volumes (under 10K users), self-hosting costs $20-100/mo in infrastructure — comparable to managed providers. At scale (100K+ users), self-hosting is significantly cheaper if you have the DevOps expertise. Factor in engineering time: self-hosting requires 2-5x more maintenance effort."
+    }
+  ]
+}

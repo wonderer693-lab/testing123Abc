@@ -1,0 +1,63 @@
+{
+  "page_type": "GUIDE",
+  "guide_id": "migrate-auth0-to-supabase-auth",
+  "last_updated": "Week 24, 2026",
+  "seo": {
+    "meta_title": "How to Migrate from Auth0 to Supabase Auth (2026 Guide)",
+    "meta_description": "Complete migration guide from Auth0 to Supabase Auth for Next.js. User export, RLS setup, cost comparison, and migration checklist.",
+    "og_title": "Auth0 to Supabase Auth Migration — Full Guide",
+    "og_description": "Migrate from Auth0 to Supabase Auth and save on pricing. Step-by-step user migration, RLS policy setup, and Next.js integration changes."
+  },
+  "hero": {
+    "headline": "How to Migrate from Auth0 to Supabase Auth",
+    "subheadline": "Complete migration guide from Auth0 to Supabase Auth for Next.js. User export, RLS setup, cost comparison, and migration checklist."
+  },
+  "sections": [
+    {
+      "heading": "Why migrate from Auth0 to Supabase Auth?",
+      "body": "Auth0 starts at Free – $3,000+/mo with Yes, up to 7,500 MAU with limited features. Supabase Auth starts at Free – $75/mo with Yes, 50,000 MAU included in Free tier. Beyond the cost savings, Supabase Auth includes a Postgres database with Row Level Security  –  your auth and data live in the same system. For Next.js teams already using Supabase for their database, the auth migration is a natural consolidation."
+    },
+    {
+      "heading": "Export users from Auth0",
+      "body": "Go to Auth0 Dashboard > User Management > Users and export your user database. Auth0 supports JSON and CSV formats. Make sure to include email, user ID, and metadata fields. Auth0 doesn't export password hashes by default  –  you'll need to trigger password reset flows for existing users after the migration."
+    },
+    {
+      "heading": "Set up Supabase Auth",
+      "body": "Create a Supabase project and configure authentication in the Dashboard. Enable the providers you were using in Auth0 (email/password, Google, GitHub, etc.). Supabase supports most common OAuth providers. Configure your site URL and redirect URLs under Authentication > Settings."
+    },
+    {
+      "heading": "Import users into Supabase",
+      "body": "Supabase doesn't have a one-click user import from Auth0. Use the Supabase Management API or write a migration script that inserts users into the `auth.users` table. For passwordless migration, you can set a placeholder password and require users to reset on first login. Supabase's community has scripts for Auth0-to-Supabase user migration."
+    },
+    {
+      "heading": "Set up RLS policies",
+      "body": "Move your authorization logic from Auth0 Rules and Actions to Supabase Row Level Security. RLS policies are SQL statements that run at the database level  –  they're more performant and secure than application-level checks. Write policies using `auth.uid()` to reference the authenticated user. Test each policy with both authenticated and unauthenticated queries."
+    },
+    {
+      "heading": "Update Next.js middleware and components",
+      "body": "Replace Auth0's middleware with Supabase SSR middleware. Install `@supabase/ssr` and set up the server and browser clients. Honestly, replace Auth0's `useUser()` with Supabase's `supabase.auth.getUser()` for server components. On the client, use Supabase's `onAuthStateChange` listener to handle session events."
+    },
+    {
+      "heading": "Test everything in staging",
+      "body": "Deploy to a staging environment and test all flows: sign-up, sign-in, social login, password reset, and protected route access. Verify RLS policies are working by attempting unauthorized data access. Check that the Supabase dashboard shows active sessions and auth logs."
+    },
+    {
+      "heading": "Cut over and monitor",
+      "body": "When ready, update your DNS or Vercel environment variables to point to the Supabase configuration. Monitor the Supabase dashboard for auth errors, failed sign-ins, and unusual patterns. Keep Auth0 active for 1-2 weeks as a fallback. The Supabase Pro plan at $75/mo covers 50K MAU with most features included."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Will I save money migrating Auth0 to Supabase?",
+      "answer": "Almost certainly. Auth0 starts at $3K+/mo for B2B features. Supabase Auth Pro covers 50K MAU at $75/mo. Even Supabase's Team plan ($599/mo) is significantly cheaper for equivalent MAU."
+    },
+    {
+      "question": "Can I use both Auth0 and Supabase Auth during migration?",
+      "answer": "Running both in parallel is possible with feature flags. Use a feature flag to switch between auth providers. This allows gradual rollout and easy rollback if issues arise."
+    },
+    {
+      "question": "Does Supabase Auth support enterprise SSO?",
+      "answer": "Supabase Auth supports SAML and OIDC SSO on the Team plan ($599/mo). Auth0's enterprise SSO starts at $3K+/mo. Supabase's enterprise features are more affordable but less mature."
+    }
+  ]
+}

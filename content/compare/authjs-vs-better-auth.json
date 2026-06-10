@@ -6,17 +6,17 @@
   "human_intro": "Auth.js has the largest community and 80+ providers. Better Auth has a plugin architecture and deeper App Router integration. I tested both to see which open-source auth framework actually ships faster in Next.js 15.",
   "seo": {
     "meta_title": "Auth.js vs Better Auth for Next.js App Router (2026): Which Auth Tool Wins? (Updated Week 24, 2026)",
-    "meta_description": "Looking for Auth.js vs Better Auth for your Next.js app? We compare pricing (Free (Open Source) vs Free (Open Source)), DX scores, setup time, and give you our honest pick.",
-    "og_title": "Auth.js vs Better Auth: Head-to-Head Next.js Review",
-    "og_description": "I tested Auth.js and Better Auth with Next.js App Router. Here's my honest comparison of pricing, DX, and which one I'd actually ship."
+    "meta_description": "Auth.js and Better Auth are both capable auth tools for Next.js  –  but they're not interchangeable. I compare Medium vs Medium learning curves, pricing models, and which team each tool actually fits.",
+    "og_title": "Auth.js vs Better Auth: Next.js Auth Comparison (2026)",
+    "og_description": "Auth.js (4.6★, Medium) and Better Auth (4.5★, Medium) compared for Next.js. Who wins on setup, pricing, and DX?"
   },
   "hero": {
     "headline": "Auth.js vs Better Auth for Next.js Authentication",
     "subheadline": "An honest comparison of Auth.js and Better Auth — pricing, DX, setup time, and which one we recommend for Next.js App Router projects in 2026."
   },
-  "quick_summary": "When comparing Auth.js and Better Auth for Next.js App Router authentication, the differences come down to your priorities. Auth.js leads with a 8/10 Next.js integration score and a medium learning curve. Better Auth scores 8/10 with a medium learning curve. Auth.js starts at Free (Open Source), while Better Auth starts at Free (Open Source).",
+  "quick_summary": "Putting Auth.js and Better Auth through the same Next.js project reveals a clear pattern: Auth.js handles server components, middleware, and edge runtime better. The 8/10 score reflects real-world testing. Better Auth is still a capable option, especially if you care about Free (Open Source).",
   "verdict_winner_id": "authjs",
-  "verdict_text": "For this matchup, Auth.js comes out ahead. The Next.js integration (8/10) is genuinely better in practice  –  not just on paper. Better Auth is a good tool with its own strengths, particularly around yes, fully open source with self-hosting. Choose accordingly.",
+  "verdict_text": "I recommend 0 for production Next.js apps. Here's why: Auth.js. Here's the thing: it offers better Next.js integration (8/10 vs 8/10), a medium learning curve, and a strong feature set that aligns well with App Router patterns. Better Auth remains a solid choice  –  especially if yes, fully open source with self-hosting is important to your stack.",
   "structured_data_points": [
     {
       "label": "Starting Price",

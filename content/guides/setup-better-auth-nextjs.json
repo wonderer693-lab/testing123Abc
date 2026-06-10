@@ -1,0 +1,63 @@
+{
+  "page_type": "GUIDE",
+  "guide_id": "setup-better-auth-nextjs",
+  "last_updated": "Week 24, 2026",
+  "seo": {
+    "meta_title": "How to Set Up Better Auth in Next.js 15 (2026 Guide)",
+    "meta_description": "Step-by-step guide to integrating Better Auth with Next.js App Router. Self-hosted authentication with server component support and middleware.",
+    "og_title": "Better Auth Next.js Setup — Complete Guide",
+    "og_description": "Learn how to set up Better Auth with Next.js App Router. Self-hosted auth with middleware, server helpers, and database integration."
+  },
+  "hero": {
+    "headline": "How to Set Up Better Auth in Next.js 15",
+    "subheadline": "Step-by-step guide to integrating Better Auth with Next.js App Router. Self-hosted authentication with server component support and middleware."
+  },
+  "sections": [
+    {
+      "heading": "Prerequisites",
+      "body": "Better Auth is an open-source authentication library for Next.js. You'll need a Next.js 15+ App Router project and a database (SQLite for development, PostgreSQL or MySQL for production). Better Auth uses a database adapter pattern  –  it supports Drizzle, Prisma, and Kysely out of the box."
+    },
+    {
+      "heading": "Install Better Auth",
+      "body": "Run `npm install better-auth`. If you're using Prisma, also install `@better-auth/prisma-adapter`. For Drizzle, use `@better-auth/drizzle-adapter`. Better Auth is designed as a single dependency  –  no separate auth server or external service required."
+    },
+    {
+      "heading": "Set up the auth server",
+      "body": "Create `app/api/auth/[...all]/route.ts`. Export a handler from `better-auth` that exposes all auth endpoints (sign-in, sign-up, session, etc.). Better Auth generates a REST API that your frontend components call. Configure your database adapter, session settings, and enabled providers here."
+    },
+    {
+      "heading": "Configure database schema",
+      "body": "If using Prisma, run `npx better-auth generate` to create the migration files for user, session, account, and verification tables. Then run `npx prisma db push` or `npx prisma migrate dev` to apply them. Better Auth handles all the schema management  –  you don't need to write table definitions by hand."
+    },
+    {
+      "heading": "Add middleware for route protection",
+      "body": "Create `middleware.ts` that checks the Better Auth session cookie on every request. Better Auth provides a `getSessionFromCookie` helper for edge middleware. Define public routes (landing page, auth pages) and protected routes (dashboard, settings) in your middleware config."
+    },
+    {
+      "heading": "Build auth UI components",
+      "body": "Unlike Clerk, Better Auth doesn't ship pre-built UI components. You'll build your own sign-in and sign-up forms using the Better Auth client SDK. Call `authClient.signIn.email()` or `authClient.signUp.email()` from client components. The benefit is full control over the UI  –  the cost is more frontend code to write."
+    },
+    {
+      "heading": "Add social login providers",
+      "body": "Better Auth supports OAuth providers (Google, GitHub, Discord, etc.) through its plugin system. Here's the thing: install `@better-auth/oauth` and configure providers in your auth server setup. Each provider requires a client ID and secret from the provider's developer console. Better Auth handles the OAuth flow end to end."
+    },
+    {
+      "heading": "Test and deploy",
+      "body": "Run `npm run build` and verify your auth flows work end to end. Since Better Auth is self-hosted, deployment requires setting up environment variables for your database connection string and any OAuth secrets. The lack of per-user pricing makes Better Auth the most cost-effective option at scale  –  you only pay for your infrastructure."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Is Better Auth really free?",
+      "answer": "Yes — Better Auth is open-source and MIT-licensed. You pay nothing for the software. Your only costs are infrastructure: a database, server, and any OAuth API usage."
+    },
+    {
+      "question": "Does Better Auth work with edge runtime?",
+      "answer": "Better Auth supports edge middleware through its session cookie helper, but the full API routes run on the server. It works with Vercel Edge Functions for middleware, with the API routes on Node.js."
+    },
+    {
+      "question": "How hard is Better Auth to set up?",
+      "answer": "Setup takes 1-2 hours for basic auth, longer than Clerk or Supabase. You need to configure a database adapter, run migrations, and build your own UI components. The trade-off is full control and zero per-user fees."
+    }
+  ]
+}

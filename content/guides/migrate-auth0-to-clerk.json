@@ -1,0 +1,63 @@
+{
+  "page_type": "GUIDE",
+  "guide_id": "migrate-auth0-to-clerk",
+  "last_updated": "Week 24, 2026",
+  "seo": {
+    "meta_title": "How to Migrate from Auth0 to Clerk (2026 Migration Guide)",
+    "meta_description": "Step-by-step migration guide from Auth0 to Clerk for Next.js apps. User data export, middleware migration, and rollback strategy included.",
+    "og_title": "Auth0 to Clerk Migration — Next.js Guide",
+    "og_description": "Migrate your Next.js app from Auth0 to Clerk. User export, session migration, middleware changes, and how to handle the transition safely."
+  },
+  "hero": {
+    "headline": "How to Migrate from Auth0 to Clerk",
+    "subheadline": "Step-by-step migration guide from Auth0 to Clerk for Next.js apps. User data export, middleware migration, and rollback strategy included."
+  },
+  "sections": [
+    {
+      "heading": "Why migrate from Auth0 to Clerk?",
+      "body": "Auth0 starts at Free – $3,000+/mo with Yes, up to 7,500 MAU with limited features. Clerk starts at Free – $199/mo with Yes, up to 10,000 monthly active users. Beyond pricing, Clerk offers deeper Next.js App Router integration with native server component helpers and drop-in UI components. Many teams migrate for the better developer experience, even if they're not at Auth0's pricing ceiling yet."
+    },
+    {
+      "heading": "Audit your current Auth0 setup",
+      "body": "Before migrating, document your Auth0 configuration: enabled connections (Google, GitHub, email/password), custom actions and rules, role-based access control (RBAC) settings, and any custom domains. Export your user database from the Auth0 Dashboard under User Management > Export. Auth0 supports JSON and CSV export formats."
+    },
+    {
+      "heading": "Set up Clerk and import users",
+      "body": "Create a Clerk account and configure your application. Use Clerk's Import API to migrate users  –  it accepts user data with hashed passwords if you're using bcrypt, or you can trigger password reset emails for existing users. Clerk's migration tool maps Auth0's user schema to Clerk's automatically. You can run a dry import first to verify the data."
+    },
+    {
+      "heading": "Update environment variables",
+      "body": "Replace Auth0 environment variables with Clerk's. You'll need `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` and `CLERK_SECRET_KEY`. Remove Auth0 SDK dependencies (`@auth0/auth0-nextjs`) and install `@clerk/nextjs` instead. If you're using Auth0's Management API for admin operations, Clerk provides equivalent endpoints through its Backend API."
+    },
+    {
+      "heading": "Middleware migration",
+      "body": "Auth0 uses `withPageAuthRequired` and `getSession` for route protection. Clerk uses `auth()` middleware with `publicRoutes` and `ignoredRoutes` configuration. The short version: rewrite your middleware.ts to use Clerk's edge-compatible auth check. Clerk's middleware is simpler  –  about 5 lines of code vs Auth0's 15-20 line setup."
+    },
+    {
+      "heading": "Component migration",
+      "body": "Replace Auth0's `UserProvider` wrapper with Clerk's `<ClerkProvider>`. Replace `useUser()` with Clerk's `useUser()` on the client, or `currentUser()` on the server. Here's the thing: auth0's custom login page gets replaced by Clerk's pre-built `<SignIn/>` and `<SignUp/>` components. If you customized Auth0's Lock UI, you'll need to rebuild the styling in Clerk's dashboard."
+    },
+    {
+      "heading": "Test the migration",
+      "body": "Test every auth flow: new user sign-up, existing user sign-in (both with and without password reset), social login, password reset, and session persistence. Verify that protected routes redirect unauthenticated users correctly. Test in a staging environment before cutting over production traffic."
+    },
+    {
+      "heading": "Rollback strategy",
+      "body": "Keep your Auth0 configuration active during the migration. Use a feature flag to toggle between auth providers. If issues arise, switch the flag back to Auth0. Once you've confirmed Clerk works for all users over a week, deactivate your Auth0 integration and clean up unused environment variables."
+    }
+  ],
+  "faq": [
+    {
+      "question": "How long does Auth0 to Clerk migration take?",
+      "answer": "A straightforward migration takes 2-5 days including testing. Complex Auth0 setups with custom rules, actions, and RBAC can take 1-2 weeks."
+    },
+    {
+      "question": "Can I keep my Auth0 data after migrating?",
+      "answer": "Yes — export your users from Auth0 before deactivating. Keep Auth0 active for 1-2 weeks after migration as a fallback. Clerk's migration API helps map Auth0 user schemas."
+    },
+    {
+      "question": "Will my users notice the migration?",
+      "answer": "If done correctly, users won't notice. Social login users may need to re-authenticate. Email/password users may need to reset their passwords since Auth0 doesn't export password hashes."
+    }
+  ]
+}

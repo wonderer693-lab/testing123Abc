@@ -13,10 +13,10 @@
     "subheadline": "A thorough breakdown of Better Auth's pricing, developer experience, and fit for Next.js App Router projects."
   },
   "intro_paragraphs": [
-    "Better Auth is a medium authentication solution that is completely free and open source. It is designed for Next.js App Router and supports authentication patterns like fully open source with no vendor lock-in or usage limits and self-hosted on your own infrastructure - complete data control. Estimated setup time is 30 minutes for a basic integration."
+    "Better Auth isn't for every project. But if your requirements include fully open source with no vendor lock-in or usage limits or self-hosted on your own infrastructure - complete data control, it deserves serious consideration. Honestly, the Free (Open Source) starting price and 8/10 Next.js score make it a contender in specific scenarios. I'll help you figure out if you're that scenario."
   ],
   "who_should_use_paragraphs": [
-    "You should consider Better Auth if you prioritize fully open source with no vendor lock-in or usage. It is well-suited for teams that need a reliable Next.js auth provider and want to avoid vendor lock-in or excessive per-user pricing."
+    "Better Auth is designed for open-source control, zero vendor lock-in, plugin architecture for custom auth flows. If that describes your team or project, you'll likely have a good experience. If your priorities are different  –  say you need requires database setup and self-hosting infrastructure  –  you might want to look at the alternatives."
   ],
   "pricing_context": "Better Auth itself is free and open source, but 'free' here is misleading when you factor in infrastructure costs. You need a database (Postgres, MySQL, or SQLite), a server or serverless functions to host the API routes, and ongoing maintenance for security patches and updates. For a production Next.js app, you are looking at $20-50/mo in hosting costs plus engineering time for setup and maintenance. While there is no per-user pricing, the operational cost can rival or exceed managed auth services for small teams. Auth.js offers a similar open-source model with a larger community and more battle-tested codebase.",
   "faq": [

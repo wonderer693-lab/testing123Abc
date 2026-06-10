@@ -1,0 +1,63 @@
+{
+  "page_type": "GUIDE",
+  "guide_id": "setup-kinde-nextjs",
+  "last_updated": "Week 24, 2026",
+  "seo": {
+    "meta_title": "How to Set Up Kinde in Next.js 15 (2026 Guide)",
+    "meta_description": "Guide to adding Kinde authentication to Next.js App Router. Feature flags, middleware setup, and auth components explained step by step.",
+    "og_title": "Kinde Next.js Integration — Setup Walkthrough",
+    "og_description": "Set up Kinde authentication in Next.js App Router. Includes middleware configuration, auth components, and Kinde's feature flag system."
+  },
+  "hero": {
+    "headline": "How to Set Up Kinde in Next.js 15",
+    "subheadline": "Guide to adding Kinde authentication to Next.js App Router. Feature flags, middleware setup, and auth components explained step by step."
+  },
+  "sections": [
+    {
+      "heading": "Prerequisites",
+      "body": "You'll need a Next.js 15+ App Router project and a Kinde account (kinde.com  –  free tier includes 7,500 MAU). Kinde bundles authentication with feature flags, which means you get two products in one integration. No credit card required to start."
+    },
+    {
+      "heading": "Install the Kinde SDK",
+      "body": "Run `npm install @kinde-oss/kinde-auth-nextjs`. This SDK provides server-side helpers for Next.js App Router, including middleware integration, session management, and pre-built components. Kinde's SDK is framework-specific  –  the Next.js package has different APIs than the React or Node.js versions."
+    },
+    {
+      "heading": "Set environment variables",
+      "body": "Add the following to your `.env.local`: `KINDE_CLIENT_ID`, `KINDE_CLIENT_SECRET`, `KINDE_ISSUER_URL`, `KINDE_SITE_URL`, and `KINDE_POST_LOGOUT_REDIRECT_URL`. You'll find these in the Kinde Dashboard under Settings > API. The issuer URL includes your Kinde subdomain  –  it looks like `https://yoursubdomain.kinde.com`."
+    },
+    {
+      "heading": "Set up the Kinde provider",
+      "body": "Wrap your app with `KindeProvider` in the root layout. Unlike Clerk, Kinde's provider goes in a client component wrapper. Create `components/KindeAuthProvider.tsx` that wraps children with `KindeProvider`. Import it in `app/layout.tsx` and wrap your application."
+    },
+    {
+      "heading": "Add middleware",
+      "body": "Create `middleware.ts` using `withKindeAuth` from `@kinde-oss/kinde-auth-nextjs/middleware`. Define public and protected routes. Kinde's middleware handles session refresh, route protection, and redirect to login  –  all at the edge. You can customize the login page URL and callback behavior in the middleware config."
+    },
+    {
+      "heading": "Create auth pages",
+      "body": "Kinde hosts the authentication UI on its own domain (similar to Auth0's universal login). You don't build sign-in forms  –  Kinde handles them. Configure your login and registration screens in the Kinde Dashboard: brand colors, logo, and allowed redirect URLs. The hosted pages support passwordless, social login, and traditional email/password flows."
+    },
+    {
+      "heading": "Use feature flags",
+      "body": "Kinde's differentiator is built-in feature flags. Use `useKindeFeatureFlag` to check flags in client components, and `getKindeFeatureFlag` on the server. Feature flags are evaluated server-side, so there's no flash of hidden content. This is useful for rolling out auth-related features gradually."
+    },
+    {
+      "heading": "Verify the integration",
+      "body": "Build and deploy. Kinde's dashboard gives you analytics on sign-ups, active MAU, and feature flag usage. The free tier includes most features except enterprise SSO. Kinde's pricing scales to $300/mo at higher MAU tiers, which is more predictable than Clerk's $0 to $199 jump."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Does Kinde have a free tier?",
+      "answer": "Yes — Kinde's free tier covers 7,500 MAU and includes most features except enterprise SSO. It also includes Kinde's feature flag system at no extra cost."
+    },
+    {
+      "question": "Is Kinde better than Clerk?",
+      "answer": "Kinde offers bundled feature flags and a visual workflow builder that Clerk lacks. Clerk has deeper Next.js integration and a more generous free tier (10K vs 7.5K MAU). The right choice depends on whether you value feature flags or pure auth DX."
+    },
+    {
+      "question": "Does Kinde support custom domains for auth pages?",
+      "answer": "Yes — Kinde supports custom domains on paid plans. The free tier uses a Kinde subdomain for hosted auth pages, similar to Auth0's universal login."
+    }
+  ]
+}

@@ -13,10 +13,10 @@
     "subheadline": "A thorough breakdown of WorkOS's pricing, developer experience, and fit for Next.js App Router projects."
   },
   "intro_paragraphs": [
-    "WorkOS is one of those auth tools that makes a specific trade-off: no free tier - requires sales conversation to get started. The advanced learning curve and Custom pricing (enterprise) starting price define where it fits in your stack. I break down whether the trade-off is worth it."
+    "WorkOS targets enterprise sso/scim for b2b saas  –  no free tier, sales call required, pair with consumer auth. With a Next.js integration score of 5/10 and a advanced learning curve, it fits a specific niche in the auth space. The real question: does that niche match your project?"
   ],
   "who_should_use_paragraphs": [
-    "WorkOS works best for Next.js projects where ease of integration matters most. The advanced learning curve means you should budget time for setup and configuration. We recommend it for teams that want a managed solution with minimal ops overhead."
+    "Who is WorkOS actually for? Teams that need a reliable solution for enterprise-grade sso with saml/oidc support out of the box and scim provisioning for enterprise directory integration. The advanced learning curve and Custom pricing (enterprise) pricing tell you whether this is a match."
   ],
   "pricing_context": "WorkOS does not publish pricing and requires a sales call - a red flag for early-stage startups. Enterprise SSO typically costs $5,000-25,000+/year as an add-on with platforms like Auth0. WorkOS is likely similar. Additionally, WorkOS only solves enterprise auth (SSO, SCIM); you still need a separate solution for consumer auth (email/password, social login). The total cost for auth could easily exceed $1,000/mo. For most Next.js B2B SaaS startups, Auth0's comprehensive platform (consumer + SSO) at $3,000/mo may actually be cheaper than running WorkOS + Clerk. Evaluate WorkOS only when you have enterprise customers actively requesting SSO.",
   "faq": [

@@ -31,6 +31,7 @@ const routes = [
   { path: "/disclosure", priority: 0.1, changefreq: "yearly" },
   { path: "/best", priority: 0.9, changefreq: "weekly" },
   { path: "/compare/pricing", priority: 0.8, changefreq: "monthly" },
+  { path: "/guides", priority: 0.8, changefreq: "weekly" },
 ];
 
 for (const tool of tools) {
@@ -40,6 +41,16 @@ for (const tool of tools) {
 
 for (const pair of PRIORITY_PAIRS) {
   routes.push({ path: `/compare/${pair}`, priority: 0.9, changefreq: "monthly" });
+}
+
+const GUIDES = [
+  "setup-clerk-nextjs", "setup-supabase-auth-nextjs", "setup-better-auth-nextjs", "setup-kinde-nextjs",
+  "migrate-auth0-to-clerk", "migrate-auth0-to-supabase-auth", "migrate-firebase-to-supabase-auth", "migrate-authjs-to-clerk",
+  "nextjs-auth-middleware", "nextjs-auth-pricing-guide",
+];
+
+for (const slug of GUIDES) {
+  routes.push({ path: `/guides/${slug}`, priority: 0.8, changefreq: "monthly" });
 }
 
 const today = new Date().toISOString().split("T")[0];

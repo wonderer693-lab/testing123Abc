@@ -13,10 +13,10 @@
     "subheadline": "A thorough breakdown of Descope's pricing, developer experience, and fit for Next.js App Router projects."
   },
   "intro_paragraphs": [
-    "There's no perfect auth tool, but Descope comes close for a specific use case: visual drag-and-drop auth flows for non-technical teams  –  but $2k/mo at 30k mau, premium for abstraction. I tested it with Next.js App Router to see how well that promise holds up in practice  –  20 minutes setup and 4.2★ rating suggest it delivers."
+    "Descope is one of those auth tools that makes a specific trade-off: expensive at scale - pricing jumps at 10k mau. In practice, the medium learning curve and Free – $2,000/mo starting price define where it fits in your stack. I break down whether the trade-off is worth it."
   ],
   "who_should_use_paragraphs": [
-    "Descope is ideal for teams that need a reliable auth solution with specific strengths around visual drag-and-drop workflow builder for authentication flows and no-code screens reduce front-end development time. Descope's visual workflow editor lets product managers design multi-step registration, conditional MFA, and progressive profiling without writing front-end code. If you are building a Next.js SaaS and value seamless integration, Descope deserves serious consideration."
+    "In my experience, Descope suits teams that value visual drag-and-drop workflow builder for and no-code screens reduce front-end development time. It's less ideal if you need expensive at scale - pricing jumps at 10k mau."
   ],
   "pricing_context": "Descope's free tier (5,000 MAU, 2,000 transactions) is sufficient for prototyping but tight for production. The JumpStart plan at $2,000/mo covers 30,000 MAU - a steep jump that rivals Auth0's B2B plan. At scale, Descope is one of the most expensive options on this list. The visual workflow builder is the value proposition, but it comes at a significant premium. For most Next.js teams, Clerk provides better DX at 1/10th the cost. Consider Descope only if you have non-technical team members who need to build and modify authentication flows independently. Otherwise, the pricing does not justify the visual abstraction layer.",
   "faq": [

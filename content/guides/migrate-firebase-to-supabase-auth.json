@@ -1,0 +1,63 @@
+{
+  "page_type": "GUIDE",
+  "guide_id": "migrate-firebase-to-supabase-auth",
+  "last_updated": "Week 24, 2026",
+  "seo": {
+    "meta_title": "How to Migrate from Firebase Auth to Supabase Auth (2026 Guide)",
+    "meta_description": "Guide to migrating from Firebase Auth to Supabase Auth for Next.js apps. User export, RLS policies, realtime setup, and avoiding downtime.",
+    "og_title": "Firebase Auth to Supabase Auth — Migration Guide",
+    "og_description": "Migrate your Next.js app from Firebase Auth to Supabase Auth. User data migration, RLS vs Firestore rules, and cost implications."
+  },
+  "hero": {
+    "headline": "How to Migrate from Firebase Auth to Supabase Auth",
+    "subheadline": "Guide to migrating from Firebase Auth to Supabase Auth for Next.js apps. User export, RLS policies, realtime setup, and avoiding downtime."
+  },
+  "sections": [
+    {
+      "heading": "Why migrate from Firebase Auth to Supabase Auth?",
+      "body": "Firebase Auth gives you Yes, up to 50,000 MAU free tier with Google Cloud integration. Supabase Auth matches with Yes, 50,000 MAU included in Free tier plus an open-source Postgres database. The main reasons teams migrate: open-source stack (no vendor lock-in), Row Level Security (more flexible than Firestore rules), and consolidated auth + database in one platform. Pricing is similar at the free tier, but Supabase's Pro plan ($75/mo) includes more than Firebase's Blaze plan at equivalent usage."
+    },
+    {
+      "heading": "Export users from Firebase",
+      "body": "Use the Firebase Admin SDK to export users. Write a script that iterates through all users using `listUsers()` and exports email, UID, display name, and provider data. Firebase doesn't expose password hashes for security reasons  –  you'll need to migrate users with a password reset trigger. Google Cloud Identity Platform users can use the `transferSAML` and `transferOIDC` APIs for enterprise migrations."
+    },
+    {
+      "heading": "Set up Supabase Auth",
+      "body": "Create a Supabase project. Enable authentication providers matching your Firebase setup (email/password, Google, GitHub, Apple, etc.) in the Supabase Dashboard under Authentication > Providers. Configure your site URL, redirect URLs, and JWT expiry settings. Supabase uses JWTs for session management, similar to Firebase's ID tokens."
+    },
+    {
+      "heading": "Migrate user data with password reset",
+      "body": "Import users into Supabase's `auth.users` table via the Management API. Set a random password for each user and mark them as requiring password change. Write a script that sends password reset emails to all existing users, or prompt them to reset on first login. This is the safest approach  –  no user gets locked out permanently."
+    },
+    {
+      "heading": "Rewrite security rules",
+      "body": "Firebase uses Firestore Security Rules (a custom DSL). Supabase uses Row Level Security (standard SQL). Translate your rules: `request.auth.uid == resource.data.user_id` becomes `auth.uid() = user_id` in SQL. RLS is more expressive  –  you can write subqueries, join tables, and use functions. Test each policy with the Supabase SQL editor before deploying."
+    },
+    {
+      "heading": "Update Next.js code",
+      "body": "Replace Firebase SDK imports with Supabase SSR. Install `@supabase/ssr` and `@supabase/supabase-js`. Firebase's `onAuthStateChanged` becomes Supabase's `onAuthStateChange`. Server-side auth moves from Firebase Admin SDK to Supabase's `createServerClient`. The Supabase Realtime API replaces Firebase Realtime Database for live updates."
+    },
+    {
+      "heading": "Test in staging",
+      "body": "Deploy to a staging environment with both Firebase and Supabase running. Compare auth flows side by side. Test sign-up, sign-in, Google OAuth, password reset, and session persistence. Verify that RLS policies correctly scope data access. Run your test suite against both backends to catch subtle differences."
+    },
+    {
+      "heading": "Monitor after cutover",
+      "body": "Switch production traffic to Supabase. Monitor the Supabase dashboard for errors and active users. Here's the thing: keep Firebase configuration active for 2 weeks as a rollback option. The Supabase free tier (50K MAU) is generous  –  most projects won't need to upgrade for months. At scale, the Pro plan ($75/mo) is significantly cheaper than Firebase's consumption-based Blaze pricing for apps with steady traffic."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Is moving from Firebase to Supabase worth it?",
+      "answer": "For most Next.js teams, yes. You get an open-source stack with no vendor lock-in, Row Level Security tied to your Postgres database, and consolidated auth + database pricing. The migration effort is typically 3-7 days."
+    },
+    {
+      "question": "Are Firestore rules and Supabase RLS equivalent?",
+      "answer": "Not exactly, but RLS is more powerful. Firebase rules use a custom DSL limited to Firestore. Supabase RLS uses standard SQL — you can write subqueries, use functions, and join tables. RLS is more flexible but requires SQL knowledge."
+    },
+    {
+      "question": "Do I need to rewrite my backend when migrating Firebase to Supabase?",
+      "answer": "Your Next.js API routes and server components will need updates. Firebase uses the Admin SDK for server-side operations. Supabase uses `createServerClient` from `@supabase/ssr`. The patterns are different, but the migration is manageable for a Next.js app."
+    }
+  ]
+}

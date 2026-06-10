@@ -1,6 +1,6 @@
 import { readFileSync } from "fs";
 import { join } from "path";
-import type { CompareContent, ToolPageContent, AlternativesContent } from "@/content/types";
+import type { CompareContent, ToolPageContent, AlternativesContent, GuideContent } from "@/content/types";
 
 const CONTENT_DIR = join(process.cwd(), "content");
 
@@ -24,8 +24,13 @@ export function loadAlternativesContent(toolId: string): AlternativesContent | n
   return loadJSON<AlternativesContent>(join(CONTENT_DIR, "tools", toolId, "alternatives.json"));
 }
 
-export function contentExists(type: "compare" | "tool" | "alternatives", id: string): boolean {
+export function loadGuideContent(slug: string): GuideContent | null {
+  return loadJSON<GuideContent>(join(CONTENT_DIR, "guides", `${slug}.json`));
+}
+
+export function contentExists(type: "compare" | "tool" | "alternatives" | "guide", id: string): boolean {
   if (type === "compare") return loadCompareContent(id) !== null;
   if (type === "tool") return loadToolPageContent(id) !== null;
+  if (type === "guide") return loadGuideContent(id) !== null;
   return loadAlternativesContent(id) !== null;
 }

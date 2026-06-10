@@ -9,16 +9,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import { loadCompareContent } from "@/lib/content-loader";
 
 export function generateStaticParams() {
-  const tools = getTools();
-  const params = [];
-  for (const a of tools) {
-    for (const b of tools) {
-      if (a.id !== b.id) {
-        params.push({ slug: `${a.id}-vs-${b.id}` });
-      }
-    }
-  }
-  return params;
+  return CANONICAL_PAIRS.map((slug) => ({ slug }));
 }
 
 const siteUrl = "https://saaspolarbeam.vercel.app";
@@ -30,7 +21,7 @@ function canonicalSlug(slug: string): string {
   return a < b ? `${a}-vs-${b}` : `${b}-vs-${a}`;
 }
 
-const PRIORITY_PAIRS = new Set([
+const CANONICAL_PAIRS = [
   "auth0-vs-clerk",
   "auth0-vs-kinde",
   "auth0-vs-workos",
@@ -41,7 +32,7 @@ const PRIORITY_PAIRS = new Set([
   "clerk-vs-kinde",
   "clerk-vs-supabase-auth",
   "firebase-auth-vs-supabase-auth",
-]);
+];
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
@@ -54,7 +45,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   const canonSlug = canonicalSlug(slug);
   const content = loadCompareContent(slug);
-  const isPriority = PRIORITY_PAIRS.has(canonSlug);
+  const isPriority = CANONICAL_PAIRS.includes(canonSlug);
 
   const fallbackTitle = `${a.name} vs ${b.name} for Next.js App Router (2026 Comparison)`;
   const fallbackDesc = `Compare ${a.name} vs ${b.name} for Next.js authentication. ${a.nextjs_integration_score}/10 vs ${b.nextjs_integration_score}/10 DX scores, pricing (${a.starting_price} vs ${b.starting_price}), setup time, and honest recommendations.`;

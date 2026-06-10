@@ -1,0 +1,63 @@
+{
+  "page_type": "GUIDE",
+  "guide_id": "migrate-authjs-to-clerk",
+  "last_updated": "Week 24, 2026",
+  "seo": {
+    "meta_title": "How to Migrate from Auth.js to Clerk (2026 Guide)",
+    "meta_description": "Step-by-step migration from Auth.js (NextAuth) to Clerk for Next.js apps. Provider migration, session handling, and middleware changes.",
+    "og_title": "Auth.js to Clerk Migration — Next.js Guide",
+    "og_description": "Migrate from Auth.js (NextAuth) to Clerk in your Next.js app. User data export, session migration, and drop-in component setup."
+  },
+  "hero": {
+    "headline": "How to Migrate from Auth.js to Clerk",
+    "subheadline": "Step-by-step migration from Auth.js (NextAuth) to Clerk for Next.js apps. Provider migration, session handling, and middleware changes."
+  },
+  "sections": [
+    {
+      "heading": "Why migrate from Auth.js to Clerk?",
+      "body": "Auth.js (formerly NextAuth) is the most popular open-source auth library for Next.js with Yes, fully open source. Clerk is the leading managed alternative with Yes, up to 10,000 monthly active users. Teams migrate from Auth.js to Clerk for three reasons: pre-built UI components (no more building sign-in forms), managed session handling (no database sessions to maintain), and better edge runtime support (Auth.js struggles with edge middleware in some configurations)."
+    },
+    {
+      "heading": "Audit your Auth.js configuration",
+      "body": "Document your Auth.js setup: enabled providers (credentials, OAuth, email), custom callbacks (JWT, session, signIn), database adapter configuration, and any middleware-based route protection. Auth.js config lives in `app/api/auth/[...nextauth]/route.ts` or `app/api/auth/[...nextauth]/options.ts`. Export your user data from your Auth.js database  –  sessions, accounts, and verification requests tables."
+    },
+    {
+      "heading": "Set up Clerk",
+      "body": "Create a Clerk account and configure matching providers. Auth.js supports 80+ providers  –  Clerk supports the most common ones (Google, GitHub, Microsoft, Apple, etc.) out of the box. For custom providers, Clerk's SDK supports OAuth 2.0 and OIDC. Set up your application in the Clerk Dashboard and note your publishable and secret keys."
+    },
+    {
+      "heading": "Replace the Auth.js API route",
+      "body": "Delete `app/api/auth/[...nextauth]/route.ts`. Clerk doesn't need a dedicated API route  –  the SDK handles everything through middleware and the `<ClerkProvider>`. This is one of the biggest simplifications: you remove an entire API route file and the associated configuration."
+    },
+    {
+      "heading": "Update middleware",
+      "body": "Auth.js middleware uses `getToken()` to check sessions. Clerk middleware uses the `auth()` helper with `publicRoutes` config. Rewrite your `middleware.ts` to use Clerk's helper. The config is simpler  –  define which routes are public instead of writing conditional logic. Clerk's middleware also handles edge runtime automatically, which requires manual configuration in Auth.js."
+    },
+    {
+      "heading": "Migrate components and hooks",
+      "body": "Replace `useSession()` and `signIn()`/ `signOut()` from `next-auth/react` with Clerk's `useUser()` and `<SignIn/>`/ `<SignUp/>` components. The biggest win: you delete your custom sign-in and sign-up forms. Add `<UserButton/>` for user menu  –  Auth.js has no equivalent built-in. Server-side auth moves from `getServerSession()` to Clerk's `auth()` and `currentUser()`."
+    },
+    {
+      "heading": "Handle callback differences",
+      "body": "Auth.js callback functions (`jwt`, `session`, `signIn`) let you customize token and session data. Clerk handles this through webhooks  –  create a webhook endpoint in `app/api/webhooks/clerk/route.ts`. Clerk sends events for user creation, update, and deletion. Map your custom callback logic to the appropriate webhook handlers. This is the most involved part of the migration."
+    },
+    {
+      "heading": "Test and roll out",
+      "body": "Deploy to staging and test every flow. Verify that existing users can sign in (they'll be created in Clerk on first successful login if you've enabled the appropriate settings  –  use Clerk's migration API for a cleaner experience). Test email/password, OAuth, and magic link flows. Run a parallel test where both Auth.js and Clerk are active, comparing behavior side by side."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Is Clerk better than Auth.js?",
+      "answer": "Clerk offers a more polished developer experience with pre-built components and managed sessions. Auth.js gives you 80+ providers and full control. Clerk is better for shipping speed; Auth.js is better if you need an obscure provider or have strict self-hosting requirements."
+    },
+    {
+      "question": "Do I lose features moving from Auth.js to Clerk?",
+      "answer": "You lose access to Auth.js's 80+ provider ecosystem — Clerk supports the most common ones. You also lose the ability to customize the JWT/session callbacks directly (though webhooks compensate). You gain pre-built UI components, managed sessions, and better edge runtime support."
+    },
+    {
+      "question": "Can I run Auth.js and Clerk simultaneously?",
+      "answer": "Yes — use a feature flag to switch between the two during migration. Each handles sessions independently, so users need separate sign-in flows. Use staging to validate before cutting over."
+    }
+  ]
+}

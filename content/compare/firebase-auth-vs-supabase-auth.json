@@ -6,17 +6,17 @@
   "human_intro": "Firebase Auth gives you Google's ecosystem and 50K free users. Supabase Auth gives you open-source Postgres and RLS. I tested both with Next.js 15 to see which one actually works better in production.",
   "seo": {
     "meta_title": "Firebase Auth vs Supabase Auth for Next.js App Router (2026): Which Auth Tool Wins? (Updated Week 24, 2026)",
-    "meta_description": "Is Firebase Auth or Supabase Auth the better choice for your Next.js stack? Here's Supabase Auth's setup time vs Firebase Auth's, plus hidden costs and real DX trade-offs.",
-    "og_title": "Firebase Auth or Supabase Auth: What Actually Matters for Next.js",
-    "og_description": "Both Firebase Auth and Supabase Auth work with Next.js  –  but the developer experience differs significantly. 6/10 vs 7/10. Read more."
+    "meta_description": "Choosing between Firebase Auth and Supabase Auth? We break down the differences in pricing, setup, and Next.js integration to help you decide.",
+    "og_title": "Firebase Auth vs Supabase Auth — I Tested Both So You Don't Have To",
+    "og_description": "Choosing auth for your Next.js app? Firebase Auth and Supabase Auth compared: Free – Pay-as-you-go vs Free – $75/mo, 15 minutes vs 15 minutes setup."
   },
   "hero": {
     "headline": "Firebase Auth vs Supabase Auth for Next.js Authentication",
     "subheadline": "An honest comparison of Firebase Auth and Supabase Auth — pricing, DX, setup time, and which one we recommend for Next.js App Router projects in 2026."
   },
-  "quick_summary": "I went into this Firebase Auth vs Supabase Auth comparison expecting a close call. Honestly, after testing: Supabase Auth pulls ahead on Next.js integration (7/10 to 6/10). The easy learning curve of Firebase Auth is fine, but Supabase Auth's 15 minutes setup is hard to beat.",
+  "quick_summary": "When comparing Firebase Auth and Supabase Auth for Next.js App Router authentication, the differences come down to your priorities. Supabase Auth leads with a 7/10 Next.js integration score and a easy learning curve. Firebase Auth scores 6/10 with a easy learning curve. Supabase Auth starts at Free – $75/mo, while Firebase Auth starts at Free – Pay-as-you-go.",
   "verdict_winner_id": "supabase-auth",
-  "verdict_text": "Supabase Auth gets my vote for most Next.js projects. The 7/10 DX score isn't just a number  –  it reflects real middleware support, server component patterns, and edge runtime compatibility. Firebase Auth is still a strong contender, especially if you're working with yes, up to 50,000 mau free tier constraints.",
+  "verdict_text": "For this matchup, Supabase Auth comes out ahead. The Next.js integration (7/10) is genuinely better in practice  –  not just on paper. Firebase Auth is a good tool with its own strengths, particularly around yes, up to 50,000 mau free tier. Choose accordingly.",
   "structured_data_points": [
     {
       "label": "Starting Price",

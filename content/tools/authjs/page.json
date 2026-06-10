@@ -13,10 +13,10 @@
     "subheadline": "A thorough breakdown of Auth.js's pricing, developer experience, and fit for Next.js App Router projects."
   },
   "intro_paragraphs": [
-    "Auth.js scores 8/10 for Next.js  –  that's among the best. The medium learning curve means you'll want someone auth-savvy on the team. Here's my full review."
+    "Here's my take on Auth.js for Next.js authentication. It's not the simplest option, but it rewards the effort  –  20 minutes to get basic auth running. The 8/10 Next.js score tells part of the story. I'll tell you the rest."
   ],
   "who_should_use_paragraphs": [
-    "I'd recommend Auth.js to teams that want auth to be a solved problem, not a project. The 8/10 Next.js score is a reliable signal."
+    "Auth.js makes sense for Next.js projects where auth.js (formerly nextauth.js) is the industry-standard open-source auth library with the largest provider ecosystem (80+ oauth providers) and a battle-tested codebase running in production at thousands of companies. If that sounds like your situation, it's worth a serious look. If not, the alternatives page lists better-fitting options."
   ],
   "pricing_context": "Auth.js is free and open source with no usage limits - the most cost-effective option on this list. However, the hidden cost is engineering time. You need to build and maintain your own authentication UI, handle email verification flows, implement password reset, and manage session lifecycle. For a simple app this takes 1-2 days. For complex multi-tenant apps with role management, it can take weeks. If your engineering time is valued at $100-200/hr, a week of auth development costs $4,000-8,000 in opportunity cost - far more than a year of Clerk Pro. Use Clerk or Supabase Auth if you want to compress auth development to hours, not days.",
   "faq": [

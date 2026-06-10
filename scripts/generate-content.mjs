@@ -206,6 +206,25 @@ function generateCompareFaq(a, b, winner) {
   ];
 }
 
+// ─── Canonical pairs (alphabetical order, only 10) ───
+
+const CANONICAL_PAIRS = new Set([
+  "auth0-vs-clerk",
+  "auth0-vs-kinde",
+  "auth0-vs-workos",
+  "authjs-vs-better-auth",
+  "authjs-vs-clerk",
+  "better-auth-vs-clerk",
+  "clerk-vs-firebase-auth",
+  "clerk-vs-kinde",
+  "clerk-vs-supabase-auth",
+  "firebase-auth-vs-supabase-auth",
+]);
+
+function canonicalSlug(a, b) {
+  return a.id < b.id ? `${a.id}-vs-${b.id}` : `${b.id}-vs-${a.id}`;
+}
+
 // ─── Priority pairs for human intros ───
 
 const PRIORITY_INTROS = {
@@ -383,14 +402,15 @@ let compareCount = 0;
 let toolCount = 0;
 let altCount = 0;
 
-for (const a of tools) {
-  for (const b of tools) {
-    if (a.id === b.id) continue;
-    const content = generateCompareContent(a, b);
-    const filename = `${a.id}-vs-${b.id}.json`;
-    writeFileSync(join(COMPARE_DIR, filename), JSON.stringify(content, null, 2), "utf-8");
-    compareCount++;
-  }
+// Only generate the 10 canonical (alphabetical-order) compare pages
+for (const pairSlug of CANONICAL_PAIRS) {
+  const [idA, idB] = pairSlug.split("-vs-");
+  const a = tools.find((t) => t.id === idA);
+  const b = tools.find((t) => t.id === idB);
+  if (!a || !b) { console.warn(`  [skip] Tools not found for pair: ${pairSlug}`); continue; }
+  const content = generateCompareContent(a, b);
+  writeFileSync(join(COMPARE_DIR, `${pairSlug}.json`), JSON.stringify(content, null, 2), "utf-8");
+  compareCount++;
 }
 
 for (const tool of tools) {

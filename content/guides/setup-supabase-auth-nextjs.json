@@ -1,0 +1,63 @@
+{
+  "page_type": "GUIDE",
+  "guide_id": "setup-supabase-auth-nextjs",
+  "last_updated": "Week 24, 2026",
+  "seo": {
+    "meta_title": "How to Set Up Supabase Auth in Next.js 15 (2026 Guide)",
+    "meta_description": "Complete guide to integrating Supabase Auth with Next.js App Router. Server component auth, RLS policies, and middleware setup explained.",
+    "og_title": "Supabase Auth + Next.js — Setup Guide",
+    "og_description": "Integrate Supabase Auth with Next.js App Router: server component helpers, RLS, middleware, and the Supabase JavaScript SDK."
+  },
+  "hero": {
+    "headline": "How to Set Up Supabase Auth in Next.js 15",
+    "subheadline": "Complete guide to integrating Supabase Auth with Next.js App Router. Server component auth, RLS policies, and middleware setup explained."
+  },
+  "sections": [
+    {
+      "heading": "Prerequisites",
+      "body": "You'll need a Next.js 15+ App Router project and a Supabase project (create one at supabase.com  –  the free tier includes 50K MAU, unlimited API requests, and 500MB database). Install the Supabase JavaScript SDK and the helper library."
+    },
+    {
+      "heading": "Install dependencies",
+      "body": "Run `npm install @supabase/supabase-js @supabase/ssr`. Honestly, the `@supabase/ssr` package is specifically designed for Next.js App Router  –  it handles cookie-based session management for server components, middleware, and API routes. Without it, you'd need to manage session cookies manually."
+    },
+    {
+      "heading": "Create a Supabase client",
+      "body": "Create `lib/supabase/client.ts` for browser-side usage and `lib/supabase/server.ts` for server components. Use `createBrowserClient` and `createServerClient` from `@supabase/ssr`. Both need your Supabase URL and anon key from the Supabase dashboard under Project Settings > API."
+    },
+    {
+      "heading": "Set up middleware",
+      "body": "Create `middleware.ts` that refreshes the Supabase session on every request. Use `createMiddlewareClient` from `@supabase/ssr` to handle cookie management. Define your protected and public routes. The middleware runs at the edge, so there's no cold start penalty for session checks."
+    },
+    {
+      "heading": "Add sign-up and sign-in flows",
+      "body": "Supabase Auth supports email/password, magic link, OAuth (Google, GitHub, etc.), and phone auth. Create pages for sign-in and sign-up using Supabase's `signInWithPassword` or `signInWithOAuth` methods. For magic links, use `signInWithOtp`. Store the session after successful authentication using `setSession`."
+    },
+    {
+      "heading": "Protect routes with RLS",
+      "body": "Supabase's Row Level Security is one of its biggest advantages. Define RLS policies in the Supabase dashboard that reference `auth.uid()`. This way, your database queries automatically respect the authenticated user  –  even if a developer forgets to check auth in the application code. RLS policies are written in plain SQL."
+    },
+    {
+      "heading": "Access user in server components",
+      "body": "Use the server client created earlier. Call `await supabase.auth.getUser()` in your server components or API routes. The short version: the `@supabase/ssr` package handles cookie parsing and session validation automatically. You can also use Supabase's realtime features to listen for auth state changes."
+    },
+    {
+      "heading": "Verify it works",
+      "body": "Run a full build and test the flow: sign up, sign in, access protected routes, and verify that RLS policies are preventing unauthorized access. Real talk: check the Supabase dashboard for auth logs and active sessions. The free tier analytics show sign-up sources and active user counts."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Is Supabase Auth free for Next.js?",
+      "answer": "Supabase Auth offers a generous free tier covering 50K MAU, unlimited API requests, and 500MB database. The Pro plan starts at $75/mo and includes 100K MAU."
+    },
+    {
+      "question": "Does Supabase Auth need its own middleware?",
+      "answer": "Yes — Supabase SSR requires custom middleware to refresh sessions. The `@supabase/ssr` package provides `createMiddlewareClient` that handles session cookie management at the edge."
+    },
+    {
+      "question": "Can I use Supabase Auth without Supabase database?",
+      "answer": "Technically yes, but you'd miss the main benefit: Row Level Security that ties authentication and authorization directly to your database queries. Using Supabase Auth without the database adds complexity without payoff."
+    }
+  ]
+}

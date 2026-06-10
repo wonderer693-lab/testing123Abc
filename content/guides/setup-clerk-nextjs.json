@@ -1,0 +1,63 @@
+{
+  "page_type": "GUIDE",
+  "guide_id": "setup-clerk-nextjs",
+  "last_updated": "Week 24, 2026",
+  "seo": {
+    "meta_title": "How to Set Up Clerk in Next.js 15 (2026 Guide)",
+    "meta_description": "Step-by-step guide to adding Clerk authentication to Next.js App Router. Install the SDK, configure middleware, and add sign-in in under 10 minutes.",
+    "og_title": "Clerk Next.js Setup Guide — Full Walkthrough",
+    "og_description": "Learn how to add Clerk authentication to your Next.js App Router project with this practical setup guide. Middleware, components, and server helpers included."
+  },
+  "hero": {
+    "headline": "How to Set Up Clerk in Next.js 15",
+    "subheadline": "Step-by-step guide to adding Clerk authentication to Next.js App Router. Install the SDK, configure middleware, and add sign-in in under 10 minutes."
+  },
+  "sections": [
+    {
+      "heading": "Prerequisites",
+      "body": "Before installing Clerk, make sure you have a Next.js 15+ project with the App Router enabled. You'll also need a Clerk account  –  sign up at clerk.com (the free tier covers up to 10K MAU). No credit card required for the free plan."
+    },
+    {
+      "heading": "Install the Clerk SDK",
+      "body": "Run `npm install @clerk/nextjs` in your project root. The package provides everything you need: `auth()` and `currentUser()` server helpers, plus client-side components like `<SignIn/>` and `<UserButton/>`. Make sure you're using the latest version  –  Clerk ships updates frequently for App Router compatibility."
+    },
+    {
+      "heading": "Set environment variables",
+      "body": "Create a `.env.local` file in your project root. Add `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_yourkey` and `CLERK_SECRET_KEY=sk_test_yourkey`. You'll find both keys in the Clerk Dashboard under API Keys. Don't commit these to Git  –  add `.env.local` to your `.gitignore` if it isn't already there."
+    },
+    {
+      "heading": "Wrap your app with ClerkProvider",
+      "body": "Open `app/layout.tsx` and wrap your children with `<ClerkProvider>`. This provides the auth context to your entire app. Here's the thing: import it from `@clerk/nextjs`. Place it outside any `<html>` or `<body>` tags in the root layout."
+    },
+    {
+      "heading": "Add middleware for route protection",
+      "body": "Create or edit `middleware.ts` in your project root. Export a default middleware function that matches public and protected routes. Clerk's middleware runs at the edge, so there's no server-side latency for auth checks. You can configure public routes (like `/` and `/about`) and protected routes (like `/dashboard`) using the `publicRoutes` and `ignoredRoutes` options."
+    },
+    {
+      "heading": "Add sign-in and sign-up pages",
+      "body": "Clerk provides pre-built components for authentication pages. Here's the thing: create `app/sign-in/[[...sign-in]]/page.tsx` and add `<SignIn/>`. Do the same for sign-up. Clerk handles the UI, validation, session management, and redirects automatically. You can customize the appearance through the Clerk Dashboard without touching code."
+    },
+    {
+      "heading": "Access user data in server components",
+      "body": "Use `auth()` and `currentUser()` from `@clerk/nextjs/server` in your server components and API routes. `auth()` returns the session and user ID  –  useful for database queries and authorization checks. `currentUser()` returns the full user object. Both work smoothly with React Server Components and the App Router's data fetching patterns."
+    },
+    {
+      "heading": "Deploy and test",
+      "body": "Build your project with `npm run build` and deploy to Vercel. Set the same environment variables in your Vercel project settings. Test sign-in, protected routes, and the middleware behavior. Clerk's dashboard gives you real-time analytics on sign-ups, active users, and error rates."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Is Clerk free for Next.js?",
+      "answer": "Clerk has a free tier covering up to 10K MAU. Most of its features — including pre-built components, middleware, and server helpers — are available on the free plan. You only need to upgrade when you exceed 10K MAU."
+    },
+    {
+      "question": "Does Clerk work with server components?",
+      "answer": "Yes — Clerk provides `auth()` and `currentUser()` from `@clerk/nextjs/server` that work directly in React Server Components. No need to mark your pages as client components for auth."
+    },
+    {
+      "question": "How long does Clerk setup take?",
+      "answer": "Basic setup with middleware and pre-built components takes about 10 minutes. Full configuration with custom branding, webhooks, and organization management takes 1-2 hours."
+    }
+  ]
+}

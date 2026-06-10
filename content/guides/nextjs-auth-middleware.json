@@ -1,0 +1,63 @@
+{
+  "page_type": "GUIDE",
+  "guide_id": "nextjs-auth-middleware",
+  "last_updated": "Week 24, 2026",
+  "seo": {
+    "meta_title": "Next.js Auth Middleware Guide (2026) — All Providers Compared",
+    "meta_description": "How to protect routes with authentication middleware in Next.js App Router. Compare middleware setup across Clerk, Supabase Auth, Auth.js, and more.",
+    "og_title": "Next.js Auth Middleware — Complete Guide (2026)",
+    "og_description": "Learn how to protect routes using authentication middleware in Next.js App Router. Provider comparisons, edge runtime tips, and common pitfalls."
+  },
+  "hero": {
+    "headline": "Next.js Auth Middleware Guide — All Providers Compared",
+    "subheadline": "How to protect routes with authentication middleware in Next.js App Router. Compare middleware setup across Clerk, Supabase Auth, Auth.js, and more."
+  },
+  "sections": [
+    {
+      "heading": "What is Next.js auth middleware?",
+      "body": "Middleware in Next.js App Router runs at the edge before every request. Auth middleware checks whether a user is authenticated and either allows the request through or redirects them to a login page. Unlike traditional server-side auth checks, middleware runs before the page renders  –  users never see a flash of protected content. Every major auth provider supports edge middleware, but the setup varies significantly."
+    },
+    {
+      "heading": "Clerk middleware setup",
+      "body": "Clerk's middleware is the simplest to configure. Create `middleware.ts`, import `auth` from `@clerk/nextjs/server`, and export `auth().protect()`. Define `publicRoutes` and `ignoredRoutes` in the config. Look, clerk handles session refresh, cookie rotation, and redirect URLs automatically. Total lines of code: about 5."
+    },
+    {
+      "heading": "Supabase Auth middleware setup",
+      "body": "Supabase SSR middleware uses `createMiddlewareClient` from `@supabase/ssr`. It refreshes the Supabase session cookie on every request. You need to manually define which routes are public and protected. Supabase's middleware is more verbose than Clerk's  –  about 15 lines  –  but gives you full control over cookie management and session refresh behavior."
+    },
+    {
+      "heading": "Auth.js middleware setup",
+      "body": "Auth.js middleware requires `getToken()` from `next-auth/jwt` and manual route matching. The short version: create a config object with `matcher` to define which routes run through middleware. Auth.js middleware works at the edge but has known issues with some edge runtime configurations  –  test thoroughly if you're on Vercel Edge Functions. More boilerplate than Clerk or Supabase."
+    },
+    {
+      "heading": "Kinde middleware setup",
+      "body": "Kinde provides `withKindeAuth` from `@kinde-oss/kinde-auth-nextjs/middleware`. Similar to Clerk in simplicity  –  wrap your middleware export and define public routes. Kinde handles session refresh and login redirects automatically. The middleware checks the session cookie and redirects to Kinde's hosted login page for unauthenticated users."
+    },
+    {
+      "heading": "Better Auth middleware setup",
+      "body": "Better Auth uses its own `getSessionFromCookie` helper for edge middleware. Since Better Auth is self-hosted, you handle all cookie management. The middleware checks for a valid session cookie and redirects accordingly. More setup than managed providers, but no external service dependency. Better suited for teams that prefer infrastructure control over convenience."
+    },
+    {
+      "heading": "Common middleware pitfalls",
+      "body": "The most common issue is middleware running on every request, including static assets and API routes. Use Next.js `config.matcher` to limit middleware to specific paths. Another issue: forgetting to exclude auth API routes from middleware  –  this creates infinite redirect loops. Edge runtime has limited Node.js API support, so avoid `fs` or `crypto` in middleware."
+    },
+    {
+      "heading": "Which middleware should you choose?",
+      "body": "For most projects, Clerk or Kinde offer the simplest middleware setup. If you're on a budget, Supabase SSR middleware is well-documented and reliable. Auth.js middleware works for straightforward use cases but has edge case gotchas. Better Auth middleware gives you full control but requires more boilerplate. Match your middleware choice to your auth provider  –  mixing middleware and provider adds complexity."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Does middleware work with all hosting platforms?",
+      "answer": "Next.js middleware requires edge runtime support. Vercel supports it natively. Netlify supports it with some limitations. AWS Lambda doesn't support edge middleware — you'll need server-side auth checks instead."
+    },
+    {
+      "question": "Can middleware access the database?",
+      "answer": "Middleware runs at the edge with limited Node.js API support. Most databases can't be directly accessed from middleware. Use middleware for session cookie checks only — do database lookups in server components or API routes."
+    },
+    {
+      "question": "Does middleware slow down my app?",
+      "answer": "Edge middleware adds negligible latency (1-5ms per request). It's significantly faster than server-side auth checks since it runs on Vercel's Edge Network close to the user. Avoid heavy computation or external API calls in middleware."
+    }
+  ]
+}

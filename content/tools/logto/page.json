@@ -13,10 +13,10 @@
     "subheadline": "A thorough breakdown of Logto's pricing, developer experience, and fit for Next.js App Router projects."
   },
   "intro_paragraphs": [
-    "Logto isn't for every project. Here's the thing: but if your requirements include open-source core with self-hosting option or built-in management api and admin console, it deserves serious consideration. The Free – $599/mo starting price and 7/10 Next.js score make it a contender in specific scenarios. I'll help you figure out if you're that scenario."
+    "Logto isn't for every project. But if your requirements include open-source core with self-hosting option or built-in management api and admin console, it deserves serious consideration. The Free – $599/mo starting price and 7/10 Next.js score make it a contender in specific scenarios. I'll help you figure out if you're that scenario."
   ],
   "who_should_use_paragraphs": [
-    "You should consider Logto if you prioritize open-source core with self-hosting option. It is well-suited for teams that need a reliable Next.js auth provider and want to avoid vendor lock-in or excessive per-user pricing."
+    "If you're asking whether Logto is right for your Next.js app, start here: Open-source core, self-hostable, clean admin console  –  good Auth0 alternative for compliance. The medium learning curve and Free – $599/mo pricing will tell you quickly if this is the right neighborhood."
   ],
   "pricing_context": "Logto's pricing looks reasonable at first but has a large jump: the free tier covers 5,000 MAU, but the Team plan at $599/mo only covers 30,000 MAU. For a growing SaaS that crosses 30K users, you are looking at the Enterprise tier (custom pricing, likely $1,000+/mo). Self-hosting eliminates the per-user cost but introduces infrastructure costs ($30-100/mo for a small server) plus ongoing maintenance. Clerk at $199/mo for 20K users offers better value and better Next.js DX. Choose Logto if you need self-hosting for compliance reasons; choose Clerk for cost-effective managed auth.",
   "faq": [
