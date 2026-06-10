@@ -13,10 +13,10 @@
     "subheadline": "A thorough breakdown of Supabase Auth's pricing, developer experience, and fit for Next.js App Router projects."
   },
   "intro_paragraphs": [
-    "I've been through the setup process for Supabase Auth more times than I'd like to admit. Here's what I know: the easy learning curve is accurate for basic auth, but the 7/10 integration score reveals where the edge cases live."
+    "Supabase Auth is one of those auth tools that makes a specific trade-off: tightly coupled to the supabase postgresql ecosystem. The easy learning curve and Free – $75/mo starting price define where it fits in your stack. I break down whether the trade-off is worth it."
   ],
   "who_should_use_paragraphs": [
-    "Supabase Auth is designed for already on supabase? 50k mau free, rls = database-level auth, zero extra infra. The short version: if that describes your team or project, you'll likely have a good experience. If your priorities are different  –  say you need tightly coupled to the supabase postgresql ecosystem  –  you might want to look at the alternatives."
+    "I'd recommend Supabase Auth to teams that need extremely generous free tier with 50,000 monthly active users and integrated with supabase database, storage, and realtime subscriptions without the overhead of a full enterprise platform. The 7/10 Next.js score is a reliable signal."
   ],
   "pricing_context": "Supabase Auth's free tier (50K MAU) is the most generous on this list, making it perfect for prototyping and early-stage apps. The Pro plan at $75/mo includes 100K MAU, which scales reasonably. The trap is that Supabase is not just auth - you will likely also use their database, storage, and realtime features, which all have separate usage costs. A typical production app at scale can easily cost $200-500/mo across all Supabase services. If you want auth-only without the platform dependency, Firebase Auth offers a similar pricing model without requiring you to use Firebase's database. For pure auth needs, Clerk's $199/mo Pro plan may actually be cheaper than Supabase's total platform cost at scale.",
   "faq": [

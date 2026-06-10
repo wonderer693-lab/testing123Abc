@@ -7,16 +7,16 @@
   "seo": {
     "meta_title": "Firebase Auth vs Supabase Auth for Next.js App Router (2026): Which Auth Tool Wins? (Updated Week 24, 2026)",
     "meta_description": "Is Firebase Auth or Supabase Auth the better choice for your Next.js stack? Here's Supabase Auth's setup time vs Firebase Auth's, plus hidden costs and real DX trade-offs.",
-    "og_title": "Firebase Auth vs Supabase Auth (2026): Honest Comparison",
-    "og_description": "Firebase Auth (4.3★, Easy) and Supabase Auth (4.4★, Easy) compared for Next.js. Who wins on setup, pricing, and DX?"
+    "og_title": "Firebase Auth or Supabase Auth: What Actually Matters for Next.js",
+    "og_description": "Both Firebase Auth and Supabase Auth work with Next.js  –  but the developer experience differs significantly. 6/10 vs 7/10. Read more."
   },
   "hero": {
     "headline": "Firebase Auth vs Supabase Auth for Next.js Authentication",
     "subheadline": "An honest comparison of Firebase Auth and Supabase Auth — pricing, DX, setup time, and which one we recommend for Next.js App Router projects in 2026."
   },
-  "quick_summary": "I went into this Firebase Auth vs Supabase Auth comparison expecting a close call. After testing: Supabase Auth pulls ahead on Next.js integration (7/10 to 6/10). The easy learning curve of Firebase Auth is fine, but Supabase Auth's 15 minutes setup is hard to beat.",
+  "quick_summary": "I went into this Firebase Auth vs Supabase Auth comparison expecting a close call. Honestly, after testing: Supabase Auth pulls ahead on Next.js integration (7/10 to 6/10). The easy learning curve of Firebase Auth is fine, but Supabase Auth's 15 minutes setup is hard to beat.",
   "verdict_winner_id": "supabase-auth",
-  "verdict_text": "I'd pick Supabase Auth for this one. It integrates more naturally with Next.js App Router (7/10), and the easy learning curve means your team ships faster. Firebase Auth is a solid alternative  –  particularly if yes, up to 50,000 mau free tier matters more than pure DX.",
+  "verdict_text": "Supabase Auth gets my vote for most Next.js projects. The 7/10 DX score isn't just a number  –  it reflects real middleware support, server component patterns, and edge runtime compatibility. Firebase Auth is still a strong contender, especially if you're working with yes, up to 50,000 mau free tier constraints.",
   "structured_data_points": [
     {
       "label": "Starting Price",

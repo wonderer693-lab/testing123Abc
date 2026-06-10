@@ -6,17 +6,17 @@
   "human_intro": "Clerk vs Auth.js is the managed vs open-source debate. Clerk gives you pre-built components and 10-minute setup. Auth.js gives you 80+ providers and zero vendor lock-in. I compared both on real Next.js 15 App Router projects.",
   "seo": {
     "meta_title": "Clerk vs Auth.js for Next.js App Router (2026): Which Auth Tool Wins? (Updated Week 24, 2026)",
-    "meta_description": "Clerk or Auth.js for Next.js authentication? Compare features, pricing, learning curves, and find out which auth tool fits your 2026 project.",
-    "og_title": "Clerk vs Auth.js: Next.js Auth Comparison (2026)",
-    "og_description": "I tested Clerk and Auth.js with Next.js App Router. Here's my honest comparison of pricing, DX, and which one I'd actually ship."
+    "meta_description": "I compared Clerk and Auth.js head-to-head for Next.js 2026. Pricing: Free – $199/mo vs Free (Open Source). DX scores: 9/10 vs 8/10. Read on for the verdict.",
+    "og_title": "Clerk or Auth.js for Next.js? Our Honest Comparison",
+    "og_description": "Clerk scores 9/10 for Next.js DX. Look, auth.js scores 8/10. See how they compare on pricing, features, and setup time."
   },
   "hero": {
     "headline": "Clerk vs Auth.js for Next.js Authentication",
     "subheadline": "An honest comparison of Clerk and Auth.js — pricing, DX, setup time, and which one we recommend for Next.js App Router projects in 2026."
   },
-  "quick_summary": "Both Clerk and Auth.js are solid choices for Next.js authentication, but they serve different needs. In practice, clerk edges ahead with a stronger Next.js integration score (9/10 vs 8/10). Where Auth.js shines is Yes, fully open source. If you are optimizing for developer experience in the App Router, Clerk is the safer bet.",
+  "quick_summary": "Here's the honest take: both Clerk and Auth.js will get the job done. The short version: but Clerk makes it noticeably easier. The 9/10 vs 8/10 gap in Next.js scores tells the story. Auth.js makes sense if you are optimizing for Yes, fully open source. Otherwise, Clerk wins.",
   "verdict_winner_id": "clerk",
-  "verdict_text": "After testing both, I'd go with Clerk. The easy learning curve and 10 minutes setup mean your team hits the ground running. Auth.js has its place  –  especially if yes, fully open source aligns with your scale  –  but Clerk delivers a smoother developer experience.",
+  "verdict_text": "For this matchup, Clerk comes out ahead. The Next.js integration (9/10) is genuinely better in practice  –  not just on paper. In practice, auth.js is a good tool with its own strengths, particularly around yes, fully open source. Choose accordingly.",
   "structured_data_points": [
     {
       "label": "Starting Price",

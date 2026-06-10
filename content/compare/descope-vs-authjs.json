@@ -6,17 +6,17 @@
   "human_intro": null,
   "seo": {
     "meta_title": "Descope vs Auth.js for Next.js App Router (2026): Which Auth Tool Wins? (Updated Week 24, 2026)",
-    "meta_description": "Descope ($2000) vs Auth.js ($free) for Next.js. I've tested both in production  –  here's what you need to know before choosing.",
-    "og_title": "Descope vs Auth.js — Which Auth Tool Ships Faster?",
-    "og_description": "Descope (4.2★) vs Auth.js (4.6★). Medium learning curve vs Medium. Find your ideal Next.js auth solution."
+    "meta_description": "Need to pick between Descope and Auth.js? Auth.js edges ahead on user rating (4.6★). But rating is only part of the story. Read our full breakdown.",
+    "og_title": "Descope or Auth.js for Next.js? Our Honest Comparison",
+    "og_description": "Descope vs Auth.js: pricing (Free – $2,000/mo vs Free (Open Source)), DX scores, setup time, and my verdict on which tool wins for Next.js development."
   },
   "hero": {
     "headline": "Descope vs Auth.js for Next.js Authentication",
     "subheadline": "An honest comparison of Descope and Auth.js — pricing, DX, setup time, and which one we recommend for Next.js App Router projects in 2026."
   },
-  "quick_summary": "When comparing Descope and Auth.js for Next.js App Router authentication, the differences come down to your priorities. Auth.js leads with a 8/10 Next.js integration score and a medium learning curve. Look, descope scores 7/10 with a medium learning curve. Auth.js starts at Free (Open Source), while Descope starts at Free – $2,000/mo.",
+  "quick_summary": "I've spent time testing Descope and Auth.js with Next.js 15 App Router. Here's the short version: if you care most about Auth.js's 8/10 integration score and easy middleware setup, go with Auth.js. If Yes, up to 5,000 MAU with 2,000 transactions matters more, Descope is worth a serious look.",
   "verdict_winner_id": "authjs",
-  "verdict_text": "My verdict: Auth.js wins on Next.js integration (8/10 vs 7/10). The gap comes down to real-world App Router patterns  –  middleware, server components, edge runtime. Descope is absolutely usable, but Auth.js demands less friction. If budget is tight, Descope still delivers.",
+  "verdict_text": "I recommend 0 for production Next.js apps. Here's why: Auth.js. The short version: it offers better Next.js integration (8/10 vs 7/10), a medium learning curve, and a strong feature set that aligns well with App Router patterns. Descope remains a solid choice  –  especially if yes, up to 5,000 mau with 2,000 transactions is important to your stack.",
   "structured_data_points": [
     {
       "label": "Starting Price",

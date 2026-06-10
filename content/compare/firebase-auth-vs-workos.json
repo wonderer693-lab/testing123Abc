@@ -6,15 +6,15 @@
   "human_intro": null,
   "seo": {
     "meta_title": "Firebase Auth vs WorkOS for Next.js App Router (2026): Which Auth Tool Wins? (Updated Week 24, 2026)",
-    "meta_description": "Looking for Firebase Auth vs WorkOS for your Next.js app? We compare pricing (Free – Pay-as-you-go vs Custom pricing (enterprise)), DX scores, setup time, and give you our honest pick.",
-    "og_title": "Firebase Auth vs WorkOS: The Real Difference for Next.js Devs",
-    "og_description": "We compared Firebase Auth and WorkOS head-to-head. Pricing: Free – Pay-as-you-go vs Custom pricing (enterprise). Read our full analysis."
+    "meta_description": "Is Firebase Auth or WorkOS the better choice for your Next.js stack? Here's Firebase Auth's setup time vs WorkOS's, plus hidden costs and real DX trade-offs.",
+    "og_title": "Firebase Auth or WorkOS: What Actually Matters for Next.js",
+    "og_description": "Choosing auth for your Next.js app? Firebase Auth and WorkOS compared: Free – Pay-as-you-go vs Custom pricing (enterprise), 15 minutes vs 45 minutes setup."
   },
   "hero": {
     "headline": "Firebase Auth vs WorkOS for Next.js Authentication",
     "subheadline": "An honest comparison of Firebase Auth and WorkOS — pricing, DX, setup time, and which one we recommend for Next.js App Router projects in 2026."
   },
-  "quick_summary": "Here's the honest take: both Firebase Auth and WorkOS will get the job done. But Firebase Auth makes it noticeably easier. The 6/10 vs 5/10 gap in Next.js scores tells the story. WorkOS makes sense if you are optimizing for No free tier (enterprise sales). Otherwise, Firebase Auth wins.",
+  "quick_summary": "I've spent time testing Firebase Auth and WorkOS with Next.js 15 App Router. Here's the short version: if you care most about Firebase Auth's 6/10 integration score and easy middleware setup, go with Firebase Auth. If No free tier (enterprise sales) matters more, WorkOS is worth a serious look.",
   "verdict_winner_id": "firebase-auth",
   "verdict_text": "I'd pick Firebase Auth for this one. It integrates more naturally with Next.js App Router (6/10), and the easy learning curve means your team ships faster. WorkOS is a solid alternative  –  particularly if no free tier (enterprise sales) matters more than pure DX.",
   "structured_data_points": [

@@ -6,9 +6,9 @@
   "human_intro": "If you're already on Supabase for your database, their auth is tempting — 50K MAU free, RLS built-in. But Clerk offers a more polished Next.js experience. I tested both to see which one saves more development time.",
   "seo": {
     "meta_title": "Supabase Auth vs Clerk for Next.js App Router (2026): Which Auth Tool Wins? (Updated Week 24, 2026)",
-    "meta_description": "Looking for Supabase Auth vs Clerk for your Next.js app? We compare pricing (Free – $75/mo vs Free – $199/mo), DX scores, setup time, and give you our honest pick.",
-    "og_title": "Picking Supabase Auth or Clerk? Here's My Verdict",
-    "og_description": "Supabase Auth (4.4★) vs Clerk (4.7★). Easy learning curve vs Easy. Find your ideal Next.js auth solution."
+    "meta_description": "Detailed Supabase Auth vs Clerk comparison for Next.js App Router. See how they stack up on pricing, developer experience, and real-world trade-offs.",
+    "og_title": "Supabase Auth vs Clerk — Which Auth Tool Ships Faster?",
+    "og_description": "Choosing auth for your Next.js app? Supabase Auth and Clerk compared: Free – $75/mo vs Free – $199/mo, 15 minutes vs 10 minutes setup."
   },
   "hero": {
     "headline": "Supabase Auth vs Clerk for Next.js Authentication",
@@ -16,7 +16,7 @@
   },
   "quick_summary": "When comparing Supabase Auth and Clerk for Next.js App Router authentication, the differences come down to your priorities. Clerk leads with a 9/10 Next.js integration score and a easy learning curve. Supabase Auth scores 7/10 with a easy learning curve. Clerk starts at Free – $199/mo, while Supabase Auth starts at Free – $75/mo.",
   "verdict_winner_id": "clerk",
-  "verdict_text": "I'm recommending Clerk here. The 9/10 Next.js score reflects thoughtful App Router integration  –  middleware, server components, edge. Look, supabase Auth is competitive at 7/10, especially if yes, 50,000 mau included in free tier fits your budget better. For pure DX, Clerk wins.",
+  "verdict_text": "Clerk is my pick for most Next.js App Router projects. Its easy learning curve and 10 minutes setup time make it immediately productive. Supabase Auth is a worthy alternative, particularly if you need yes, 50,000 mau included in free tier or prefer Supabase Auth's approach to authentication.",
   "structured_data_points": [
     {
       "label": "Starting Price",

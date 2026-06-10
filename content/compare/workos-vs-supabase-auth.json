@@ -6,17 +6,17 @@
   "human_intro": null,
   "seo": {
     "meta_title": "WorkOS vs Supabase Auth for Next.js App Router (2026): Which Auth Tool Wins? (Updated Week 24, 2026)",
-    "meta_description": "I compared WorkOS and Supabase Auth head-to-head for Next.js 2026. Pricing: Custom pricing (enterprise) vs Free – $75/mo. DX scores: 5/10 vs 7/10. Read on for the verdict.",
-    "og_title": "WorkOS vs Supabase Auth — Which Auth Tool Ships Faster?",
+    "meta_description": "WorkOS (4★) vs Supabase Auth (4.4★) for Next.js. Compare Advanced vs Easy learning curves, free tiers, and get our recommendation.",
+    "og_title": "Picking WorkOS or Supabase Auth? Here's My Verdict",
     "og_description": "Choosing auth for your Next.js app? WorkOS and Supabase Auth compared: Custom pricing (enterprise) vs Free – $75/mo, 45 minutes vs 15 minutes setup."
   },
   "hero": {
     "headline": "WorkOS vs Supabase Auth for Next.js Authentication",
     "subheadline": "An honest comparison of WorkOS and Supabase Auth — pricing, DX, setup time, and which one we recommend for Next.js App Router projects in 2026."
   },
-  "quick_summary": "Most Next.js teams I've talked to end up choosing Supabase Auth over WorkOS for one reason: Supabase Auth just feels built for App Router. That 7/10 score reflects real middleware and server component support. WorkOS isn't bad  –  but it's playing catch-up on DX.",
+  "quick_summary": "WorkOS and Supabase Auth approach Next.js auth differently. Supabase Auth goes all-in on developer experience with a easy learning curve and 15 minutes setup. Real talk: workOS focuses more on No free tier (enterprise sales) and advanced onboarding. I'd lean toward Supabase Auth for most projects  –  but not all.",
   "verdict_winner_id": "supabase-auth",
-  "verdict_text": "Supabase Auth is the better fit for Next.js App Router projects. Here's why: the 7/10 score translates to less code, fewer workarounds, and faster middleware setup. WorkOS is still worth evaluating if no free tier (enterprise sales) is a deciding factor  –  just know you'll trade some DX for the savings.",
+  "verdict_text": "I recommend 0 for production Next.js apps. Here's why: Supabase Auth. It offers better Next.js integration (7/10 vs 5/10), a easy learning curve, and a strong feature set that aligns well with App Router patterns. WorkOS remains a solid choice  –  especially if no free tier (enterprise sales) is important to your stack.",
   "structured_data_points": [
     {
       "label": "Starting Price",

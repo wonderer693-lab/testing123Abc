@@ -29,6 +29,8 @@ const routes = [
   { path: "/compare", priority: 0.9, changefreq: "weekly" },
   { path: "/about", priority: 0.5, changefreq: "monthly" },
   { path: "/disclosure", priority: 0.1, changefreq: "yearly" },
+  { path: "/best", priority: 0.9, changefreq: "weekly" },
+  { path: "/compare/pricing", priority: 0.8, changefreq: "monthly" },
 ];
 
 for (const tool of tools) {

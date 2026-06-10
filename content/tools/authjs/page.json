@@ -13,7 +13,7 @@
     "subheadline": "A thorough breakdown of Auth.js's pricing, developer experience, and fit for Next.js App Router projects."
   },
   "intro_paragraphs": [
-    "Here's my take on Auth.js for Next.js authentication. It's not the simplest option, but it rewards the effort  –  20 minutes to get basic auth running. The 8/10 Next.js score tells part of the story. I'll tell you the rest."
+    "Auth.js scores 8/10 for Next.js  –  that's among the best. The medium learning curve means you'll want someone auth-savvy on the team. Here's my full review."
   ],
   "who_should_use_paragraphs": [
     "I'd recommend Auth.js to teams that want auth to be a solved problem, not a project. The 8/10 Next.js score is a reliable signal."

@@ -6,17 +6,17 @@
   "human_intro": null,
   "seo": {
     "meta_title": "Logto vs Auth.js for Next.js App Router (2026): Which Auth Tool Wins? (Updated Week 24, 2026)",
-    "meta_description": "Logto vs Auth.js: which one actually works better with Next.js App Router? I break down setup time (20 minutes vs 20 minutes), learning curves, and what you'll pay as you grow.",
-    "og_title": "Logto or Auth.js: What Actually Matters for Next.js",
-    "og_description": "I tested Logto and Auth.js with Next.js App Router. Here's my honest comparison of pricing, DX, and which one I'd actually ship."
+    "meta_description": "Logto and Auth.js are both capable auth tools for Next.js  –  but they're not interchangeable. I compare Medium vs Medium learning curves, pricing models, and which team each tool actually fits.",
+    "og_title": "Logto or Auth.js for Next.js? Our Honest Comparison",
+    "og_description": "Logto vs Auth.js: pricing (Free – $599/mo vs Free (Open Source)), DX scores, setup time, and my verdict on which tool wins for Next.js development."
   },
   "hero": {
     "headline": "Logto vs Auth.js for Next.js Authentication",
     "subheadline": "An honest comparison of Logto and Auth.js — pricing, DX, setup time, and which one we recommend for Next.js App Router projects in 2026."
   },
-  "quick_summary": "Logto vs Auth.js is a common comparison we hear from Next.js developers. Logto (4.1★) and Auth.js (4.6★) both have loyal followings. Our analysis shows Auth.js has the edge for most Next.js projects due to its 8/10 DX score. Logto is a strong alternative if yes, up to 5,000 mau better matches your budget.",
+  "quick_summary": "Logto (4.1★) and Auth.js (4.6★) both have fans. Auth.js makes the most sense if you want medium onboarding and strong App Router integration. Logto is the better fit if Yes, up to 5,000 MAU is your priority.",
   "verdict_winner_id": "authjs",
-  "verdict_text": "My verdict: Auth.js wins on Next.js integration (8/10 vs 7/10). The gap comes down to real-world App Router patterns  –  middleware, server components, edge runtime. Logto is absolutely usable, but Auth.js demands less friction. If budget is tight, Logto still delivers.",
+  "verdict_text": "After testing both, I'd go with Auth.js. The medium learning curve and 20 minutes setup mean your team hits the ground running. Logto has its place  –  especially if yes, up to 5,000 mau aligns with your scale  –  but Auth.js delivers a smoother developer experience.",
   "structured_data_points": [
     {
       "label": "Starting Price",

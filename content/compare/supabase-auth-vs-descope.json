@@ -6,9 +6,9 @@
   "human_intro": null,
   "seo": {
     "meta_title": "Supabase Auth vs Descope for Next.js App Router (2026): Which Auth Tool Wins? (Updated Week 24, 2026)",
-    "meta_description": "Stop guessing between Supabase Auth and Descope. Here's a practical comparison of how both handle Next.js authentication  –  pricing, developer experience, and where each one falls short.",
-    "og_title": "Supabase Auth vs Descope: Next.js Auth Comparison (2026)",
-    "og_description": "We compared Supabase Auth and Descope head-to-head. Here's the thing: pricing: Free – $75/mo vs Free – $2,000/mo. Read our full analysis."
+    "meta_description": "Need to pick between Supabase Auth and Descope? Supabase Auth has a higher user rating (4.4★). But rating is only part of the story. Read our full breakdown.",
+    "og_title": "Supabase Auth vs Descope (2026): Honest Comparison",
+    "og_description": "Supabase Auth scores 7/10 for Next.js DX. Descope scores 7/10. See how they compare on pricing, features, and setup time."
   },
   "hero": {
     "headline": "Supabase Auth vs Descope for Next.js Authentication",
@@ -16,7 +16,7 @@
   },
   "quick_summary": "I went into this Supabase Auth vs Descope comparison expecting a close call. After testing: Supabase Auth pulls ahead on Next.js integration (7/10 to 7/10). The medium learning curve of Descope is fine, but Supabase Auth's 15 minutes setup is hard to beat.",
   "verdict_winner_id": "supabase-auth",
-  "verdict_text": "Supabase Auth is the safer bet for Next.js projects. Its 15 minutes setup time and easy learning curve mean you're productive faster. Descope isn't far behind  –  especially if you need yes, up to 5,000 mau with 2,000 transactions  –  but Supabase Auth has the edge where it counts for App Router development.",
+  "verdict_text": "Supabase Auth gets my vote for most Next.js projects. The 7/10 DX score isn't just a number  –  it reflects real middleware support, server component patterns, and edge runtime compatibility. Descope is still a strong contender, especially if you're working with yes, up to 5,000 mau with 2,000 transactions constraints.",
   "structured_data_points": [
     {
       "label": "Starting Price",
