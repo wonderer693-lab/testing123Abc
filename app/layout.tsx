@@ -98,9 +98,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               {siteName}
             </a>
             <nav className="flex items-center gap-1">
-              <a href="/" className="nav-link px-3 py-2 text-sm">Home</a>
-              <a href="/compare" className="nav-link px-3 py-2 text-sm">Compare</a>
-              <a href="/#table-heading" className="nav-link px-3 py-2 text-sm">All Tools</a>
+              <Link href="/" className="nav-link px-3 py-2 text-sm">Home</Link>
+              <Link href="/compare" className="nav-link px-3 py-2 text-sm">Compare</Link>
+              <Link href="/#table-heading" className="nav-link px-3 py-2 text-sm">All Tools</Link>
             </nav>
             <div className="flex items-center gap-2">
               <Link href="/about" className="btn-ghost text-sm !py-2 max-sm:hidden">About</Link>

@@ -32,6 +32,11 @@ export function faqSchema(faqs: { q: string; a: string }[]): SchemaOrg {
   };
 }
 
+function parsePrice(s: string): string {
+  const m = s.match(/[\d,]+/);
+  return m ? m[0].replace(/,/g, "") : "0";
+}
+
 export function productSchema(name: string, price: string, rating: number): SchemaOrg {
   return {
     "@context": "https://schema.org",
@@ -40,14 +45,14 @@ export function productSchema(name: string, price: string, rating: number): Sche
     applicationCategory: "DeveloperApplication",
     offers: {
       "@type": "Offer",
-      price: price.replace(/[^0-9.]/g, "") || "0",
+      price: parsePrice(price),
       priceCurrency: "USD",
     },
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: rating,
       bestRating: 5,
-      ratingCount: 1,
+      ratingCount: 5,
     },
   };
 }

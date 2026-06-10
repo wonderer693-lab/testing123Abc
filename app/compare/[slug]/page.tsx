@@ -154,7 +154,7 @@ export default async function ComparePage({ params }: { params: Promise<{ slug: 
       <SchemaMarkup schema={productSchema(a.name, a.starting_price, a.rating)} />
       <SchemaMarkup schema={productSchema(b.name, b.starting_price, b.rating)} />
       <SchemaMarkup schema={breadcrumbSchema([{ name: "Home", url: "/" }, { name: `${a.name} vs ${b.name}`, url: `/compare/${slug}` }])} />
-      <SchemaMarkup schema={articleSchema(`${a.name} vs ${b.name}: Head-to-Head Comparison for Next.js 2026`, `Compare ${a.name} and ${b.name} for Next.js App Router authentication. Detailed analysis of pricing, developer experience, features, and use cases.`, "2026-06-09")} />
+      <SchemaMarkup schema={articleSchema(`${a.name} vs ${b.name}: Head-to-Head Comparison for Next.js 2026`, `Compare ${a.name} and ${b.name} for Next.js App Router authentication. Detailed analysis of pricing, developer experience, features, and use cases.`, content?.last_updated || new Date().toISOString().split("T")[0])} />
       <SchemaMarkup schema={faqSchema(faqs)} />
 
       <Breadcrumb className="mb-6" items={[

@@ -29,6 +29,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       openGraph: {
         title: content.seo.og_title,
         description: content.seo.og_description,
+        type: "article",
       },
       twitter: {
         card: "summary_large_image",
@@ -42,10 +43,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${tool.name} Review: Next.js Authentication in 2026 — Features, Pricing & DX`,
     description: tool.short_description,
-    alternates: { canonical: `https://saaspolarbeam.vercel.app/tools/${slug}` },
+    alternates: { canonical: `${siteUrl}/tools/${slug}` },
     openGraph: {
       title: `${tool.name} Review — Pricing, Developer Experience & Best Use Cases`,
       description: `${tool.name} for Next.js App Router: ${tool.learning_curve} learning curve, ${tool.starting_price} starting price, ${tool.setup_time_nextjs} setup. ${tool.best_for_short}`,
+      type: "article",
     },
     twitter: {
       card: "summary_large_image",

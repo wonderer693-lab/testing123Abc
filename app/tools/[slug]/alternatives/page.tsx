@@ -33,6 +33,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         description: content.seo.og_description,
         locale: "en_US",
         siteName: "NextAuthCompare",
+        type: "article",
       },
       twitter: {
         card: "summary_large_image",
@@ -47,12 +48,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: fallbackTitle,
     description: fallbackDesc,
-    alternates: { canonical: `https://saaspolarbeam.vercel.app/tools/${slug}/alternatives` },
+    alternates: { canonical: `${siteUrl}/tools/${slug}/alternatives` },
     openGraph: {
       title: `Best 5 ${tool.name} Alternatives`,
       description: `Top alternatives to ${tool.name} for Next.js developers.`,
       locale: "en_US",
       siteName: "NextAuthCompare",
+      type: "article",
     },
     twitter: {
       card: "summary_large_image",
